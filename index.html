@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telemedicine: The Rules Behind the Screen — An Interactive Editorial Infographic</title>
+  
+  <!-- Editorial Typography: Fraunces (Editorial Display Serif) + Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="editorial-body">
+
+  <!-- Subtle Medical Parchment Texture & Grid Overlay -->
+  <div class="paper-texture-overlay" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       EDITORIAL TOP BAR & NAVIGATION
+       ========================================================================= -->
+  <header class="editorial-header">
+    <div class="header-container">
+      <div class="masthead-brand">
+        <span class="brand-caduceus">🩺</span>
+        <div class="brand-titles">
+          <span class="editorial-series-tag">EDITORIAL INVESTIGATION • DIGITAL HEALTH POLICY</span>
+          <h1 class="brand-main-title">TELEMEDICINE <span class="brand-subtitle">— The Rules Behind the Screen</span></h1>
+        </div>
+      </div>
+
+      <nav class="editorial-nav">
+        <a href="#opening" class="nav-item active">00. Room</a>
+        <a href="#licensing" class="nav-item">01. 50 Rulebooks</a>
+        <a href="#prescribing" class="nav-item">02. Behind the Screen</a>
+        <a href="#reimbursement" class="nav-item">03. The Quilt & Maze</a>
+        <a href="#finale" class="nav-item">04. The Convergence</a>
+        <a href="#code-anatomy" class="nav-item code-link">Code Anatomy 💻</a>
+      </nav>
+
+      <button id="view-infographic-btn" class="btn btn-editorial-outline" title="Compare with original infographic illustration">
+        🖼️ Original Infographic
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         00. THE OPENING — AN ILLUSTRATED DOCTOR'S CONSULTATION ROOM
+         ========================================================================= -->
+    <section id="opening" class="story-chapter room-chapter">
+      <div class="container room-container">
+        
+        <!-- Floating Medical Botanical & Instrument Doodles -->
+        <div class="doodle doodle-stethoscope" aria-hidden="true">
+          <svg viewBox="0 0 100 100" class="doodle-svg">
+            <path d="M30,20 C30,45 45,60 50,60 C55,60 70,45 70,20 M50,60 L50,80 C50,85 55,90 60,90 C65,90 70,85 70,80" fill="none" stroke="#315A62" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="70" cy="80" r="7" fill="#B8D8DC" stroke="#315A62" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="doodle doodle-rx" aria-hidden="true">℞</div>
+        <div class="doodle doodle-pill" aria-hidden="true">💊</div>
+        <div class="doodle doodle-shield" aria-hidden="true">🛡️</div>
+
+        <div class="room-lead-text">
+          <span class="chapter-kicker">PROLOGUE • THE DISTANCE PARADOX</span>
+          <blockquote class="editorial-hero-quote">
+            “Telemedicine broke the walls of distance — <br class="hide-mobile">
+            <span class="quote-emphasis">policy is still deciding who's allowed through.</span>”
+          </blockquote>
+          <p class="room-subtext">
+            A webcam can transmit a doctor’s voice across 3,000 miles in 12 milliseconds. 
+            Yet between the physician's camera and the patient's screen lies a maze of 50 state medical boards, federal drug statutes, and fractured insurance contracts.
+          </p>
+        </div>
+
+        <!-- The Hero Floating Laptop & Virtual Room Centerpiece -->
+        <div class="laptop-stage" id="laptop-stage">
+          <div class="laptop-device" id="laptop-device">
+            <div class="laptop-lid">
+              <div class="laptop-webcam"></div>
+              
+              <!-- Laptop Screen: The Virtual Consultation -->
+              <div class="laptop-screen" id="consultation-screen">
+                <div class="screen-header">
+                  <div class="screen-status-badge">
+                    <span class="pulse-indicator"></span>
+                    <span class="status-text">TELEMEDICINE SESSION: CONNECTED</span>
+                  </div>
+                  <span class="screen-clock" id="screen-live-clock">10:42 AM EST</span>
+                </div>
+
+                <div class="consultation-portal">
+                  <!-- Doctor Side -->
+                  <div class="participant-panel doctor-panel">
+                    <div class="avatar-ring doctor-ring">
+                      <span class="avatar-emoji">🩺</span>
+                    </div>
+                    <div class="participant-info">
+                      <span class="participant-role">PHYSICIAN</span>
+                      <strong class="participant-name">Dr. Alex Sterling, MD</strong>
+                      <span class="participant-loc">📍 New York, NY</span>
+                    </div>
+                  </div>
+
+                  <!-- Real-Time Pulsing ECG Line Connecting Them -->
+                  <div class="ecg-tether-container">
+                    <svg class="ecg-tether-svg" viewBox="0 0 320 60" preserveAspectRatio="none">
+                      <path class="ecg-tether-bg" d="M0,30 L90,30 L105,30 L115,10 L125,50 L135,5 L145,45 L155,30 L320,30" />
+                      <path class="ecg-tether-pulse" d="M0,30 L90,30 L105,30 L115,10 L125,50 L135,5 L145,45 L155,30 L320,30" />
+                    </svg>
+                    <span class="tether-label">2,450 MILES FIBER CONNECTION</span>
+                  </div>
+
+                  <!-- Patient Side -->
+                  <div class="participant-panel patient-panel">
+                    <div class="avatar-ring patient-ring">
+                      <span class="avatar-emoji">👤</span>
+                    </div>
+                    <div class="participant-info">
+                      <span class="participant-role">PATIENT</span>
+                      <strong class="participant-name">Jordan Reed</strong>
+                      <span class="participant-loc">📍 Los Angeles, CA</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom Screen Banner with Zoom CTA -->
+                <div class="screen-footer">
+                  <span class="stat-pill"><strong>50</strong> State Jurisdictions</span>
+                  <span class="stat-pill"><strong>1</strong> Screen Physical Divide</span>
+                  <span class="stat-pill"><strong>100%</strong> Payer Maze</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="laptop-base">
+              <div class="laptop-notch"></div>
+            </div>
+          </div>
+
+          <!-- Camera Zoom Launch Trigger -->
+          <div class="zoom-cta-container">
+            <button id="zoom-into-screen-btn" class="btn btn-primary-zoom">
+              <span class="zoom-btn-icon">🔍</span> Zoom Into the Screen — Uncover the Rules
+            </button>
+            <span class="zoom-hint">Scroll down or click to enter the regulatory engine</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Curved Flowing Wave Divider 1 -->
+    <div class="curved-separator" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="separator-svg">
+        <path d="M0,45 C280,90 480,10 720,50 C960,90 1200,15 1440,45 L1440,90 L0,90 Z" fill="#FFF8E8"/>
+        <path d="M0,45 C280,90 480,10 720,50 C960,90 1200,15 1440,45" fill="none" stroke="#9DBB91" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div class="separator-icon-badge">🗺️ CHAPTER 01</div>
+    </div>
+
+    <!-- =========================================================================
+         01. CHAPTER 01 — WHERE CAN THE DOCTOR TREAT?
+             "ONE DOCTOR. 50 RULEBOOKS." (LICENSING)
+         ========================================================================= -->
+    <section id="licensing" class="story-chapter licensing-chapter">
+      <div class="container">
+        <div class="chapter-header">
+          <span class="chapter-index-pill">01 • LICENSURE BARRIERS</span>
+          <h2 class="chapter-title">One Doctor. 50 Rulebooks.</h2>
+          <p class="chapter-subtitle">
+            A doctor licensed in New York cannot legally treat a patient in California. While the video stream takes 20 milliseconds, the medical license halts squarely at the state line.
+          </p>
+        </div>
+
+        <div class="editorial-grid">
+          <!-- The Dynamic Animated Illustrated US Map -->
+          <div class="card editorial-map-card">
+            <div class="card-inner-header">
+              <div class="header-icon-title">
+                <span class="card-hero-icon">🗺️</span>
+                <div>
+                  <h3>The Cross-Border Licensure Journey</h3>
+                  <small class="text-muted">Select states to test interstate medical reciprocity</small>
+                </div>
+              </div>
+              <span class="live-pill" id="map-status-pill">ROUTE: NY ➔ CA</span>
+            </div>
+
+            <!-- SVG Illustrated Map Viewport -->
+            <div class="map-viewport">
+              <svg id="us-interactive-map" viewBox="0 0 900 520" class="us-map-svg">
+                <!-- Illustrated Contours of the United States -->
+                <defs>
+                  <linearGradient id="routeGradientBlocked" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#315A62"/>
+                    <stop offset="50%" stop-color="#C96B68"/>
+                    <stop offset="100%" stop-color="#C96B68"/>
+                  </linearGradient>
+                  <linearGradient id="routeGradientAllowed" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#315A62"/>
+                    <stop offset="100%" stop-color="#9DBB91"/>
+                  </linearGradient>
+                  <filter id="roadblockGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#C96B68" flood-opacity="0.6"/>
+                  </filter>
+                </defs>
+
+                <!-- Base US Map Silhouette -->
+                <path class="us-base-land" d="M120,70 L230,65 L360,80 L520,60 L680,65 L760,110 L840,115 L820,170 L850,210 L800,280 L820,380 L760,420 L730,480 L690,440 L650,420 L580,410 L540,470 L480,470 L420,410 L350,420 L270,390 L180,400 L120,330 L100,240 L130,160 Z" />
+                
+                <!-- Stylized Key State Outlines -->
+                <!-- West Coast (CA, WA) -->
+                <path id="state-path-WA" class="map-state state-compact" d="M120,70 L200,68 L190,120 L110,120 Z" data-state="WA" />
+                <path id="state-path-CA" class="map-state state-restrictive active-target" d="M110,160 L160,160 L180,310 L130,340 L100,240 Z" data-state="CA" />
+                
+                <!-- Mountain / Central (AZ, TX, IL, OH) -->
+                <path id="state-path-AZ" class="map-state state-compact" d="M180,270 L260,270 L250,370 L180,350 Z" data-state="AZ" />
+                <path id="state-path-TX" class="map-state state-independent" d="M350,330 L470,330 L480,440 L430,460 L360,400 Z" data-state="TX" />
+                <path id="state-path-IL" class="map-state state-compact" d="M510,170 L560,170 L550,260 L510,250 Z" data-state="IL" />
+                <path id="state-path-OH" class="map-state state-compact" d="M590,170 L650,170 L640,240 L590,240 Z" data-state="OH" />
+                
+                <!-- East Coast (NY, FL) -->
+                <path id="state-path-NY" class="map-state state-restrictive active-origin" d="M720,110 L790,105 L810,150 L750,160 L730,130 Z" data-state="NY" />
+                <path id="state-path-FL" class="map-state state-independent" d="M690,390 L750,390 L780,470 L740,480 L690,420 Z" data-state="FL" />
+
+                <!-- Map State Labels -->
+                <text x="135" y="240" class="map-label">CA</text>
+                <text x="145" y="95" class="map-label">WA</text>
+                <text x="215" y="320" class="map-label">AZ</text>
+                <text x="405" y="390" class="map-label">TX</text>
+                <text x="530" y="215" class="map-label">IL</text>
+                <text x="615" y="205" class="map-label">OH</text>
+                <text x="760" y="135" class="map-label">NY</text>
+                <text x="735" y="440" class="map-label">FL</text>
+
+                <!-- Doctor Location Pin (Default: NY) -->
+                <g id="doctor-pin-group" transform="translate(765, 135)">
+                  <circle cx="0" cy="0" r="16" class="pin-halo doctor-halo" />
+                  <circle cx="0" cy="0" r="10" class="pin-core doctor-core" />
+                  <text x="0" y="4" text-anchor="middle" class="pin-text">🩺</text>
+                  <text x="0" y="-18" text-anchor="middle" class="pin-title">DR. ALEX (NY)</text>
+                </g>
+
+                <!-- Patient Location Pin (Default: CA) -->
+                <g id="patient-pin-group" transform="translate(135, 250)">
+                  <circle cx="0" cy="0" r="16" class="pin-halo patient-halo" />
+                  <circle cx="0" cy="0" r="10" class="pin-core patient-core" />
+                  <text x="0" y="4" text-anchor="middle" class="pin-text">👤</text>
+                  <text x="0" y="-18" text-anchor="middle" class="pin-title">PATIENT (CA)</text>
+                </g>
+
+                <!-- Animated Medical Connection Arc -->
+                <path id="interstate-route-path" class="route-flight-path route-blocked" d="M765,135 Q450,40 135,250" fill="none" stroke-width="4" />
+
+                <!-- Travelling Medical Signal Dot -->
+                <circle id="route-travelling-pulse" cx="765" cy="135" r="7" class="pulse-sparkle" />
+
+                <!-- The Regulatory Barricade Wall halfway across the US -->
+                <g id="regulatory-wall-group" class="wall-active" transform="translate(450, 140)" filter="url(#roadblockGlow)">
+                  <rect x="-35" y="-22" width="70" height="44" rx="6" class="wall-box" />
+                  <text x="0" y="-4" text-anchor="middle" class="wall-alert-icon">🚧</text>
+                  <text x="0" y="14" text-anchor="middle" class="wall-alert-text">BLOCKED</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Route Configuration Controls -->
+            <div class="map-controls-panel">
+              <div class="route-selectors">
+                <div class="selector-unit">
+                  <label for="doctor-state-select">🩺 Physician's Home State:</label>
+                  <select id="doctor-state-select" class="editorial-select">
+                    <option value="NY" selected>New York (NY) — Non-Compact</option>
+                    <option value="CA">California (CA) — Non-Compact</option>
+                    <option value="TX">Texas (TX) — Independent</option>
+                    <option value="FL">Florida (FL) — Out-of-State Telehealth Registry</option>
+                    <option value="WA">Washington (WA) — IMLC Compact Member</option>
+                    <option value="IL">Illinois (IL) — IMLC Compact Member</option>
+                    <option value="OH">Ohio (OH) — IMLC Compact Member</option>
+                    <option value="AZ">Arizona (AZ) — IMLC Compact Member</option>
+                  </select>
+                </div>
+
+                <div class="route-arrow-bridge">
+                  <span class="bridge-arrow">➔</span>
+                </div>
+
+                <div class="selector-unit">
+                  <label for="patient-state-select">👤 Patient's Physical Location:</label>
+                  <select id="patient-state-select" class="editorial-select">
+                    <option value="CA" selected>California (CA) — Non-Compact</option>
+                    <option value="NY">New York (NY) — Non-Compact</option>
+                    <option value="TX">Texas (TX) — Independent</option>
+                    <option value="FL">Florida (FL) — Out-of-State Telehealth Registry</option>
+                    <option value="WA">Washington (WA) — IMLC Compact Member</option>
+                    <option value="IL">Illinois (IL) — IMLC Compact Member</option>
+                    <option value="OH">Ohio (OH) — IMLC Compact Member</option>
+                    <option value="AZ">Arizona (AZ) — IMLC Compact Member</option>
+                  </select>
+                </div>
+              </div>
+
+              <button id="test-route-btn" class="btn btn-editorial-primary">
+                ⚡ Transmit Consultation Signal
+              </button>
+            </div>
+
+            <!-- Dynamic Regulatory Verdict Card -->
+            <div id="licensing-verdict-card" class="verdict-banner verdict-blocked">
+              <div class="verdict-status-icon" id="verdict-icon">🚫</div>
+              <div class="verdict-body">
+                <h4 id="verdict-headline">CRITICAL ROADBLOCK: Unlicensed Cross-Border Practice</h4>
+                <p id="verdict-narrative">
+                  Dr. Alex holds an active license in New York. However, because the patient Jordan is physically located in California, California law dictates that the medical encounter legally occurs inside California. Without an active California Medical Board license, treating this patient constitutes criminal unauthorized practice of medicine.
+                </p>
+                <div class="verdict-tags">
+                  <span class="v-tag penalty-tag">🚨 Violation: Class A Misdemeanor / Felony</span>
+                  <span class="v-tag fee-tag">💵 Cost: $840+ CA license app fee & 6-month wait</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Academic Editorial Explainer Column -->
+          <div class="editorial-side-column">
+            <div class="editorial-parchment-card">
+              <span class="card-eyebrow">CONSTITUTIONAL ARCHITECTURE</span>
+              <h3>The 10th Amendment Paradox</h3>
+              <p>
+                Why doesn't the federal government simply issue one national medical license? 
+                Under the <strong>Tenth Amendment of the US Constitution</strong>, states retain police power to protect the health, safety, and morals of their citizens.
+              </p>
+              
+              <hr class="paper-divider">
+
+              <h4>Three Friction Points of State Sovereignty:</h4>
+              <ul class="illustrated-bullet-list">
+                <li>
+                  <span class="list-icon">📍</span>
+                  <div>
+                    <strong>Locus of the Medical Exam:</strong>
+                    The law unequivocally defines the site of care as the <em>patient’s physical location</em>, regardless of where the doctor or server sits.
+                  </div>
+                </li>
+                <li>
+                  <span class="list-icon">📜</span>
+                  <div>
+                    <strong>50 Disparate CME Rules:</strong>
+                    Doctors must track separate Continuing Medical Education requirements, state opioid quotas, and mandatory suicide prevention credits in every state they serve.
+                  </div>
+                </li>
+                <li>
+                  <span class="list-icon">⚡</span>
+                  <div>
+                    <strong>The IMLC Compromise:</strong>
+                    The <em>Interstate Medical Licensure Compact (IMLC)</em> offers an expedited pathway between ~40 participating states, but physicians still pay separate fees for each state license.
+                  </div>
+                </li>
+              </ul>
+
+              <div class="editorial-callout-box">
+                <span class="callout-icon">💡</span>
+                <p>
+                  <strong>Takeaway:</strong> Technology dissolved geographical distance in 2000; healthcare regulation remains anchored in the 1787 constitutional delegation of state powers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Curved Flowing Wave Divider 2 -->
+    <div class="curved-separator" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="separator-svg">
+        <path d="M0,45 C320,10 520,85 720,40 C920,5 1180,80 1440,45 L1440,90 L0,90 Z" fill="#FFF8E8"/>
+        <path d="M0,45 C320,10 520,85 720,40 C920,5 1180,80 1440,45" fill="none" stroke="#315A62" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div class="separator-icon-badge">📋 CHAPTER 02</div>
+    </div>
+
+    <!-- =========================================================================
+         02. CHAPTER 02 — THE SCREEN ISN'T THE EXAM.
+             "PRESCRIBING BEHIND THE GLASS"
+         ========================================================================= -->
+    <section id="prescribing" class="story-chapter prescribing-chapter">
+      <div class="container">
+        <div class="chapter-header">
+          <span class="chapter-index-pill">02 • CONTROLLED SUBSTANCES</span>
+          <h2 class="chapter-title">The Screen Isn't the Exam.</h2>
+          <p class="chapter-subtitle">
+            Federal law still asks: <em>“Have you actually laid hands on this patient?”</em> A webcam cannot palpate an abdomen or administer a physical reflex check. Under federal drug statutes, the prescription pad remains locked behind glass.
+          </p>
+        </div>
+
+        <div class="editorial-grid">
+          
+          <!-- The Giant Interactive Rx Clipboard Behind Glass -->
+          <div class="card rx-hero-card">
+            <div class="clipboard-bracket">
+              <div class="clipboard-metal-clip">
+                <div class="clip-screw"></div>
+                <div class="clip-brand">STATE MEDICAL BOARD • OFFICIAL ℞ PAD</div>
+                <div class="clip-screw"></div>
+              </div>
+            </div>
+
+            <!-- The Tactile Glass Screen Overlay -->
+            <div class="tactile-glass-container" id="tactile-glass-container">
+              <div class="frosted-glass-pane" id="frosted-glass-pane">
+                <span class="glass-glare-line"></span>
+                <span class="glass-watermark">THE SCREEN DIVIDE</span>
+                
+                <!-- Physical Doctor Hand Silhouette Reaching Toward Glass -->
+                <div class="doctor-reaching-hand" id="doctor-reaching-hand" aria-hidden="true">
+                  <svg viewBox="0 0 160 200" class="hand-svg">
+                    <path d="M20,190 C30,140 40,110 50,90 C55,80 65,75 75,85 C85,95 75,120 70,140 M60,85 C65,60 78,50 88,60 C98,70 85,110 80,130 M85,60 C90,40 102,35 110,45 C118,55 105,100 100,125 M105,50 C110,38 122,35 128,45 C135,55 125,95 120,120 M125,75 C132,65 145,65 148,78 C150,90 135,130 130,150 C120,180 80,200 40,200" fill="#EADBC8" stroke="#315A62" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- The Official Prescription Document Behind the Screen -->
+              <div class="rx-paper-document">
+                <div class="rx-doc-header">
+                  <div class="rx-symbol-emblem">℞</div>
+                  <div class="rx-clinic-details">
+                    <h4>METROPOLITAN TELEHEALTH PHYSICIANS</h4>
+                    <p>Dr. Alex Sterling, MD • DEA Registration: #FS8291044</p>
+                    <small>Federal Ryan Haight Compliance Certification Required</small>
+                  </div>
+                </div>
+
+                <hr class="rx-line">
+
+                <div class="rx-patient-meta">
+                  <p><strong>Patient Name:</strong> Jordan Reed &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Date:</strong> <span id="rx-date-stamp">Today</span></p>
+                  <p><strong>Encounter Mode:</strong> Synchronous Telehealth (Video/Audio)</p>
+                </div>
+
+                <!-- Central Padlock Graphic Layer -->
+                <div class="mechanical-padlock-stage" id="padlock-stage">
+                  <div class="padlock-assembly locked" id="padlock-assembly">
+                    <div class="padlock-shackle"></div>
+                    <div class="padlock-body">
+                      <div class="padlock-keyhole"></div>
+                      <span class="padlock-status-label" id="padlock-text">LOCKED BY STATUTE</span>
+                    </div>
+                  </div>
+                  <div class="padlock-seal" id="padlock-seal">
+                    RESTRICTED: IN-PERSON EXAM MANDATE
+                  </div>
+                </div>
+
+                <!-- Prescription Content -->
+                <div class="rx-prescription-body">
+                  <div class="prescribed-item-box">
+                    <span class="med-icon" id="med-display-icon">💊</span>
+                    <div class="med-text-details">
+                      <h4 id="med-name-display">Schedule II: Methylphenidate / Adderall</h4>
+                      <p id="med-class-display">DEA Controlled Substance • High abuse & dependence potential</p>
+                    </div>
+                  </div>
+
+                  <div class="ryan-haight-warning-block" id="haight-warning-block">
+                    <span class="warning-triangle">⚠️</span>
+                    <p>
+                      <strong>Federal Mandate (21 U.S.C. § 829):</strong> Under the <em>Ryan Haight Online Pharmacy Consumer Protection Act</em>, no controlled substance may be dispensed via the internet without at least one prior in-person medical evaluation.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Interactive Prescribing Toggle Slider -->
+                <div class="rx-slider-interface">
+                  <span class="slider-instruction">Slide to switch medication category:</span>
+                  <div class="prescribe-mode-slider-container">
+                    <button class="slider-choice-btn active" id="btn-choice-controlled" data-mode="controlled">
+                      🔒 Controlled Substance<br><small>(Adderall, Xanax, Buprenorphine)</small>
+                    </button>
+                    <button class="slider-choice-btn" id="btn-choice-standard" data-mode="standard">
+                      🩹 Standard Medication<br><small>(Antibiotics, Metformin, Inhalers)</small>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="rx-footer-note">
+              <small>👆 Move your cursor over the screen to inspect the frosted glass barrier</small>
+            </div>
+          </div>
+
+          <!-- Editorial Timeline & Context Column -->
+          <div class="editorial-side-column">
+            <div class="editorial-parchment-card">
+              <span class="card-eyebrow">FEDERAL DRUG ENFORCEMENT</span>
+              <h3>The Ryan Haight Legacy & The Post-COVID Cliff</h3>
+              <p>
+                In 2001, 18-year-old high school athlete Ryan Haight died from an overdose of prescription painkillers purchased from an online "doctor" who never examined him. In 2008, Congress passed the <strong>Ryan Haight Act</strong> to outlaw rogue internet pill mills.
+              </p>
+
+              <!-- Illustrated Vertical Timeline -->
+              <div class="editorial-timeline">
+                <div class="timeline-node completed">
+                  <div class="node-marker">2008</div>
+                  <div class="node-content">
+                    <strong>The Physical Exam Mandate:</strong>
+                    Law strictly bans prescribing Schedule II–V controlled substances online without an in-person exam.
+                  </div>
+                </div>
+
+                <div class="timeline-node waiver">
+                  <div class="node-marker">2020</div>
+                  <div class="node-content">
+                    <strong>COVID-19 Emergency Waiver:</strong>
+                    DEA temporarily pauses the in-person mandate. Virtual mental health, ADHD treatment, and opioid addiction care explode.
+                  </div>
+                </div>
+
+                <div class="timeline-node cliff">
+                  <div class="node-marker">PRESENT</div>
+                  <div class="node-content">
+                    <strong>The Regulatory Cliff:</strong>
+                    DEA keeps extending temporary rules while wrestling with how to create a permanent "Special Registration for Telemedicine" without reviving online pill mills.
+                  </div>
+                </div>
+              </div>
+
+              <div class="editorial-quote-box">
+                <p>
+                  <em>“If the DEA abruptly reinstates the in-person exam rule, millions of rural and psychiatric patients will lose their lifeline overnight.”</em>
+                </p>
+                <cite>— American Telemedicine Association (ATA)</cite>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Curved Flowing Wave Divider 3 -->
+    <div class="curved-separator" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="separator-svg">
+        <path d="M0,45 C240,80 480,10 720,55 C960,100 1200,20 1440,45 L1440,90 L0,90 Z" fill="#FFF8E8"/>
+        <path d="M0,45 C240,80 480,10 720,55 C960,100 1200,20 1440,45" fill="none" stroke="#9DBB91" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div class="separator-icon-badge">🧩 CHAPTER 03</div>
+    </div>
+
+    <!-- =========================================================================
+         03. CHAPTER 03 — COVERAGE IS A PATCHWORK QUILT
+             "THE REIMBURSEMENT MAZE"
+         ========================================================================= -->
+    <section id="reimbursement" class="story-chapter quilt-chapter">
+      <div class="container">
+        <div class="chapter-header">
+          <span class="chapter-index-pill">03 • FINANCIAL FEASIBILITY</span>
+          <h2 class="chapter-title">Coverage Is a Patchwork Quilt.</h2>
+          <p class="chapter-subtitle">
+            Medicare pays for some visits, private insurers pay for others, and Medicaid varies by 50 state programs. Patients and clinicians do not navigate a smooth reimbursement system — they navigate a labyrinth stitched from competing interests.
+          </p>
+        </div>
+
+        <!-- The Living Digital Patchwork Quilt -->
+        <div class="patchwork-quilt-container">
+          <div class="quilt-frame">
+            <div class="quilt-seam-border"></div>
+
+            <div class="quilt-grid-mosaic">
+              
+              <!-- Patch A: Medicare -->
+              <div class="quilt-patch patch-medicare active" data-patch="medicare">
+                <div class="patch-stitch-edge"></div>
+                <div class="patch-texture-pattern"></div>
+                <div class="patch-content">
+                  <span class="patch-badge-tag">FEDERAL PAYER</span>
+                  <div class="patch-symbol">🏛️</div>
+                  <h4>MEDICARE</h4>
+                  <p>Title XVIII Statutory Restrictions</p>
+                  <span class="patch-stamp">Originating Site Rules</span>
+                </div>
+              </div>
+
+              <!-- Patch B: Medicaid -->
+              <div class="quilt-patch patch-medicaid" data-patch="medicaid">
+                <div class="patch-stitch-edge"></div>
+                <div class="patch-texture-pattern"></div>
+                <div class="patch-content">
+                  <span class="patch-badge-tag">STATE-BY-STATE</span>
+                  <div class="patch-symbol">🏥</div>
+                  <h4>MEDICAID</h4>
+                  <p>50 Fragmented Programs</p>
+                  <span class="patch-stamp">Varying Fee Schedules</span>
+                </div>
+              </div>
+
+              <!-- Patch C: Centerpiece Patch — THE PATIENT'S LABYRINTH MAZE -->
+              <div class="quilt-patch patch-labyrinth active-maze" data-patch="maze">
+                <div class="patch-stitch-edge"></div>
+                <div class="maze-patch-header">
+                  <span class="patch-badge-tag highlight-tag">THE LABYRINTH CENTERPIECE</span>
+                  <h4>🧭 The Reimbursement Maze</h4>
+                  <small>Can the patient navigate to an approved claim?</small>
+                </div>
+
+                <!-- Interactive SVG Labyrinth -->
+                <div class="labyrinth-stage">
+                  <svg id="reimbursement-maze-svg" viewBox="0 0 360 220" class="maze-svg">
+                    <!-- Maze Corridors Wall Patterns -->
+                    <g class="maze-walls" stroke="#315A62" stroke-width="4" stroke-linecap="round" fill="none">
+                      <!-- Outer Bounds -->
+                      <rect x="10" y="10" width="340" height="200" rx="10" stroke="#315A62" stroke-width="3" stroke-dasharray="6,4"/>
+                      <!-- Inner Labyrinth Channels -->
+                      <path d="M40,40 L120,40 L120,90 L70,90 L70,140 L130,140 L130,180" />
+                      <path d="M160,40 L230,40 L230,80 L180,80 L180,120 L240,120" />
+                      <path d="M270,40 L320,40 L320,130 L270,130 L270,180" />
+                      <path d="M40,180 L90,180 M160,160 L210,160 L210,190" />
+                    </g>
+
+                    <!-- Animated Maze Solved Route Path -->
+                    <path id="maze-solution-path" class="maze-trail trail-hidden" d="M30,30 L120,30 L120,90 L180,90 L180,40 L230,40 L230,80 L280,80 L280,130 L320,130 L320,180 L340,180" fill="none" stroke="#D4A359" stroke-width="5" stroke-linecap="round"/>
+
+                    <!-- Dead End Trap Markers -->
+                    <g class="maze-traps" id="maze-traps">
+                      <circle cx="130" cy="180" r="8" class="trap-dot" />
+                      <text x="130" y="184" text-anchor="middle" class="trap-label">✕</text>
+
+                      <circle cx="240" cy="120" r="8" class="trap-dot" />
+                      <text x="240" y="124" text-anchor="middle" class="trap-label">✕</text>
+                    </g>
+
+                    <!-- Patient Token Character in Maze -->
+                    <g id="maze-patient-token" transform="translate(30, 30)">
+                      <circle cx="0" cy="0" r="14" class="token-halo" />
+                      <circle cx="0" cy="0" r="9" class="token-body" />
+                      <text x="0" y="4" text-anchor="middle" class="token-char">👤</text>
+                    </g>
+
+                    <!-- Exit Approved Goal -->
+                    <g id="maze-goal-token" transform="translate(330, 180)">
+                      <circle cx="0" cy="0" r="14" class="goal-halo" />
+                      <text x="0" y="4" text-anchor="middle" class="goal-char">🏁</text>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="maze-quick-action">
+                  <span class="maze-hint-text">Test your coverage path below 👇</span>
+                </div>
+              </div>
+
+              <!-- Patch D: Commercial / Private Insurance -->
+              <div class="quilt-patch patch-commercial" data-patch="commercial">
+                <div class="patch-stitch-edge"></div>
+                <div class="patch-texture-pattern"></div>
+                <div class="patch-content">
+                  <span class="patch-badge-tag">PRIVATE SECTOR</span>
+                  <div class="patch-symbol">🏢</div>
+                  <h4>COMMERCIAL</h4>
+                  <p>Employer & Exchange Plans</p>
+                  <span class="patch-stamp">Payment Parity Battles</span>
+                </div>
+              </div>
+
+              <!-- Patch E: Direct-to-Consumer / Cash -->
+              <div class="quilt-patch patch-cash" data-patch="cash">
+                <div class="patch-stitch-edge"></div>
+                <div class="patch-texture-pattern"></div>
+                <div class="patch-content">
+                  <span class="patch-badge-tag">OUT-OF-POCKET</span>
+                  <div class="patch-symbol">💳</div>
+                  <h4>DIRECT CASH</h4>
+                  <p>Bypassing Insurance Mazes</p>
+                  <span class="patch-stamp">Subscription Health</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Dynamic Lifted Patch Policy Inspection Tray -->
+          <div class="lifted-patch-detail-card" id="patch-detail-tray">
+            <div class="detail-tray-header">
+              <div class="tray-title-group">
+                <span class="tray-icon" id="tray-icon">🏛️</span>
+                <div>
+                  <h3 id="tray-title">Medicare Title XVIII: Pre-COVID Restrictions & Waivers</h3>
+                  <small id="tray-category" class="text-muted">Federal Statutory Reimbursement Rules</small>
+                </div>
+              </div>
+              <span class="tray-badge" id="tray-status-badge">CONGRESSIONAL MANDATE</span>
+            </div>
+
+            <div class="tray-narrative" id="tray-narrative">
+              <p>
+                Prior to 2020, Section 1861(m) of the Social Security Act strictly barred Medicare reimbursement unless two harsh criteria were met: 
+                <strong>(1)</strong> The patient had to live in an officially designated rural Health Professional Shortage Area (HPSA), and 
+                <strong>(2)</strong> The patient had to travel to an approved clinical "originating site" (such as a rural clinic or hospital). Sitting on one's own living room couch was completely non-reimbursable.
+              </p>
+            </div>
+
+            <!-- Interactive Maze Scenario Simulator -->
+            <div class="maze-interactive-controls" id="maze-simulator-box">
+              <div class="sim-header">
+                <h4>🧭 Run the Reimbursement Maze Simulator</h4>
+                <p>Configure the patient's scenario to see if the visit gets reimbursed or rejected:</p>
+              </div>
+
+              <div class="sim-selectors-grid">
+                <div class="sim-select-unit">
+                  <label for="maze-input-payer">1. Primary Insurance Payer:</label>
+                  <select id="maze-input-payer" class="editorial-select">
+                    <option value="medicare">Medicare Fee-For-Service</option>
+                    <option value="medicaid">Medicaid (State Plan)</option>
+                    <option value="commercial" selected>Commercial (Aetna / BCBS)</option>
+                    <option value="self_pay">Direct Cash (No Insurance)</option>
+                  </select>
+                </div>
+
+                <div class="sim-select-unit">
+                  <label for="maze-input-location">2. Patient's Originating Site:</label>
+                  <select id="maze-input-location" class="editorial-select">
+                    <option value="home" selected>Patient's Living Room (Home)</option>
+                    <option value="rural_clinic">Approved Rural Shortage Clinic</option>
+                  </select>
+                </div>
+
+                <div class="sim-select-unit">
+                  <label for="maze-input-modality">3. Telehealth Modality:</label>
+                  <select id="maze-input-modality" class="editorial-select">
+                    <option value="video" selected>2-Way Synchronous Video + Audio</option>
+                    <option value="audio_only">Telephone Audio-Only (No Video)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="sim-button-row">
+                <button id="solve-maze-btn" class="btn btn-editorial-primary">
+                  🧭 Navigate Maze & Calculate Claim
+                </button>
+              </div>
+
+              <!-- Dynamic Maze Result Card -->
+              <div id="maze-simulation-result" class="maze-result-panel result-success">
+                <div class="result-icon-badge" id="maze-res-icon">✓</div>
+                <div class="result-text-content">
+                  <h4 id="maze-res-headline">REIMBURSEMENT PATH FOUND: Covered Under Telehealth Parity</h4>
+                  <p id="maze-res-narrative">
+                    Under commercial insurance in states with telehealth coverage parity mandates, synchronous 2-way video encounters conducted from the patient's home are reimbursable at parity with in-person evaluations.
+                  </p>
+                  <div class="maze-audit-tag" id="maze-res-audit">
+                    <strong>Payout Status:</strong> 85%–100% In-Person Physician Fee Schedule Equivalent
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Curved Flowing Wave Divider 4 -->
+    <div class="curved-separator" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="separator-svg">
+        <path d="M0,45 C300,15 560,85 720,45 C880,5 1140,80 1440,45 L1440,90 L0,90 Z" fill="#FFF8E8"/>
+        <path d="M0,45 C300,15 560,85 720,45 C880,5 1140,80 1440,45" fill="none" stroke="#315A62" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div class="separator-icon-badge">✨ CHAPTER 04</div>
+    </div>
+
+    <!-- =========================================================================
+         04. THE FINALE — THE THREE WORLDS CONNECT
+             "ONE TELEMEDICINE CONSULTATION"
+         ========================================================================= -->
+    <section id="finale" class="story-chapter finale-chapter">
+      <div class="container finale-container">
+        
+        <div class="finale-header">
+          <span class="chapter-index-pill finale-pill">THE CONVERGENCE</span>
+          <h2 class="finale-title">Can Digital Health Cross Every Boundary?</h2>
+          <p class="finale-lead">
+            When a patient sits before a laptop, the encounter does not depend on internet speed. 
+            It depends on whether all three legal engines align simultaneously:
+          </p>
+        </div>
+
+        <!-- The 3 Pillars Converging into One Screen Console -->
+        <div class="convergence-console">
+          
+          <div class="triad-nodes-row">
+            <!-- Node 1: Licensing -->
+            <div class="triad-node node-licensing">
+              <div class="node-badge-icon">🗺️</div>
+              <h4>01. LICENSING</h4>
+              <p>50 State Rulebooks</p>
+              <div class="node-live-status status-check" id="final-licensing-status">
+                <span class="icon">✓</span> In-State / Compact
+              </div>
+            </div>
+
+            <!-- Merging Bridge Vector -->
+            <div class="node-merge-connector">
+              <svg viewBox="0 0 80 40" class="connector-svg">
+                <path d="M0,20 L80,20" stroke="#315A62" stroke-width="3" stroke-dasharray="4,4"/>
+              </svg>
+            </div>
+
+            <!-- Node 2: Prescribing -->
+            <div class="triad-node node-prescribing">
+              <div class="node-badge-icon">🔒</div>
+              <h4>02. PRESCRIBING</h4>
+              <p>Ryan Haight & Drug Laws</p>
+              <div class="node-live-status status-check" id="final-prescribing-status">
+                <span class="icon">✓</span> Non-Controlled Approved
+              </div>
+            </div>
+
+            <!-- Merging Bridge Vector -->
+            <div class="node-merge-connector">
+              <svg viewBox="0 0 80 40" class="connector-svg">
+                <path d="M0,20 L80,20" stroke="#315A62" stroke-width="3" stroke-dasharray="4,4"/>
+              </svg>
+            </div>
+
+            <!-- Node 3: Reimbursement -->
+            <div class="triad-node node-reimbursement">
+              <div class="node-badge-icon">🧩</div>
+              <h4>03. REIMBURSEMENT</h4>
+              <p>Payer Patchwork Quilt</p>
+              <div class="node-live-status status-pending" id="final-reimbursement-status">
+                <span class="icon">?</span> Prior Auth Required
+              </div>
+            </div>
+          </div>
+
+          <!-- The Final Unified Consultation Verdict Display -->
+          <div class="unified-consultation-display">
+            <div class="unified-inner-screen">
+              <div class="screen-vital-bar">
+                <span>VIRTUAL EXAM ROOM #084</span>
+                <span>STATE: NY ➔ CA</span>
+                <span>STATUS: CONDITIONAL COMPLIANCE</span>
+              </div>
+
+              <div class="unified-center-message">
+                <h3>The Final Verdict on Telehealth:</h3>
+                <blockquote class="finale-epigram">
+                  “Technology removed the distance. <br>
+                  Regulation decides what happens next.”
+                </blockquote>
+                <p class="epigram-sub">
+                  Until federal and state lawmakers harmonize cross-border reciprocity, establish a permanent telemedicine DEA registration, and institute permanent Medicare payment parity, the promise of borderless digital medicine remains bounded by the law.
+                </p>
+              </div>
+
+              <!-- Interactive Live Visit Checker -->
+              <div class="final-visit-toggle-row">
+                <button id="toggle-compliant-demo-btn" class="btn btn-editorial-outline">
+                  🔄 Switch Scenario: Ideal Visit vs. Roadblock Cascade
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         05. HOW THIS WAS CODED MANUALLY (EDITORIAL CODE ANATOMY)
+         ========================================================================= -->
+    <section id="code-anatomy" class="story-chapter code-anatomy-chapter">
+      <div class="container">
+        <div class="chapter-header">
+          <span class="chapter-index-pill">EDITORIAL CODE HANDBOOK</span>
+          <h2 class="chapter-title">The Anatomy of an Editorial Infographic</h2>
+          <p class="chapter-subtitle">
+            How do you hand-craft an editorial medical storybook without bulky frameworks? Here is the exact architectural blueprint across HTML, CSS, SVG, and JavaScript:
+          </p>
+        </div>
+
+        <div class="code-cards-trio">
+          <!-- Card 1: HTML & SVG Skeleton -->
+          <div class="editorial-code-card">
+            <div class="code-card-badge html-badge">1. HTML & INLINE SVG</div>
+            <h4>The Illustrated Skeleton</h4>
+            <p>
+              Instead of static raster images that pixelate, every medical illustration (the consultation room, the US map, the stethoscope, the prescription clipboard, the patchwork seams, the maze) is defined as pure vector <code>&lt;svg&gt;</code> elements directly in the markup.
+            </p>
+            <pre class="editorial-code-snippet"><code>&lt;!-- Scalable Hand-Drawn Divider --&gt;
+&lt;svg viewBox="0 0 1440 90" preserveAspectRatio="none"&gt;
+  &lt;path d="M0,45 C280,90 480,10 720,50..." 
+        fill="#FFF8E8" stroke="#9DBB91" stroke-width="4"/&gt;
+&lt;/svg&gt;</code></pre>
+            <span class="code-benefit">✓ Infinite scalability • Zero download bloat • Crisp on Retina screens</span>
+          </div>
+
+          <!-- Card 2: CSS Textile & Paper Styling -->
+          <div class="editorial-code-card">
+            <div class="code-card-badge css-badge">2. CSS PARCHMENT & TEXTILES</div>
+            <h4>Paper & Stitched Seams</h4>
+            <p>
+              To eliminate cold cyber-dashboards, we use warm editorial color variables, custom paper drop shadows, and <code>stroke-dasharray</code> sewing stitches to make the insurance quilt feel hand-crafted.
+            </p>
+            <pre class="editorial-code-snippet"><code>:root {
+  --bg-parchment: #F7F1DF;
+  --teal-deep:    #315A62;
+  --green-soft:   #9DBB91;
+  --warning-coral:#C96B68;
+}
+/* Stitched Quilt Seam */
+.patch-stitch-edge {
+  border: 2px dashed #8C7853;
+}</code></pre>
+            <span class="code-benefit">✓ Authentic editorial warmth • Tactile textures • CSS 3D depth</span>
+          </div>
+
+          <!-- Card 3: JavaScript State Machine -->
+          <div class="editorial-code-card">
+            <div class="code-card-badge js-badge">3. JAVASCRIPT STATE ENGINE</div>
+            <h4>Living Storybook Reactivity</h4>
+            <p>
+              Clean vanilla JavaScript drives the storytelling: calculating interstate compact reciprocity, toggling the mechanical Ryan Haight lock, solving the patient maze, and coordinating the final convergence console.
+            </p>
+            <pre class="editorial-code-snippet"><code>// Dynamic Padlock & Statute Reactivity
+slider.addEventListener('change', (e) => {
+  const isControlled = e.target.value === 'controlled';
+  padlock.classList.toggle('locked', isControlled);
+  warningBox.style.display = isControlled ? 'block' : 'none';
+});</code></pre>
+            <span class="code-benefit">✓ Pure Vanilla JS • No npm overhead • Immediate instant interactivity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       EDITORIAL FOOTER
+       ========================================================================= -->
+  <footer class="editorial-footer">
+    <div class="container footer-layout">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <span>🩺</span>
+          <strong>TELEMEDICINE: THE RULES BEHIND THE SCREEN</strong>
+        </div>
+        <p class="footer-cite">
+          An interactive editorial exploration of digital health law, constitutional federalism, and reimbursement policy.
+        </p>
+      </div>
+
+      <div class="footer-legal-col">
+        <h5>Statutory References</h5>
+        <ul>
+          <li>Interstate Medical Licensure Compact (IMLC)</li>
+          <li>Ryan Haight Act of 2008 (21 U.S.C. § 829)</li>
+          <li>Social Security Act § 1861(m) (Medicare Telehealth)</li>
+          <li>DEA Proposed Telehealth Special Registration Rule</li>
+        </ul>
+      </div>
+
+      <div class="footer-action-col">
+        <button id="footer-top-btn" class="btn btn-editorial-outline">
+          ↑ Return to Top
+        </button>
+        <p class="footer-fineprint">Handcrafted with HTML5, CSS3 & Vanilla JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL: ORIGINAL INFOGRAPHIC LIGHTBOX
+       ========================================================================= -->
+  <div id="infographic-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3>Original Infographic Artwork</h3>
+          <small class="text-muted">“Telemedicine: Goverment Policy and Regulations”</small>
+        </div>
+        <button id="close-modal-btn" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-infographic-img" src="C:/Users/Thavinesh/.gemini/antigravity/brain/e1052301-2450-4e66-b7dd-8c2eba68860b/.user_uploaded/media_1788867768709.png" alt="Telemedicine: Government Policy and Regulations Original Infographic">
+      </div>
+      <div class="modal-footer">
+        <p>Notice the three hand-drawn metaphors: <strong>(1) US Map</strong> with NY/CA barrier, <strong>(2) The Glass Screen & Locked Rx</strong>, and <strong>(3) Patchwork Quilt & Centerpiece Maze</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
