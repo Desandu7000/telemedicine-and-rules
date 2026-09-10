@@ -1,648 +1,565 @@
 /**
  * ==============================================================================
- * TELEMEDICINE: THE RULES BEHIND THE SCREEN
- * Living Medical Editorial Infographic & Storybook Engine
+ * TELEMEDICINE: GOVERNMENT RULES AND REGULATIONS
+ * University SCI1125D Academic Editorial Engine
  * ==============================================================================
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initLiveClock();
-  initRoomZoom();
-  initLicensingMapSimulator();
+  initGateProgressTracker();
+  initLicensingSimulator();
   initPrescribingEngine();
-  initPatchworkQuiltEngine();
-  initMazeCalculatorEngine();
-  initConvergenceEngine();
-  initModalLightbox();
-  initSmoothNav();
+  initQuiltAndMazeEngine();
+  initConvergenceAudit();
+  initInfographicLightbox();
+  initSmoothNavigation();
 });
 
 /* ==============================================================================
-   00. ROOM LIVE CLOCK & SMOOTH CAMERA ZOOM
+   00. REGULATORY GATES PROGRESS TRACKER & NAV HIGHLIGHTER
    ============================================================================== */
-function initLiveClock() {
-  const clockEl = document.getElementById('screen-live-clock');
-  if (!clockEl) return;
+function initGateProgressTracker() {
+  const gate1 = document.getElementById('gate-indicator-1');
+  const gate2 = document.getElementById('gate-indicator-2');
+  const gate3 = document.getElementById('gate-indicator-3');
+  const navLinks = document.querySelectorAll('.academic-nav .nav-btn');
 
-  function updateClock() {
-    const now = new Date();
-    const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-    clockEl.textContent = `${timeStr} EST`;
-  }
-  updateClock();
-  setInterval(updateClock, 1000);
-}
+  const sections = [
+    { id: 'home', gate: 0 },
+    { id: 'licensing', gate: 1 },
+    { id: 'prescribing', gate: 2 },
+    { id: 'reimbursement', gate: 3 },
+    { id: 'convergence', gate: 3 },
+    { id: 'about', gate: 3 },
+    { id: 'infographic', gate: 3 },
+    { id: 'references', gate: 3 }
+  ];
 
-function initRoomZoom() {
-  const zoomBtn = document.getElementById('zoom-into-screen-btn');
-  const laptopStage = document.getElementById('laptop-stage');
-  const licensingChapter = document.getElementById('licensing');
-
-  if (!zoomBtn || !laptopStage || !licensingChapter) return;
-
-  zoomBtn.addEventListener('click', () => {
-    // Apply camera zoom transform to laptop
-    laptopStage.classList.add('zoomed-in');
-    
-    // Smoothly glide into Chapter 01
-    setTimeout(() => {
-      licensingChapter.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => {
-        laptopStage.classList.remove('zoomed-in');
-      }, 1000);
-    }, 450);
-  });
-}
-
-function initSmoothNav() {
-  const navLinks = document.querySelectorAll('.editorial-nav .nav-item');
-  const topBtn = document.getElementById('footer-top-btn');
-
-  if (topBtn) {
-    topBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // Highlight active nav item on scroll
   window.addEventListener('scroll', () => {
-    const chapters = document.querySelectorAll('.story-chapter');
-    let currentId = '';
-    
-    chapters.forEach(chapter => {
-      const rect = chapter.getBoundingClientRect();
-      if (rect.top <= 200 && rect.bottom >= 200) {
-        currentId = chapter.getAttribute('id');
+    const scrollPos = window.scrollY + 220;
+
+    let currentSection = 'home';
+    sections.forEach(sec => {
+      const el = document.getElementById(sec.id);
+      if (el && el.offsetTop <= scrollPos) {
+        currentSection = sec.id;
       }
     });
 
-    if (currentId) {
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentId}`) {
-          link.classList.add('active');
-        }
-      });
+    // Update active nav button
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentSection}`) {
+        link.classList.add('active');
+      }
+    });
+
+    // Update Gate Tracker
+    if (gate1 && gate2 && gate3) {
+      gate1.classList.remove('active');
+      gate2.classList.remove('active');
+      gate3.classList.remove('active');
+
+      if (currentSection === 'licensing') {
+        gate1.classList.add('active');
+      } else if (currentSection === 'prescribing') {
+        gate1.classList.add('active');
+        gate2.classList.add('active');
+      } else if (currentSection === 'reimbursement' || currentSection === 'convergence') {
+        gate1.classList.add('active');
+        gate2.classList.add('active');
+        gate3.classList.add('active');
+      }
     }
   });
 }
 
+function initSmoothNavigation() {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}
+
 
 /* ==============================================================================
-   01. CHAPTER 01: US MAP & CROSS-BORDER REGULATORY ROADBLOCK
+   ASPECT 1: LICENSING SIMULATOR (US MAP & BOUNDARY PAUSE)
    ============================================================================== */
-function initLicensingMapSimulator() {
-  // Selectors & UI Elements
-  const docSelect = document.getElementById('doctor-state-select');
-  const patSelect = document.getElementById('patient-state-select');
-  const testBtn = document.getElementById('test-route-btn');
-  const statusPill = document.getElementById('map-status-pill');
-  
-  const docPin = document.getElementById('doctor-pin-group');
-  const patPin = document.getElementById('patient-pin-group');
-  const routePath = document.getElementById('interstate-route-path');
-  const travellingPulse = document.getElementById('route-travelling-pulse');
-  const wallGroup = document.getElementById('regulatory-wall-group');
+function initLicensingSimulator() {
+  const docSelect = document.getElementById('doctor-loc-select');
+  const patSelect = document.getElementById('patient-loc-select');
+  const sendBtn = document.getElementById('send-consultation-btn');
 
-  const verdictCard = document.getElementById('licensing-verdict-card');
+  const docMarker = document.getElementById('map-doc-marker');
+  const patMarker = document.getElementById('map-pat-marker');
+  const signalArc = document.getElementById('signal-flight-arc');
+  const boundaryBarrier = document.getElementById('regulatory-boundary-barrier');
+
+  const verdictCard = document.getElementById('licensing-verdict-display');
   const verdictIcon = document.getElementById('verdict-icon');
-  const verdictHeadline = document.getElementById('verdict-headline');
-  const verdictNarrative = document.getElementById('verdict-narrative');
+  const verdictTitle = document.getElementById('verdict-title');
+  const verdictExpl = document.getElementById('verdict-explanation');
 
-  if (!docSelect || !patSelect || !routePath) return;
+  if (!docSelect || !patSelect || !signalArc) return;
 
-  // Geographic SVG Coordinates for Key States
-  const stateCoordinates = {
+  // Geographic SVG pin coordinates for key US jurisdictions
+  const stateData = {
     NY: { x: 765, y: 135, name: 'New York', compact: false },
     CA: { x: 135, y: 250, name: 'California', compact: false },
     WA: { x: 155, y: 95,  name: 'Washington', compact: true },
     AZ: { x: 215, y: 320, name: 'Arizona', compact: true },
-    TX: { x: 415, y: 390, name: 'Texas', compact: false, independent: true },
     IL: { x: 535, y: 215, name: 'Illinois', compact: true },
     OH: { x: 620, y: 205, name: 'Ohio', compact: true },
+    TX: { x: 415, y: 390, name: 'Texas', compact: false },
     FL: { x: 735, y: 440, name: 'Florida', compact: false, registry: true }
   };
 
-  // IMLC Compact State List
-  const imlcCompactStates = ['WA', 'AZ', 'IL', 'OH'];
+  const imlcCompactList = ['WA', 'AZ', 'IL', 'OH'];
 
-  function updateMapAndEvaluate() {
+  function evaluateLicensingSimulation(isTriggeredByButton = false) {
     const docCode = docSelect.value;
     const patCode = patSelect.value;
 
-    const docCoords = stateCoordinates[docCode] || stateCoordinates.NY;
-    const patCoords = stateCoordinates[patCode] || stateCoordinates.CA;
+    const docCoords = stateData[docCode] || stateData.NY;
+    const patCoords = stateData[patCode] || stateData.CA;
 
-    statusPill.textContent = `ROUTE: ${docCode} ➔ ${patCode}`;
-
-    // 1. Move the Doctor and Patient SVG Pins
-    if (docPin) {
-      docPin.setAttribute('transform', `translate(${docCoords.x}, ${docCoords.y})`);
-      const docTitle = docPin.querySelector('.pin-title');
-      if (docTitle) docTitle.textContent = `DR. ALEX (${docCode})`;
+    // 1. Move SVG Doctor & Patient Pins
+    if (docMarker) {
+      docMarker.setAttribute('transform', `translate(${docCoords.x}, ${docCoords.y})`);
+      const docTag = docMarker.querySelector('.marker-tag');
+      if (docTag) docTag.textContent = `DOCTOR: ${docCoords.name.toUpperCase()}`;
     }
-    if (patPin) {
-      patPin.setAttribute('transform', `translate(${patCoords.x}, ${patCoords.y})`);
-      const patTitle = patPin.querySelector('.pin-title');
-      if (patTitle) patTitle.textContent = `PATIENT (${patCode})`;
+    if (patMarker) {
+      patMarker.setAttribute('transform', `translate(${patCoords.x}, ${patCoords.y})`);
+      const patTag = patMarker.querySelector('.marker-tag');
+      if (patTag) patTag.textContent = `PATIENT: ${patCoords.name.toUpperCase()}`;
     }
 
-    // 2. Highlight Map States
-    document.querySelectorAll('.map-state').forEach(el => {
-      el.classList.remove('active-origin', 'active-target');
+    // 2. Highlight SVG State Polygons
+    document.querySelectorAll('.map-poly').forEach(poly => {
+      poly.classList.remove('active-doctor-state', 'active-patient-state');
     });
-    const docStatePath = document.getElementById(`state-path-${docCode}`);
-    const patStatePath = document.getElementById(`state-path-${patCode}`);
-    if (docStatePath) docStatePath.classList.add('active-origin');
-    if (patStatePath) patStatePath.classList.add('active-target');
+    const docPoly = document.getElementById(`poly-${docCode}`);
+    const patPoly = document.getElementById(`poly-${patCode}`);
+    if (docPoly) docPoly.classList.add('active-doctor-state');
+    if (patPoly) patPoly.classList.add('active-patient-state');
 
-    // 3. Compute the Curved Route Flight Path
+    // 3. Compute Curved Flight Signal
     const midX = (docCoords.x + patCoords.x) / 2;
-    const midY = (docCoords.y + patCoords.y) / 2 - 50; // Arch upward
-    const pathD = `M${docCoords.x},${docCoords.y} Q${midX},${midY} ${patCoords.x},${patCoords.y}`;
-    routePath.setAttribute('d', pathD);
+    const midY = (docCoords.y + patCoords.y) / 2 - 45;
+    const pathString = `M${docCoords.x},${docCoords.y} Q${midX},${midY} ${patCoords.x},${patCoords.y}`;
+    signalArc.setAttribute('d', pathString);
 
-    // Position the Wall at the apex
-    if (wallGroup) {
-      wallGroup.setAttribute('transform', `translate(${midX}, ${midY + 15})`);
+    // Position Regulatory Barrier along midpoint
+    if (boundaryBarrier) {
+      boundaryBarrier.setAttribute('transform', `translate(${midX}, ${midY + 15})`);
     }
 
-    // Animate travelling pulse
-    if (travellingPulse) {
-      travellingPulse.setAttribute('cx', docCoords.x);
-      travellingPulse.setAttribute('cy', docCoords.y);
-      setTimeout(() => {
-        travellingPulse.setAttribute('cx', midX);
-        travellingPulse.setAttribute('cy', midY);
-      }, 250);
-    }
+    // Reset verdict styling
+    verdictCard.className = 'verdict-banner-academic';
 
-    // 4. Evaluate Regulatory Status
-    verdictCard.className = 'verdict-banner';
-    routePath.className.baseVal = 'route-flight-path';
-
-    // CASE A: Same State Practice
+    // SCENARIO A: Same Jurisdiction (In-State Practice)
     if (docCode === patCode) {
-      verdictCard.classList.add('verdict-allowed');
-      routePath.classList.add('route-allowed');
-      if (wallGroup) wallGroup.style.display = 'none';
+      verdictCard.classList.add('verdict-authorized');
+      if (boundaryBarrier) boundaryBarrier.style.display = 'none';
+      signalArc.style.stroke = 'var(--green-deep)';
 
       verdictIcon.textContent = '✅';
-      verdictHeadline.textContent = `AUTHORIZED: Direct In-State Telehealth (${docCode})`;
-      verdictNarrative.innerHTML = `
-        Both physician and patient are physically situated within <strong>${docCoords.name}</strong>. 
-        Because medical licensure jurisdiction is fully concurrent, Dr. Alex Sterling holds complete authority to examine and diagnose the patient without triggering cross-border regulatory barriers.
+      verdictTitle.textContent = `Jurisdiction Match: Authorized In-State Practice (${docCoords.name})`;
+      verdictExpl.innerHTML = `
+        Both physician and patient are physically located in <strong>${docCoords.name}</strong>. 
+        Because the encounter occurs within a single jurisdiction, Dr. Sterling’s license fulfills standard medical board requirements without triggering interstate boundary complications.
       `;
-      updateFinaleLicensing(true, `${docCode} In-State Authorized`);
+      updateConvergenceGate('licensing', true, `${docCode} In-State Authorized`);
     }
-    // CASE B: Interstate Medical Licensure Compact (IMLC)
-    else if (imlcCompactStates.includes(docCode) && imlcCompactStates.includes(patCode)) {
-      verdictCard.classList.add('verdict-compact');
-      routePath.classList.add('route-compact');
-      if (wallGroup) {
-        wallGroup.style.display = 'block';
-        const wallText = wallGroup.querySelector('.wall-alert-text');
-        const wallBox = wallGroup.querySelector('.wall-box');
-        if (wallText) wallText.textContent = 'IMLC GATE';
-        if (wallBox) wallBox.style.fill = '#D4A359';
+    // SCENARIO B: Interstate Compact (IMLC) Pathway
+    else if (imlcCompactList.includes(docCode) && imlcCompactList.includes(patCode)) {
+      verdictCard.classList.add('verdict-compact-pathway');
+      if (boundaryBarrier) {
+        boundaryBarrier.style.display = 'block';
+        const box = boundaryBarrier.querySelector('.boundary-box');
+        const txt = boundaryBarrier.querySelector('.boundary-text');
+        if (box) box.style.fill = 'var(--gold-amber)';
+        if (txt) txt.textContent = 'IMLC COMPACT PATHWAY';
       }
+      signalArc.style.stroke = 'var(--gold-amber)';
 
       verdictIcon.textContent = '⚡';
-      verdictHeadline.textContent = `IMLC EXPEDITED RECIPROCITY (${docCode} ↔ ${patCode})`;
-      verdictNarrative.innerHTML = `
-        Both ${docCoords.name} and ${patCoords.name} are active members of the <strong>Interstate Medical Licensure Compact (IMLC)</strong>. 
-        While Dr. Alex cannot practice automatically without paperwork, he can obtain an expedited multi-state license through his State of Principal License (SPL). Full compliance requires paying separate annual renewal fees to both boards.
+      verdictTitle.textContent = `Expedited Interstate Reciprocity: IMLC Member States (${docCoords.name} ↔ ${patCoords.name})`;
+      verdictExpl.innerHTML = `
+        Both ${docCoords.name} and ${patCoords.name} participate in the <strong>Interstate Medical Licensure Compact (IMLC)</strong>. 
+        While this does not constitute a single national license, it provides an expedited administrative process for qualified physicians to obtain dual licensure across member jurisdictions.
       `;
-      updateFinaleLicensing(true, `IMLC Expedited (${docCode} ↔ ${patCode})`);
+      updateConvergenceGate('licensing', true, `IMLC (${docCode} ↔ ${patCode})`);
     }
-    // CASE C: Florida Out-of-State Telehealth Registry
+    // SCENARIO C: Florida Telehealth Registry Model
     else if (patCode === 'FL') {
-      verdictCard.classList.add('verdict-compact');
-      routePath.classList.add('route-compact');
-      if (wallGroup) {
-        wallGroup.style.display = 'block';
-        const wallText = wallGroup.querySelector('.wall-alert-text');
-        if (wallText) wallText.textContent = 'FL REGISTRY';
+      verdictCard.classList.add('verdict-compact-pathway');
+      if (boundaryBarrier) {
+        boundaryBarrier.style.display = 'block';
+        const txt = boundaryBarrier.querySelector('.boundary-text');
+        if (txt) txt.textContent = 'FL TELEHEALTH REGISTRY';
       }
+      signalArc.style.stroke = 'var(--gold-amber)';
 
       verdictIcon.textContent = '📋';
-      verdictHeadline.textContent = `FLORIDA TELEHEALTH REGISTRY PATHWAY (${docCode} ➔ FL)`;
-      verdictNarrative.innerHTML = `
-        Florida law allows out-of-state healthcare providers to treat Florida residents without a full Florida medical license, <em>provided</em> the physician registers under Florida Section 456.47 and does not open a physical clinic in the state.
+      verdictTitle.textContent = `Out-of-State Telehealth Registry Pathway (${docCoords.name} ➔ Florida)`;
+      verdictExpl.innerHTML = `
+        Under Florida Section 456.47, out-of-state healthcare practitioners can register with the Florida Department of Health to provide telemedicine to Florida residents without holding a full Florida license, provided they meet statutory criteria and do not open a physical office.
       `;
-      updateFinaleLicensing(true, 'FL Registry Authorized');
+      updateConvergenceGate('licensing', true, 'FL Registry Authorized');
     }
-    // CASE D: Cross-Border Blockade (e.g., NY to CA)
+    // SCENARIO D: Cross-Border Regulatory Barrier (e.g., NY to CA)
     else {
-      verdictCard.classList.add('verdict-blocked');
-      routePath.classList.add('route-blocked');
-      if (wallGroup) {
-        wallGroup.style.display = 'block';
-        const wallText = wallGroup.querySelector('.wall-alert-text');
-        const wallBox = wallGroup.querySelector('.wall-box');
-        if (wallText) wallText.textContent = 'BLOCKED';
-        if (wallBox) wallBox.style.fill = '#C96B68';
+      verdictCard.classList.add('verdict-friction');
+      if (boundaryBarrier) {
+        boundaryBarrier.style.display = 'block';
+        const box = boundaryBarrier.querySelector('.boundary-box');
+        const txt = boundaryBarrier.querySelector('.boundary-text');
+        if (box) box.style.fill = 'var(--coral-warning)';
+        if (txt) txt.textContent = 'REGULATORY BOUNDARY';
       }
+      signalArc.style.stroke = 'var(--coral-warning)';
 
-      verdictIcon.textContent = '🚫';
-      verdictHeadline.textContent = `CRITICAL ROADBLOCK: Unlicensed Cross-Border Practice (${docCode} ➔ ${patCode})`;
-      verdictNarrative.innerHTML = `
-        Dr. Alex holds an active license in <strong>${docCoords.name}</strong>. However, because the patient is physically situated in <strong>${patCoords.name}</strong>, state police power dictates that the clinical encounter legally takes place in ${patCoords.name}. 
-        Without an independent ${patCoords.name} Medical Board license, treating this patient is classified as unauthorized practice of medicine.
+      verdictIcon.textContent = '⚠️';
+      verdictTitle.textContent = `Jurisdiction Boundary Friction: ${docCoords.name} to ${patCoords.name}`;
+      verdictExpl.innerHTML = `
+        Telemedicine can create licensing challenges because requirements differ between jurisdictions. 
+        Because the patient is physically located in <strong>${patCoords.name}</strong>, local health regulations stipulate that the clinical encounter occurs within ${patCoords.name}. 
+        Without active licensure from the ${patCoords.name} Medical Board, practicing across this state line is restricted under current jurisdictional frameworks.
       `;
-      updateFinaleLicensing(false, `Blocked (${docCode} ✕ ${patCode})`);
+      updateConvergenceGate('licensing', false, `Boundary (${docCode} ✕ ${patCode})`);
     }
   }
 
-  // Interactive Click directly on SVG Map States
-  document.querySelectorAll('.map-state').forEach(stateEl => {
-    stateEl.addEventListener('click', () => {
-      const clickedState = stateEl.getAttribute('data-state');
-      // Alternate setting patient state
-      patSelect.value = clickedState;
-      updateMapAndEvaluate();
+  // Interactive Click on Map State Polygons
+  document.querySelectorAll('.map-poly').forEach(poly => {
+    poly.addEventListener('click', () => {
+      const code = poly.getAttribute('data-code');
+      patSelect.value = code;
+      evaluateLicensingSimulation();
     });
   });
 
-  // Event Listeners for Dropdowns & Button
-  docSelect.addEventListener('change', updateMapAndEvaluate);
-  patSelect.addEventListener('change', updateMapAndEvaluate);
-  testBtn.addEventListener('click', () => {
-    updateMapAndEvaluate();
-    testBtn.textContent = '⚡ Transmitted!';
-    setTimeout(() => { testBtn.textContent = '⚡ Transmit Consultation Signal'; }, 1200);
-  });
+  // Dropdown Listeners
+  docSelect.addEventListener('change', () => evaluateLicensingSimulation());
+  patSelect.addEventListener('change', () => evaluateLicensingSimulation());
 
-  // Initial Evaluation
-  updateMapAndEvaluate();
+  if (sendBtn) {
+    sendBtn.addEventListener('click', () => {
+      evaluateLicensingSimulation(true);
+      sendBtn.textContent = '✓ Signal Evaluated';
+      setTimeout(() => { sendBtn.textContent = '📡 Send Consultation Signal'; }, 1200);
+    });
+  }
+
+  // Initial Run
+  evaluateLicensingSimulation();
 }
 
 
 /* ==============================================================================
-   02. CHAPTER 02: THE SCREEN ISN'T THE EXAM & PADLOCK ENGINE
+   ASPECT 2: PRESCRIBING ENGINE (STANDARD VS CONTROLLED SUBSTANCES)
    ============================================================================== */
 function initPrescribingEngine() {
-  const btnControlled = document.getElementById('btn-choice-controlled');
-  const btnStandard = document.getElementById('btn-choice-standard');
-  const padlockAssembly = document.getElementById('padlock-assembly');
-  const padlockText = document.getElementById('padlock-text');
-  const padlockSeal = document.getElementById('padlock-seal');
-  const medDisplayIcon = document.getElementById('med-display-icon');
-  const medNameDisplay = document.getElementById('med-name-display');
-  const medClassDisplay = document.getElementById('med-class-display');
-  const haightWarningBlock = document.getElementById('haight-warning-block');
-  const dateStamp = document.getElementById('rx-date-stamp');
-  const glassPane = document.getElementById('frosted-glass-pane');
-  const handElement = document.getElementById('doctor-reaching-hand');
+  const btnStandard = document.getElementById('btn-path-standard');
+  const btnControlled = document.getElementById('btn-path-controlled');
 
-  if (dateStamp) {
-    dateStamp.textContent = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  }
+  const padlockContainer = document.getElementById('rx-padlock-container');
+  const padlockIcon = document.getElementById('rx-padlock-icon');
+  const padlockHeadline = document.getElementById('padlock-headline');
+  const padlockSub = document.getElementById('padlock-sub');
 
-  if (!btnControlled || !btnStandard || !padlockAssembly) return;
+  const displayMedClass = document.getElementById('display-med-class');
+  const displayStatuteStatus = document.getElementById('display-statute-status');
+  const considerationNote = document.getElementById('rx-regulatory-consideration');
+  const rxStamp = document.getElementById('rx-stamp');
 
-  // Tactile Glass Hover & Cursor Parallax
-  if (glassPane && handElement) {
-    glassPane.addEventListener('mousemove', (e) => {
-      const rect = glassPane.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      handElement.style.transform = `translate(${x * 16}px, ${y * 12}px)`;
-    });
+  if (!btnStandard || !btnControlled || !padlockContainer) return;
 
-    glassPane.addEventListener('mouseleave', () => {
-      handElement.style.transform = `translate(0px, 0px)`;
-    });
-  }
+  btnStandard.addEventListener('click', () => {
+    btnStandard.classList.add('active');
+    btnControlled.classList.remove('active');
 
-  function setPrescribeMode(mode) {
-    if (mode === 'controlled') {
-      btnControlled.classList.add('active');
-      btnStandard.classList.remove('active');
+    // Unlock visual
+    padlockContainer.classList.remove('locked-state');
+    padlockIcon.textContent = '🔓';
+    padlockHeadline.textContent = 'STANDARD MEDICATION: AUTHORIZED';
+    padlockSub.textContent = 'Non-scheduled pharmacotherapy does not trigger federal in-person examination mandates.';
 
-      // Snap Padlock Shut
-      padlockAssembly.classList.remove('unlocked');
-      padlockAssembly.classList.add('locked');
-      padlockText.textContent = 'LOCKED BY STATUTE';
-      padlockSeal.textContent = 'RESTRICTED: IN-PERSON EXAM MANDATE';
-      padlockSeal.style.backgroundColor = 'var(--warning-soft)';
-      padlockSeal.style.color = 'var(--warning-coral)';
-      padlockSeal.style.borderColor = 'var(--warning-coral)';
+    displayMedClass.textContent = 'Standard Maintenance Therapy (Lisinopril / Amoxicillin)';
+    displayStatuteStatus.textContent = 'Exempt from In-Person Exam Mandate';
+    displayStatuteStatus.className = 'field-val highlight-val';
 
-      // Medication Content
-      medDisplayIcon.textContent = '💊';
-      medNameDisplay.textContent = 'Schedule II: Methylphenidate / Adderall';
-      medClassDisplay.textContent = 'DEA Controlled Substance • High abuse & physical dependence potential';
-
-      haightWarningBlock.style.display = 'flex';
-      haightWarningBlock.innerHTML = `
-        <span class="warning-triangle">⚠️</span>
-        <p>
-          <strong>Federal Mandate (21 U.S.C. § 829):</strong> Under the <em>Ryan Haight Online Pharmacy Consumer Protection Act</em>, no controlled substance may be dispensed via telemedicine without at least one in-person physical examination. A webcam alone is legally insufficient.
-        </p>
-      `;
-
-      updateFinalePrescribing(false, 'Controlled: In-Person Exam Required');
-    } else {
-      btnStandard.classList.add('active');
-      btnControlled.classList.remove('active');
-
-      // Unlock Padlock
-      padlockAssembly.classList.remove('locked');
-      padlockAssembly.classList.add('unlocked');
-      padlockText.textContent = 'AUTHORIZED FOR RX';
-      padlockSeal.textContent = 'APPROVED: STANDARD MEDICINE EXEMPTION';
-      padlockSeal.style.backgroundColor = 'var(--green-tint)';
-      padlockSeal.style.color = 'var(--green-deep)';
-      padlockSeal.style.borderColor = 'var(--green-soft)';
-
-      // Medication Content
-      medDisplayIcon.textContent = '🩹';
-      medNameDisplay.textContent = 'Standard Medication: Amoxicillin / Lisinopril';
-      medClassDisplay.textContent = 'Non-Scheduled Prescription • Zero federal controlled substance restrictions';
-
-      haightWarningBlock.style.display = 'flex';
-      haightWarningBlock.innerHTML = `
-        <span class="warning-triangle" style="color:var(--green-deep);">✓</span>
-        <p style="color:var(--green-deep);">
-          <strong>Statutory Exemption:</strong> Non-controlled substances do not trigger the Ryan Haight in-person physical examination rule. Dr. Alex is legally permitted to electronically transmit this prescription directly to the patient’s local pharmacy.
-        </p>
-      `;
-
-      updateFinalePrescribing(true, 'Standard Rx Permitted');
+    if (rxStamp) {
+      rxStamp.textContent = 'PDMP VERIFIED';
+      rxStamp.style.color = 'var(--green-deep)';
+      rxStamp.style.borderColor = 'var(--green-sage)';
+      rxStamp.style.backgroundColor = 'var(--green-tint)';
     }
-  }
 
-  btnControlled.addEventListener('click', () => setPrescribeMode('controlled'));
-  btnStandard.addEventListener('click', () => setPrescribeMode('standard'));
+    if (considerationNote) {
+      considerationNote.innerHTML = `
+        <strong>Regulatory Consideration:</strong> Non-controlled medications can generally be electronically prescribed via telemedicine where a valid patient-provider relationship is established in compliance with relevant state practice standards.
+      `;
+    }
+
+    updateConvergenceGate('prescribing', true, 'Standard Rx Approved');
+  });
+
+  btnControlled.addEventListener('click', () => {
+    btnControlled.classList.add('active');
+    btnStandard.classList.remove('active');
+
+    // Lock visual
+    padlockContainer.classList.add('locked-state');
+    padlockIcon.textContent = '🔒';
+    padlockHeadline.textContent = 'CONTROLLED SUBSTANCE: SPECIAL STATUTORY SAFEGUARDS';
+    padlockSub.textContent = 'Prescribing Schedule II–V controlled substances triggers heightened safety and in-person evaluation rules.';
+
+    displayMedClass.textContent = 'Schedule III: Buprenorphine (Opioid Use Disorder)';
+    displayStatuteStatus.textContent = 'Subject to Federal In-Person Mandates & PDMP Rules';
+    displayStatuteStatus.className = 'field-val';
+    displayStatuteStatus.style.color = 'var(--coral-warning)';
+
+    if (rxStamp) {
+      rxStamp.textContent = 'DEA SAFEGUARD';
+      rxStamp.style.color = 'var(--coral-warning)';
+      rxStamp.style.borderColor = 'var(--coral-warning)';
+      rxStamp.style.backgroundColor = 'var(--coral-tint)';
+    }
+
+    if (considerationNote) {
+      considerationNote.innerHTML = `
+        <strong>Regulatory Consideration:</strong> Prescribing controlled substances such as buprenorphine raises critical public health considerations. While pandemic flexibilities relaxed in-person requirements to prevent overdose deaths, long-term regulatory frameworks require balancing access for rural populations against diversion and safety oversight (Salmanizadeh et al., 2022).
+      `;
+    }
+
+    updateConvergenceGate('prescribing', false, 'Controlled Rx: Safeguards Active');
+  });
 }
 
 
 /* ==============================================================================
-   03. CHAPTER 03: PATCHWORK QUILT & REIMBURSEMENT MAZE
+   ASPECT 3: PATCHWORK QUILT & REIMBURSEMENT MAZE JOURNEY
    ============================================================================== */
-const quiltData = {
+const quiltAcademicData = {
   medicare: {
     icon: '🏛️',
-    title: 'Medicare (Title XVIII) Restrictions & Section 1861(m)',
-    category: 'Federal Statutory Payer',
-    badge: 'CONGRESSIONAL CLIFF',
-    text: `Prior to 2020, Section 1861(m) of the Social Security Act strictly barred Medicare reimbursement for telehealth unless two conditions were satisfied: 
-           (1) The patient was located in a strictly designated rural Health Professional Shortage Area (HPSA), and 
-           (2) The patient traveled to an approved physical medical clinic ("originating site"). 
-           Pandemic waivers temporarily allowed care at home, but permanent coverage requires continuous congressional statutory reauthorization.`
+    title: 'Medicare (Title XVIII) Telehealth Reimbursement',
+    sub: 'Federal Public Health Financing Framework',
+    text: `Historically, Section 1861(m) of the Social Security Act only reimbursed telemedicine if the patient traveled to an authorized rural clinical "originating site." While temporary emergency waivers permitted direct-to-home visits during COVID-19, long-term congressional statutory action is required to establish permanent payment parity and rural waiver extensions.`
   },
   medicaid: {
     icon: '🏥',
-    title: 'Medicaid: 50 Independent State Payer Programs',
-    category: 'State & Federal Partnership',
-    badge: 'STATE-BY-STATE DISPARITY',
-    text: `Medicaid is administered independently by each state under federal guidelines. While nearly every state Medicaid program reimburses some forms of telemedicine, reimbursement rates fluctuate from 100% parity down to less than 50% of an in-person visit. 
-           Additionally, mandatory consent forms, transmission fees, and distant site clinician enrollment vary radically across borders.`
+    title: 'Medicaid: 50 Fragmented State Programs',
+    sub: 'State-Federal Healthcare Financing',
+    text: `Medicaid is administered on a state-by-state basis. While nearly all state Medicaid programs cover some form of live video consultation, reimbursement rates vary widely from full parity with in-person evaluations down to reduced percentages, creating inconsistent access for low-income beneficiaries across borders.`
   },
-  commercial: {
+  private: {
     icon: '🏢',
-    title: 'Commercial Insurers & Telehealth Parity Battles',
-    category: 'Private Employer & Marketplace Plans',
-    badge: 'PARITY STATUTES',
-    text: `Commercial insurers are governed by state-level "telehealth coverage parity" and "payment parity" laws. 
-           While roughly 43 states mandate coverage parity (meaning an insurer must cover a virtual visit if they cover the in-person version), fewer than half mandate payment parity (requiring equal financial reimbursement rates for virtual versus in-person exams).`
+    title: 'Private Insurers & Parity Legislation',
+    sub: 'Commercial Employer & Marketplace Plans',
+    text: `Commercial health insurance is governed by state-level parity legislation. Approximately 43 states have enacted "coverage parity" (requiring plans to cover virtual care if in-person care is covered), yet fewer than half enforce "payment parity" (mandating identical dollar-for-dollar compensation for clinicians).`
   },
-  cash: {
-    icon: '💳',
-    title: 'Direct-to-Consumer (Cash Pay) Health Platforms',
-    category: 'Out-of-Pocket Bypass',
-    badge: 'BORDERS CIRCUMVENTED',
-    text: `Frustrated by the billing labyrinth, digital health companies (such as Hims, Ro, and Thirty Madison) frequently abandon the insurance reimbursement maze entirely. 
-           Patients pay a transparent monthly out-of-pocket subscription fee, eliminating Medicare pre-authorizations and coding audits at the expense of patient financial out-of-pocket burden.`
+  patient: {
+    icon: '👤',
+    title: 'Patient Beneficiary Experience & Financial Burden',
+    sub: 'Out-of-Pocket Cost Sharing & Deductibles',
+    text: `When payer policies are fragmented, patients often face unexpected coverage denials, ambiguous copayments, or balance billing if a remote provider is categorized as an out-of-network telehealth vendor rather than a covered primary care practitioner.`
   },
-  maze: {
-    icon: '🧭',
-    title: 'The Patient’s Reimbursement Maze',
-    category: 'Interactive Healthcare Labyrinth',
-    badge: 'THE FINANCIAL LABYRINTH',
-    text: `Telehealth coverage is not a single gateway — it is a sequence of conditional payer rules. 
-           To secure payment, the patient, provider, originating site location, and technical modality must simultaneously align with current statutory provisions.`
+  provider: {
+    icon: '🩺',
+    title: 'Healthcare Provider & Institutional Sustainability',
+    sub: 'Clinical Workflow, Billing Codes & Parity',
+    text: `For hospitals and independent practices, sustaining telemedicine requires equitable reimbursement. Studies demonstrate that where reimbursement parity is protected, healthcare systems achieve stable virtual care integration without inflating overall utilization costs.`
   }
 };
 
-function initPatchworkQuiltEngine() {
-  const patches = document.querySelectorAll('.quilt-patch');
+function initQuiltAndMazeEngine() {
+  // 1. Quilt Tile Interaction
+  const tiles = document.querySelectorAll('.quilt-tile');
   const trayIcon = document.getElementById('tray-icon');
   const trayTitle = document.getElementById('tray-title');
-  const trayCategory = document.getElementById('tray-category');
-  const trayBadge = document.getElementById('tray-status-badge');
-  const trayNarrative = document.getElementById('tray-narrative');
+  const traySub = document.getElementById('tray-sub');
+  const trayText = document.getElementById('tray-text');
 
-  if (!trayTitle || !trayNarrative) return;
+  tiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+      tiles.forEach(t => t.classList.remove('active-tile'));
+      tile.classList.add('active-tile');
 
-  patches.forEach(patch => {
-    patch.addEventListener('click', () => {
-      patches.forEach(p => p.classList.remove('active'));
-      patch.classList.add('active');
+      const key = tile.getAttribute('data-tile');
+      const data = quiltAcademicData[key] || quiltAcademicData.medicare;
 
-      const patchKey = patch.getAttribute('data-patch');
-      const data = quiltData[patchKey] || quiltData.medicare;
-
-      trayIcon.textContent = data.icon;
-      trayTitle.textContent = data.title;
-      trayCategory.textContent = data.category;
-      trayBadge.textContent = data.badge;
-      trayNarrative.innerHTML = `<p>${data.text}</p>`;
-
-      // If clicked maze centerpiece, scroll to maze controls smoothly
-      if (patchKey === 'maze') {
-        const simBox = document.getElementById('maze-simulator-box');
-        if (simBox) simBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
+      if (trayIcon) trayIcon.textContent = data.icon;
+      if (trayTitle) trayTitle.textContent = data.title;
+      if (traySub) traySub.textContent = data.sub;
+      if (trayText) trayText.textContent = data.text;
     });
   });
-}
 
-function initMazeCalculatorEngine() {
-  const solveBtn = document.getElementById('solve-maze-btn');
-  const payerSelect = document.getElementById('maze-input-payer');
-  const locSelect = document.getElementById('maze-input-location');
-  const modSelect = document.getElementById('maze-input-modality');
+  // 2. Reimbursement Journey Simulation
+  const simulateBtn = document.getElementById('simulate-claim-btn');
+  const payerSelect = document.getElementById('claim-payer-select');
+  const modalitySelect = document.getElementById('claim-modality-select');
 
-  const solutionPath = document.getElementById('maze-solution-path');
-  const patientToken = document.getElementById('maze-patient-token');
-  const resultPanel = document.getElementById('maze-simulation-result');
-  const resIcon = document.getElementById('maze-res-icon');
-  const resHeadline = document.getElementById('maze-res-headline');
-  const resNarrative = document.getElementById('maze-res-narrative');
-  const resAudit = document.getElementById('maze-res-audit');
+  const outcomeBox = document.getElementById('claim-outcome-box');
+  const outcomeStamp = document.getElementById('outcome-stamp');
+  const outcomeHeadline = document.getElementById('outcome-headline');
+  const outcomeDesc = document.getElementById('outcome-desc');
 
-  if (!solveBtn || !payerSelect || !solutionPath) return;
+  const flowSteps = [
+    document.getElementById('step-visit'),
+    document.getElementById('step-elig'),
+    document.getElementById('step-policy'),
+    document.getElementById('step-claim'),
+    document.getElementById('step-outcome')
+  ];
 
-  function runMazeSimulation() {
+  if (!simulateBtn || !payerSelect) return;
+
+  simulateBtn.addEventListener('click', () => {
     const payer = payerSelect.value;
-    const location = locSelect.value;
-    const modality = modSelect.value;
+    const modality = modalitySelect.value;
 
-    // Trigger visual maze navigation
-    solutionPath.classList.remove('trail-hidden');
+    // Animate flow steps
+    flowSteps.forEach((s, idx) => {
+      if (s) {
+        setTimeout(() => {
+          s.classList.add('completed');
+        }, idx * 150);
+      }
+    });
 
-    // Reset result classes
-    resultPanel.className = 'maze-result-panel';
+    outcomeBox.className = 'claim-outcome-display';
 
-    // SCENARIO 1: Cash Pay
-    if (payer === 'self_pay') {
-      patientToken.setAttribute('transform', 'translate(330, 180)');
-      resultPanel.classList.add('result-success');
-      resIcon.textContent = '✓';
-      resHeadline.textContent = 'MAZE BYPASSED: Direct Out-of-Pocket Payment';
-      resNarrative.textContent = 'Because the patient pays direct-to-consumer cash, the billing maze is bypassed entirely. No insurance claim denial can occur.';
-      resAudit.innerHTML = '<strong>Payout Status:</strong> 100% Upfront Patient Out-of-Pocket Self-Pay';
-      updateFinaleReimbursement(true, 'Self-Pay: Instant Approval');
-      return;
+    // SCENARIO 1: Private Payer with Parity + Video
+    if (payer === 'private_parity' && modality === 'video') {
+      outcomeBox.classList.add('outcome-approved');
+      outcomeStamp.textContent = 'STATUS: CLAIM APPROVED (PARITY)';
+      outcomeHeadline.textContent = 'Reimbursement Approved Under State Telehealth Parity';
+      outcomeDesc.textContent = 'Under applicable state telehealth parity laws, synchronous two-way video consultations are reimbursed at 100% equivalent of an in-person physician fee schedule.';
+      updateConvergenceGate('reimbursement', true, 'Approved (Parity)');
     }
-
-    // SCENARIO 2: Medicare Baseline Failure (Home without waiver extension)
-    if (payer === 'medicare' && location === 'home' && modality === 'audio_only') {
-      patientToken.setAttribute('transform', 'translate(130, 180)');
-      resultPanel.classList.add('result-denied');
-      resIcon.textContent = '✕';
-      resHeadline.textContent = 'CLAIM DENIED: Medicare Audio-Only Home Ineligible';
-      resNarrative.textContent = 'Medicare Title XVIII strictly prohibits telephone audio-only visits from a home setting for non-mental health somatic conditions. The claim is rejected.';
-      resAudit.innerHTML = '<strong>Audit Finding:</strong> Statutory Violation of Social Security Act § 1861(m)';
-      updateFinaleReimbursement(false, 'Medicare: Claim Denied');
-      return;
+    // SCENARIO 2: Private Payer without Parity + Audio Only
+    else if (payer === 'private_nonparity' && modality === 'audio_only') {
+      outcomeBox.classList.add('outcome-denied');
+      outcomeStamp.textContent = 'STATUS: CLAIM DENIED';
+      outcomeHeadline.textContent = 'Coverage Denied: Audio-Only Modal Non-Covered';
+      outcomeDesc.textContent = 'Without statutory coverage parity mandates, commercial contracts frequently exclude telephone audio-only consultations from covered distant-site telehealth benefits.';
+      updateConvergenceGate('reimbursement', false, 'Denied (No Parity)');
     }
-
-    // SCENARIO 3: Audio-only Commercial without Parity
-    if (payer === 'commercial' && modality === 'audio_only') {
-      patientToken.setAttribute('transform', 'translate(240, 120)');
-      resultPanel.classList.add('result-denied');
-      resIcon.textContent = '✕';
-      resHeadline.textContent = 'CLAIM DENIED: Audio-Only Parity Clause Missing';
-      resNarrative.textContent = 'Most commercial contracts mandate two-way video streaming. Audio-only phone consults are deemed non-covered exploratory calls.';
-      resAudit.innerHTML = '<strong>Audit Finding:</strong> Non-Covered Service Code Modification';
-      updateFinaleReimbursement(false, 'Commercial: Video Required');
-      return;
+    // SCENARIO 3: Medicare + Audio Only
+    else if (payer === 'medicare' && modality === 'audio_only') {
+      outcomeBox.classList.add('outcome-review');
+      outcomeStamp.textContent = 'STATUS: CONDITIONAL / REVIEW';
+      outcomeHeadline.textContent = 'Medicare Section 1861(m) Exception Audit';
+      outcomeDesc.textContent = 'Medicare permits telephone audio-only reimbursement for selected mental and behavioral healthcare, but physical somatic encounters from home require live video interaction under standard guidelines.';
+      updateConvergenceGate('reimbursement', false, 'Conditional Medicare Review');
     }
-
-    // SCENARIO 4: Approved Synchronous Video Telehealth
-    patientToken.setAttribute('transform', 'translate(330, 180)');
-    resultPanel.classList.add('result-success');
-    resIcon.textContent = '✓';
-    resHeadline.textContent = 'REIMBURSEMENT PATH FOUND: Covered Under Telehealth Parity';
-    resNarrative.textContent = 'Synchronous 2-way audio/video encounter conforms to active statutory parity policies. Claim is approved for distant-site fee schedule reimbursement.';
-    resAudit.innerHTML = '<strong>Payout Status:</strong> 85%–100% In-Person Physician Fee Schedule Equivalent';
-    updateFinaleReimbursement(true, 'Reimbursable Parity Approved');
-  }
-
-  solveBtn.addEventListener('click', runMazeSimulation);
+    // SCENARIO 4: General Approved Synchronous Consultation
+    else {
+      outcomeBox.classList.add('outcome-approved');
+      outcomeStamp.textContent = 'STATUS: CLAIM APPROVED';
+      outcomeHeadline.textContent = 'Distant Site Telemedicine Encounter Approved';
+      outcomeDesc.textContent = 'The digital healthcare claim satisfies standard originating site requirements, electronic documentation standards, and valid billing modifier codes.';
+      updateConvergenceGate('reimbursement', true, 'Claim Approved');
+    }
+  });
 }
 
 
 /* ==============================================================================
-   04. THE CONVERGENCE ENGINE (THE THREE WORLDS CONNECT)
+   04. CONVERGENCE CONSOLE ENGINE
    ============================================================================== */
-let finaleState = {
+const convergenceState = {
   licensing: false,
-  licensingText: 'NY ➔ CA (Blocked)',
-  prescribing: false,
-  prescribingText: 'Controlled: In-Person Exam Required',
+  licensingText: 'Boundary (NY ✕ CA)',
+  prescribing: true,
+  prescribingText: 'Standard Rx Approved',
   reimbursement: true,
-  reimbursementText: 'Reimbursable Parity Approved'
+  reimbursementText: 'Claim Approved'
 };
 
-function updateFinaleLicensing(ok, text) {
-  finaleState.licensing = ok;
-  finaleState.licensingText = text;
-  renderFinaleNodes();
+function updateConvergenceGate(gateName, isPass, labelText) {
+  if (convergenceState[gateName] !== undefined) {
+    convergenceState[gateName] = isPass;
+    convergenceState[`${gateName}Text`] = labelText;
+  }
+  renderConvergenceUI();
 }
 
-function updateFinalePrescribing(ok, text) {
-  finaleState.prescribing = ok;
-  finaleState.prescribingText = text;
-  renderFinaleNodes();
-}
-
-function updateFinaleReimbursement(ok, text) {
-  finaleState.reimbursement = ok;
-  finaleState.reimbursementText = text;
-  renderFinaleNodes();
-}
-
-function renderFinaleNodes() {
-  const licEl = document.getElementById('final-licensing-status');
-  const rxEl = document.getElementById('final-prescribing-status');
-  const payEl = document.getElementById('final-reimbursement-status');
+function renderConvergenceUI() {
+  const licEl = document.getElementById('conv-status-lic');
+  const rxEl = document.getElementById('conv-status-rx');
+  const reimbEl = document.getElementById('conv-status-reimb');
+  const overallBadge = document.getElementById('overall-compliance-badge');
 
   if (licEl) {
-    licEl.className = `node-live-status ${finaleState.licensing ? 'status-check' : 'status-pending'}`;
-    licEl.innerHTML = `<span class="icon">${finaleState.licensing ? '✓' : '✕'}</span> ${finaleState.licensingText}`;
+    licEl.className = `gate-status-pill ${convergenceState.licensing ? 'status-pass' : 'status-conditional'}`;
+    licEl.innerHTML = `<span class="status-icon">${convergenceState.licensing ? '✓' : '⚠️'}</span> ${convergenceState.licensingText}`;
   }
 
   if (rxEl) {
-    rxEl.className = `node-live-status ${finaleState.prescribing ? 'status-check' : 'status-pending'}`;
-    rxEl.innerHTML = `<span class="icon">${finaleState.prescribing ? '✓' : '🔒'}</span> ${finaleState.prescribingText}`;
+    rxEl.className = `gate-status-pill ${convergenceState.prescribing ? 'status-pass' : 'status-conditional'}`;
+    rxEl.innerHTML = `<span class="status-icon">${convergenceState.prescribing ? '✓' : '🔒'}</span> ${convergenceState.prescribingText}`;
   }
 
-  if (payEl) {
-    payEl.className = `node-live-status ${finaleState.reimbursement ? 'status-check' : 'status-pending'}`;
-    payEl.innerHTML = `<span class="icon">${finaleState.reimbursement ? '✓' : '✕'}</span> ${finaleState.reimbursementText}`;
+  if (reimbEl) {
+    reimbEl.className = `gate-status-pill ${convergenceState.reimbursement ? 'status-pass' : 'status-conditional'}`;
+    reimbEl.innerHTML = `<span class="status-icon">${convergenceState.reimbursement ? '✓' : '✕'}</span> ${convergenceState.reimbursementText}`;
+  }
+
+  if (overallBadge) {
+    const allPassed = convergenceState.licensing && convergenceState.prescribing && convergenceState.reimbursement;
+    if (allPassed) {
+      overallBadge.textContent = 'FULL REGULATORY COMPLIANCE';
+      overallBadge.style.backgroundColor = 'var(--green-deep)';
+    } else {
+      overallBadge.textContent = 'CONDITIONAL COMPLIANCE';
+      overallBadge.style.backgroundColor = 'var(--teal-primary)';
+    }
   }
 }
 
-function initConvergenceEngine() {
-  const toggleDemoBtn = document.getElementById('toggle-compliant-demo-btn');
-  if (!toggleDemoBtn) return;
-
-  let isAllCompliant = false;
-
-  toggleDemoBtn.addEventListener('click', () => {
-    isAllCompliant = !isAllCompliant;
-
-    if (isAllCompliant) {
-      updateFinaleLicensing(true, 'WA ↔ AZ (IMLC Compact Approved)');
-      updateFinalePrescribing(true, 'Standard Rx Permitted (No Haight Lock)');
-      updateFinaleReimbursement(true, 'Commercial Parity Approved');
-      toggleDemoBtn.textContent = '🔄 Switch Scenario: Trigger Real-World Regulatory Friction';
-    } else {
-      updateFinaleLicensing(false, 'NY ➔ CA (Cross-Border Roadblock)');
-      updateFinalePrescribing(false, 'Controlled (Ryan Haight Lock Clamped)');
-      updateFinaleReimbursement(false, 'Medicare Audio-Only Home Rejected');
-      toggleDemoBtn.textContent = '🔄 Switch Scenario: Ideal Fully Compliant Visit';
-    }
-  });
-
-  renderFinaleNodes();
+function initConvergenceAudit() {
+  renderConvergenceUI();
 }
 
 
 /* ==============================================================================
-   LIGHTBOX MODAL FOR ORIGINAL INFOGRAPHIC
+   05. HIGH RESOLUTION INFOGRAPHIC LIGHTBOX MODAL
    ============================================================================== */
-function initModalLightbox() {
-  const modalBtn = document.getElementById('view-infographic-btn');
-  const modal = document.getElementById('infographic-modal');
-  const closeBtn = document.getElementById('close-modal-btn');
+function initInfographicLightbox() {
+  const openBtn = document.getElementById('open-lightbox-btn');
+  const modal = document.getElementById('infographic-lightbox');
+  const closeBtn = document.getElementById('close-lightbox-btn');
 
-  if (!modalBtn || !modal) return;
+  if (!openBtn || !modal) return;
 
-  function openModal() {
+  function showModal() {
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
   }
 
-  function closeModal() {
+  function hideModal() {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
   }
 
-  modalBtn.addEventListener('click', openModal);
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  openBtn.addEventListener('click', showModal);
+  if (closeBtn) closeBtn.addEventListener('click', hideModal);
 
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
+    if (e.target === modal) hideModal();
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) {
-      closeModal();
+      hideModal();
     }
   });
 }

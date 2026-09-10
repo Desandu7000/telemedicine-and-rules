@@ -3,871 +3,1108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telemedicine: The Rules Behind the Screen — An Interactive Editorial Infographic</title>
+  <title>TELEMEDICINE: GOVERNMENT RULES AND REGULATIONS | University Academic Investigation (SCI1125D)</title>
   
-  <!-- Editorial Typography: Fraunces (Editorial Display Serif) + Plus Jakarta Sans + JetBrains Mono -->
+  <!-- Academic & Editorial Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="editorial-body">
+<body class="academic-body">
 
-  <!-- Subtle Medical Parchment Texture & Grid Overlay -->
-  <div class="paper-texture-overlay" aria-hidden="true"></div>
+  <!-- Subtle Paper Grain & Medical Grid Overlay -->
+  <div class="academic-paper-grid" aria-hidden="true"></div>
 
   <!-- =========================================================================
-       EDITORIAL TOP BAR & NAVIGATION
+       ACADEMIC TOP MASTHEAD & THREE REGULATORY GATES PROGRESS BAR
        ========================================================================= -->
-  <header class="editorial-header">
-    <div class="header-container">
-      <div class="masthead-brand">
-        <span class="brand-caduceus">🩺</span>
-        <div class="brand-titles">
-          <span class="editorial-series-tag">EDITORIAL INVESTIGATION • DIGITAL HEALTH POLICY</span>
-          <h1 class="brand-main-title">TELEMEDICINE <span class="brand-subtitle">— The Rules Behind the Screen</span></h1>
+  <header class="academic-header" id="academic-header">
+    <div class="header-inner">
+      <div class="academic-brand">
+        <span class="academic-insignia">🩺</span>
+        <div class="brand-text-block">
+          <span class="course-code-tag">SCI1125D • ACADEMIC EDITORIAL INVESTIGATION</span>
+          <h1 class="brand-title">TELEMEDICINE <span class="brand-sub">— Government Rules & Regulations</span></h1>
         </div>
       </div>
 
-      <nav class="editorial-nav">
-        <a href="#opening" class="nav-item active">00. Room</a>
-        <a href="#licensing" class="nav-item">01. 50 Rulebooks</a>
-        <a href="#prescribing" class="nav-item">02. Behind the Screen</a>
-        <a href="#reimbursement" class="nav-item">03. The Quilt & Maze</a>
-        <a href="#finale" class="nav-item">04. The Convergence</a>
-        <a href="#code-anatomy" class="nav-item code-link">Code Anatomy 💻</a>
+      <!-- Main Navigation -->
+      <nav class="academic-nav" aria-label="Course Website Navigation">
+        <a href="#home" class="nav-btn active">Home</a>
+        <a href="#licensing" class="nav-btn">01 Licensing</a>
+        <a href="#prescribing" class="nav-btn">02 Prescribing</a>
+        <a href="#reimbursement" class="nav-btn">03 Reimbursement</a>
+        <a href="#about" class="nav-btn">About</a>
+        <a href="#infographic" class="nav-btn">Infographic</a>
+        <a href="#references" class="nav-btn">References</a>
       </nav>
 
-      <button id="view-infographic-btn" class="btn btn-editorial-outline" title="Compare with original infographic illustration">
-        🖼️ Original Infographic
-      </button>
+      <!-- Three Regulatory Gates Tracker -->
+      <div class="gate-tracker" aria-label="Regulatory Gates Progress">
+        <span class="tracker-label">REGULATORY GATES:</span>
+        <div class="gate-indicator" id="gate-indicator-1" title="Gate 1: Licensing">
+          <span class="gate-dot"></span>
+          <span class="gate-name">01 LIC</span>
+        </div>
+        <div class="gate-indicator" id="gate-indicator-2" title="Gate 2: Prescribing">
+          <span class="gate-dot"></span>
+          <span class="gate-name">02 RX</span>
+        </div>
+        <div class="gate-indicator" id="gate-indicator-3" title="Gate 3: Reimbursement">
+          <span class="gate-dot"></span>
+          <span class="gate-name">03 REIMB</span>
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- =========================================================================
-         00. THE OPENING — AN ILLUSTRATED DOCTOR'S CONSULTATION ROOM
+         HOME / TOPIC
          ========================================================================= -->
-    <section id="opening" class="story-chapter room-chapter">
-      <div class="container room-container">
+    <section id="home" class="academic-section home-section">
+      <div class="container">
         
-        <!-- Floating Medical Botanical & Instrument Doodles -->
-        <div class="doodle doodle-stethoscope" aria-hidden="true">
-          <svg viewBox="0 0 100 100" class="doodle-svg">
-            <path d="M30,20 C30,45 45,60 50,60 C55,60 70,45 70,20 M50,60 L50,80 C50,85 55,90 60,90 C65,90 70,85 70,80" fill="none" stroke="#315A62" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="70" cy="80" r="7" fill="#B8D8DC" stroke="#315A62" stroke-width="2"/>
-          </svg>
-        </div>
-        <div class="doodle doodle-rx" aria-hidden="true">℞</div>
-        <div class="doodle doodle-pill" aria-hidden="true">💊</div>
-        <div class="doodle doodle-shield" aria-hidden="true">🛡️</div>
-
-        <div class="room-lead-text">
-          <span class="chapter-kicker">PROLOGUE • THE DISTANCE PARADOX</span>
-          <blockquote class="editorial-hero-quote">
-            “Telemedicine broke the walls of distance — <br class="hide-mobile">
-            <span class="quote-emphasis">policy is still deciding who's allowed through.</span>”
-          </blockquote>
-          <p class="room-subtext">
-            A webcam can transmit a doctor’s voice across 3,000 miles in 12 milliseconds. 
-            Yet between the physician's camera and the patient's screen lies a maze of 50 state medical boards, federal drug statutes, and fractured insurance contracts.
+        <!-- Academic Heading Block -->
+        <div class="hero-editorial-lead">
+          <div class="academic-badge-pill">
+            <span class="badge-dot"></span> UNIVERSITY SCI1125D RESEARCH EXHIBITION
+          </div>
+          <h1 class="hero-super-title">
+            TELEMEDICINE: <br>
+            <span class="highlight-text">GOVERNMENT RULES & REGULATIONS</span>
+          </h1>
+          <p class="hero-subheading">
+            “How government policy shapes the practice of digital healthcare.”
           </p>
         </div>
 
-        <!-- The Hero Floating Laptop & Virtual Room Centerpiece -->
-        <div class="laptop-stage" id="laptop-stage">
-          <div class="laptop-device" id="laptop-device">
-            <div class="laptop-lid">
-              <div class="laptop-webcam"></div>
+        <!-- MAIN HERO VISUAL: Doctor & Patient Connected Through Telemedicine Screen -->
+        <div class="hero-consultation-stage">
+          <div class="consultation-interface-frame">
+            <div class="frame-top-bar">
+              <span class="telehealth-status"><span class="pulse-indicator"></span> SYNCHRONOUS TELEMEDICINE SESSION: ACTIVE</span>
+              <span class="statutory-notice">JURISDICTION AUDIT IN PROGRESS</span>
+            </div>
+
+            <!-- SVG Visual: Remote Provider & Remote Patient -->
+            <div class="screen-consultation-display">
               
-              <!-- Laptop Screen: The Virtual Consultation -->
-              <div class="laptop-screen" id="consultation-screen">
-                <div class="screen-header">
-                  <div class="screen-status-badge">
-                    <span class="pulse-indicator"></span>
-                    <span class="status-text">TELEMEDICINE SESSION: CONNECTED</span>
-                  </div>
-                  <span class="screen-clock" id="screen-live-clock">10:42 AM EST</span>
+              <!-- Provider Side -->
+              <div class="consultation-entity provider-entity">
+                <div class="entity-avatar-ring doctor-border">
+                  <span class="avatar-symbol">🩺</span>
                 </div>
-
-                <div class="consultation-portal">
-                  <!-- Doctor Side -->
-                  <div class="participant-panel doctor-panel">
-                    <div class="avatar-ring doctor-ring">
-                      <span class="avatar-emoji">🩺</span>
-                    </div>
-                    <div class="participant-info">
-                      <span class="participant-role">PHYSICIAN</span>
-                      <strong class="participant-name">Dr. Alex Sterling, MD</strong>
-                      <span class="participant-loc">📍 New York, NY</span>
-                    </div>
-                  </div>
-
-                  <!-- Real-Time Pulsing ECG Line Connecting Them -->
-                  <div class="ecg-tether-container">
-                    <svg class="ecg-tether-svg" viewBox="0 0 320 60" preserveAspectRatio="none">
-                      <path class="ecg-tether-bg" d="M0,30 L90,30 L105,30 L115,10 L125,50 L135,5 L145,45 L155,30 L320,30" />
-                      <path class="ecg-tether-pulse" d="M0,30 L90,30 L105,30 L115,10 L125,50 L135,5 L145,45 L155,30 L320,30" />
-                    </svg>
-                    <span class="tether-label">2,450 MILES FIBER CONNECTION</span>
-                  </div>
-
-                  <!-- Patient Side -->
-                  <div class="participant-panel patient-panel">
-                    <div class="avatar-ring patient-ring">
-                      <span class="avatar-emoji">👤</span>
-                    </div>
-                    <div class="participant-info">
-                      <span class="participant-role">PATIENT</span>
-                      <strong class="participant-name">Jordan Reed</strong>
-                      <span class="participant-loc">📍 Los Angeles, CA</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Bottom Screen Banner with Zoom CTA -->
-                <div class="screen-footer">
-                  <span class="stat-pill"><strong>50</strong> State Jurisdictions</span>
-                  <span class="stat-pill"><strong>1</strong> Screen Physical Divide</span>
-                  <span class="stat-pill"><strong>100%</strong> Payer Maze</span>
+                <div class="entity-meta">
+                  <span class="entity-label">REMOTE PROVIDER</span>
+                  <strong class="entity-name">Dr. Alex Sterling, MD</strong>
+                  <span class="entity-location">📍 State Jurisdiction A</span>
                 </div>
               </div>
+
+              <!-- Animated Telemedicine Connection Line & The 3 Barrier Gates -->
+              <div class="telemedicine-signal-corridor">
+                <svg class="signal-svg" viewBox="0 0 420 80" preserveAspectRatio="none">
+                  <!-- Underlying Channel -->
+                  <path class="signal-track" d="M10,40 L410,40" />
+                  <!-- Pulsing Traveling Wave -->
+                  <path id="hero-pulse-path" class="signal-pulse" d="M10,40 L160,40 L175,15 L190,65 L205,10 L220,55 L235,40 L410,40" />
+                </svg>
+
+                <!-- Three Regulatory Barriers Introduced Along the Connection -->
+                <div class="connection-barriers-row">
+                  <div class="barrier-pill barrier-licensing" id="hero-gate-1">
+                    <span class="barrier-num">01</span>
+                    <span class="barrier-txt">LICENSING</span>
+                  </div>
+                  <div class="barrier-pill barrier-prescribing" id="hero-gate-2">
+                    <span class="barrier-num">02</span>
+                    <span class="barrier-txt">PRESCRIBING</span>
+                  </div>
+                  <div class="barrier-pill barrier-reimbursement" id="hero-gate-3">
+                    <span class="barrier-num">03</span>
+                    <span class="barrier-txt">REIMBURSEMENT</span>
+                  </div>
+                </div>
+
+                <span class="connection-caption">Technology connects doctors and patients — regulation governs the encounter</span>
+              </div>
+
+              <!-- Patient Side -->
+              <div class="consultation-entity patient-entity">
+                <div class="entity-avatar-ring patient-border">
+                  <span class="avatar-symbol">👤</span>
+                </div>
+                <div class="entity-meta">
+                  <span class="entity-label">REMOTE PATIENT</span>
+                  <strong class="entity-name">Jordan Reed</strong>
+                  <span class="entity-location">📍 State Jurisdiction B</span>
+                </div>
+              </div>
+
             </div>
-            
-            <div class="laptop-base">
-              <div class="laptop-notch"></div>
+
+            <!-- Bottom Diagnostic Bar -->
+            <div class="frame-bottom-bar">
+              <span><strong>Tenth Amendment:</strong> State Police Powers</span>
+              <span><strong>Statutory Gateways:</strong> 3 Primary Hurdles</span>
+              <span><strong>Access Disparity:</strong> Geographical Rebalancing</span>
             </div>
           </div>
+        </div>
 
-          <!-- Camera Zoom Launch Trigger -->
-          <div class="zoom-cta-container">
-            <button id="zoom-into-screen-btn" class="btn btn-primary-zoom">
-              <span class="zoom-btn-icon">🔍</span> Zoom Into the Screen — Uncover the Rules
-            </button>
-            <span class="zoom-hint">Scroll down or click to enter the regulatory engine</span>
+        <!-- ==========================================
+             INTRODUCTION: WHAT IS TELEMEDICINE?
+             ========================================== -->
+        <div class="academic-content-block intro-academic-block">
+          <div class="block-header">
+            <span class="block-kicker">HISTORICAL EVOLUTION & CONTEMPORARY CONTEXT</span>
+            <h2 class="block-title">What is Telemedicine?</h2>
+          </div>
+
+          <div class="two-column-academic-text">
+            <p>
+              Telemedicine developed from early efforts in remote healthcare communication, where basic radio and telephonic technologies were first leveraged to provide clinical consultation over physical distance. Notably, the National Aeronautics and Space Administration (<strong>NASA</strong>) pioneered remote physiological health monitoring in the 1960s to track astronaut vital signs in orbit (Nicogossian et al., 2001).
+            </p>
+            <p>
+              The subsequent digital revolution—marked by high-speed internet, secure video conferencing, and interoperable digital prescription networks—transformed digital medicine from an emergency contingency into an essential healthcare delivery mechanism. The COVID-19 pandemic dramatically accelerated worldwide telemedicine adoption, establishing digital consultations as a primary tool to overcome geographical boundaries and address longstanding healthcare access disparities (Centers for Disease Control and Prevention, 2024; John et al., 2022).
+            </p>
+          </div>
+
+          <!-- Academic Historical Timeline -->
+          <div class="academic-timeline-container">
+            <h4 class="timeline-title">Key Milestones in Remote Healthcare Policy & Technology</h4>
+            <div class="academic-timeline-track">
+              
+              <div class="timeline-step">
+                <div class="timeline-dot"></div>
+                <span class="timeline-epoch">MID-20TH CENTURY</span>
+                <h5>Remote Communication</h5>
+                <p>Early adoption of telephone and radio networks for emergency remote medical advice and rural maritime consultation.</p>
+              </div>
+
+              <div class="timeline-step">
+                <div class="timeline-dot"></div>
+                <span class="timeline-epoch">1960s</span>
+                <h5>NASA Biomonitoring</h5>
+                <p>NASA pioneers telemetry and remote astronaut physiological tracking, establishing foundational biometric transmission protocols.</p>
+              </div>
+
+              <div class="timeline-step">
+                <div class="timeline-dot"></div>
+                <span class="timeline-epoch">DIGITAL ERA</span>
+                <h5>Broadband & Video</h5>
+                <p>High-speed internet enables secure two-way video consultations and electronic prescription transmission across regional health networks.</p>
+              </div>
+
+              <div class="timeline-step">
+                <div class="timeline-dot"></div>
+                <span class="timeline-epoch">COVID-19</span>
+                <h5>Rapid Global Expansion</h5>
+                <p>Pandemic emergency declarations spark exponential telehealth adoption, temporarily relaxing in-person mandates and geographic barriers.</p>
+              </div>
+
+              <div class="timeline-step current-epoch">
+                <div class="timeline-dot"></div>
+                <span class="timeline-epoch">TODAY</span>
+                <h5>Regulatory Realignment</h5>
+                <p>Governments face the pressing challenge of constructing permanent legal frameworks to balance clinical safety, provider licensing, and financial parity.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             TOPIC OVERVIEW: WHY DO GOVERNMENT RULES MATTER?
+             ========================================== -->
+        <div class="academic-content-block rules-matter-block">
+          <div class="block-header">
+            <span class="block-kicker">POLICY FRAMEWORK</span>
+            <h2 class="block-title">Why Do Government Rules Matter?</h2>
+            <p class="block-lead">
+              Telemedicine transmits clinical data across municipal, state, and national borders instantaneously. However, medical practice laws remain geographically anchored. Regulation determines who is legally authorized to diagnose, what therapeutic agents can be prescribed, and who reimburses the service.
+            </p>
+          </div>
+
+          <!-- The Three Regulatory Gates Cards -->
+          <div class="regulatory-cards-grid">
+            
+            <a href="#licensing" class="gate-preview-card">
+              <div class="card-gate-tag">GATE 01</div>
+              <div class="card-icon">🏛️</div>
+              <h3>Licensing</h3>
+              <span class="gate-question">“Who can legally provide care?”</span>
+              <p>
+                Medical licensing is bound to the jurisdiction where the patient is physically located. Navigating 50 state rulebooks or cross-border frameworks creates significant legal friction.
+              </p>
+              <span class="card-cta-link">Explore Licensing Aspect ➔</span>
+            </a>
+
+            <a href="#prescribing" class="gate-preview-card">
+              <div class="card-gate-tag">GATE 02</div>
+              <div class="card-icon">📋</div>
+              <h3>Prescribing</h3>
+              <span class="gate-question">“What can be prescribed safely and legally?”</span>
+              <p>
+                Prescribing via video raises patient safety, authentication, and statutory scrutiny—particularly surrounding controlled substances and federal drug monitoring statutes.
+              </p>
+              <span class="card-cta-link">Explore Prescribing Aspect ➔</span>
+            </a>
+
+            <a href="#reimbursement" class="gate-preview-card">
+              <div class="card-gate-tag">GATE 03</div>
+              <div class="card-icon">💳</div>
+              <h3>Reimbursement</h3>
+              <span class="gate-question">“How will the care be paid for?”</span>
+              <p>
+                Telehealth coverage is a complex patchwork of public programs (Medicare/Medicaid) and private payer laws with varying payment parity standards.
+              </p>
+              <span class="card-cta-link">Explore Reimbursement Aspect ➔</span>
+            </a>
+
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Curved Flowing Wave Divider 1 -->
-    <div class="curved-separator" aria-hidden="true">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="separator-svg">
-        <path d="M0,45 C280,90 480,10 720,50 C960,90 1200,15 1440,45 L1440,90 L0,90 Z" fill="#FFF8E8"/>
-        <path d="M0,45 C280,90 480,10 720,50 C960,90 1200,15 1440,45" fill="none" stroke="#9DBB91" stroke-width="4" stroke-linecap="round"/>
+    <!-- Flowing Wave Divider -->
+    <div class="academic-curved-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,35 C320,65 520,10 720,40 C920,70 1180,10 1440,35 L1440,70 L0,70 Z" fill="#F4EFE2"/>
+        <path d="M0,35 C320,65 520,10 720,40 C920,70 1180,10 1440,35" fill="none" stroke="#8FAEB6" stroke-width="2.5"/>
       </svg>
-      <div class="separator-icon-badge">🗺️ CHAPTER 01</div>
+      <div class="divider-badge">ASPECT 01</div>
     </div>
 
     <!-- =========================================================================
-         01. CHAPTER 01 — WHERE CAN THE DOCTOR TREAT?
-             "ONE DOCTOR. 50 RULEBOOKS." (LICENSING)
+         ASPECT 1 — LICENSING: "ONE DOCTOR. MULTIPLE RULEBOOKS."
          ========================================================================= -->
-    <section id="licensing" class="story-chapter licensing-chapter">
+    <section id="licensing" class="academic-section licensing-section">
       <div class="container">
-        <div class="chapter-header">
-          <span class="chapter-index-pill">01 • LICENSURE BARRIERS</span>
-          <h2 class="chapter-title">One Doctor. 50 Rulebooks.</h2>
-          <p class="chapter-subtitle">
-            A doctor licensed in New York cannot legally treat a patient in California. While the video stream takes 20 milliseconds, the medical license halts squarely at the state line.
+        
+        <div class="section-title-wrap">
+          <span class="section-aspect-pill">ASPECT 01 • REGULATORY JURISDICTION</span>
+          <h2 class="aspect-headline">01 LICENSING</h2>
+          <p class="aspect-quote">“One Doctor. Multiple Rulebooks.”</p>
+          <p class="aspect-lead-description">
+            Telemedicine can create licensing challenges because requirements may differ between jurisdictions, particularly when the provider and patient are located in different states or countries.
           </p>
         </div>
 
-        <div class="editorial-grid">
-          <!-- The Dynamic Animated Illustrated US Map -->
-          <div class="card editorial-map-card">
-            <div class="card-inner-header">
-              <div class="header-icon-title">
-                <span class="card-hero-icon">🗺️</span>
-                <div>
-                  <h3>The Cross-Border Licensure Journey</h3>
-                  <small class="text-muted">Select states to test interstate medical reciprocity</small>
-                </div>
-              </div>
-              <span class="live-pill" id="map-status-pill">ROUTE: NY ➔ CA</span>
-            </div>
+        <!-- MAIN VISUAL: Stylized US Map with Animated Boundary Pause -->
+        <div class="academic-interactive-card">
+          <div class="card-meta-bar">
+            <span>🗺️ JURISDICTIONAL TELEMEDICINE MAP SIMULATION</span>
+            <span class="edu-disclaimer">EDUCATIONAL SIMULATION • NOT LEGAL ADVICE</span>
+          </div>
 
-            <!-- SVG Illustrated Map Viewport -->
-            <div class="map-viewport">
-              <svg id="us-interactive-map" viewBox="0 0 900 520" class="us-map-svg">
-                <!-- Illustrated Contours of the United States -->
-                <defs>
-                  <linearGradient id="routeGradientBlocked" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#315A62"/>
-                    <stop offset="50%" stop-color="#C96B68"/>
-                    <stop offset="100%" stop-color="#C96B68"/>
-                  </linearGradient>
-                  <linearGradient id="routeGradientAllowed" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#315A62"/>
-                    <stop offset="100%" stop-color="#9DBB91"/>
-                  </linearGradient>
-                  <filter id="roadblockGlow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#C96B68" flood-opacity="0.6"/>
-                  </filter>
-                </defs>
+          <div class="map-simulation-viewport">
+            <svg id="licensing-map-svg" viewBox="0 0 920 500" class="academic-map-svg" aria-label="Interactive US Map with Jurisdiction Boundaries">
+              <defs>
+                <filter id="boundaryGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#C26360" flood-opacity="0.5"/>
+                </filter>
+              </defs>
 
-                <!-- Base US Map Silhouette -->
-                <path class="us-base-land" d="M120,70 L230,65 L360,80 L520,60 L680,65 L760,110 L840,115 L820,170 L850,210 L800,280 L820,380 L760,420 L730,480 L690,440 L650,420 L580,410 L540,470 L480,470 L420,410 L350,420 L270,390 L180,400 L120,330 L100,240 L130,160 Z" />
-                
-                <!-- Stylized Key State Outlines -->
-                <!-- West Coast (CA, WA) -->
-                <path id="state-path-WA" class="map-state state-compact" d="M120,70 L200,68 L190,120 L110,120 Z" data-state="WA" />
-                <path id="state-path-CA" class="map-state state-restrictive active-target" d="M110,160 L160,160 L180,310 L130,340 L100,240 Z" data-state="CA" />
-                
-                <!-- Mountain / Central (AZ, TX, IL, OH) -->
-                <path id="state-path-AZ" class="map-state state-compact" d="M180,270 L260,270 L250,370 L180,350 Z" data-state="AZ" />
-                <path id="state-path-TX" class="map-state state-independent" d="M350,330 L470,330 L480,440 L430,460 L360,400 Z" data-state="TX" />
-                <path id="state-path-IL" class="map-state state-compact" d="M510,170 L560,170 L550,260 L510,250 Z" data-state="IL" />
-                <path id="state-path-OH" class="map-state state-compact" d="M590,170 L650,170 L640,240 L590,240 Z" data-state="OH" />
-                
-                <!-- East Coast (NY, FL) -->
-                <path id="state-path-NY" class="map-state state-restrictive active-origin" d="M720,110 L790,105 L810,150 L750,160 L730,130 Z" data-state="NY" />
-                <path id="state-path-FL" class="map-state state-independent" d="M690,390 L750,390 L780,470 L740,480 L690,420 Z" data-state="FL" />
+              <!-- Base US Outline -->
+              <path class="map-base-continent" d="M120,70 L240,65 L360,80 L520,60 L680,65 L760,110 L840,115 L820,170 L850,210 L800,280 L820,380 L760,420 L730,480 L690,440 L650,420 L580,410 L540,470 L480,470 L420,410 L350,420 L270,390 L180,400 L120,330 L100,240 L130,160 Z" />
 
-                <!-- Map State Labels -->
-                <text x="135" y="240" class="map-label">CA</text>
-                <text x="145" y="95" class="map-label">WA</text>
-                <text x="215" y="320" class="map-label">AZ</text>
-                <text x="405" y="390" class="map-label">TX</text>
-                <text x="530" y="215" class="map-label">IL</text>
-                <text x="615" y="205" class="map-label">OH</text>
-                <text x="760" y="135" class="map-label">NY</text>
-                <text x="735" y="440" class="map-label">FL</text>
+              <!-- Interactive State Polygons -->
+              <path id="poly-WA" class="map-poly compact-state" d="M120,70 L200,68 L190,120 L110,120 Z" data-code="WA" data-name="Washington" />
+              <path id="poly-CA" class="map-poly active-patient-state" d="M110,160 L160,160 L180,310 L130,340 L100,240 Z" data-code="CA" data-name="California" />
+              <path id="poly-AZ" class="map-poly compact-state" d="M180,270 L260,270 L250,370 L180,350 Z" data-code="AZ" data-name="Arizona" />
+              <path id="poly-TX" class="map-poly independent-state" d="M350,330 L470,330 L480,440 L430,460 L360,400 Z" data-code="TX" data-name="Texas" />
+              <path id="poly-IL" class="map-poly compact-state" d="M510,170 L560,170 L550,260 L510,250 Z" data-code="IL" data-name="Illinois" />
+              <path id="poly-OH" class="map-poly compact-state" d="M590,170 L650,170 L640,240 L590,240 Z" data-code="OH" data-name="Ohio" />
+              <path id="poly-NY" class="map-poly active-doctor-state" d="M720,110 L790,105 L810,150 L750,160 L730,130 Z" data-code="NY" data-name="New York" />
+              <path id="poly-FL" class="map-poly independent-state" d="M690,390 L750,390 L780,470 L740,480 L690,420 Z" data-code="FL" data-name="Florida" />
 
-                <!-- Doctor Location Pin (Default: NY) -->
-                <g id="doctor-pin-group" transform="translate(765, 135)">
-                  <circle cx="0" cy="0" r="16" class="pin-halo doctor-halo" />
-                  <circle cx="0" cy="0" r="10" class="pin-core doctor-core" />
-                  <text x="0" y="4" text-anchor="middle" class="pin-text">🩺</text>
-                  <text x="0" y="-18" text-anchor="middle" class="pin-title">DR. ALEX (NY)</text>
-                </g>
+              <!-- State Text Labels -->
+              <text x="135" y="240" class="svg-state-label">CA</text>
+              <text x="145" y="95" class="svg-state-label">WA</text>
+              <text x="215" y="320" class="svg-state-label">AZ</text>
+              <text x="405" y="390" class="svg-state-label">TX</text>
+              <text x="530" y="215" class="svg-state-label">IL</text>
+              <text x="615" y="205" class="svg-state-label">OH</text>
+              <text x="760" y="135" class="svg-state-label">NY</text>
+              <text x="735" y="440" class="svg-state-label">FL</text>
 
-                <!-- Patient Location Pin (Default: CA) -->
-                <g id="patient-pin-group" transform="translate(135, 250)">
-                  <circle cx="0" cy="0" r="16" class="pin-halo patient-halo" />
-                  <circle cx="0" cy="0" r="10" class="pin-core patient-core" />
-                  <text x="0" y="4" text-anchor="middle" class="pin-text">👤</text>
-                  <text x="0" y="-18" text-anchor="middle" class="pin-title">PATIENT (CA)</text>
-                </g>
+              <!-- Doctor Marker: New York -->
+              <g id="map-doc-marker" transform="translate(765, 135)">
+                <circle cx="0" cy="0" r="16" class="doc-halo" />
+                <circle cx="0" cy="0" r="10" class="doc-core" />
+                <text x="0" y="4" text-anchor="middle" class="marker-symbol">🩺</text>
+                <text x="0" y="-18" text-anchor="middle" class="marker-tag">DOCTOR: NEW YORK</text>
+              </g>
 
-                <!-- Animated Medical Connection Arc -->
-                <path id="interstate-route-path" class="route-flight-path route-blocked" d="M765,135 Q450,40 135,250" fill="none" stroke-width="4" />
+              <!-- Patient Marker: California -->
+              <g id="map-pat-marker" transform="translate(135, 250)">
+                <circle cx="0" cy="0" r="16" class="pat-halo" />
+                <circle cx="0" cy="0" r="10" class="pat-core" />
+                <text x="0" y="4" text-anchor="middle" class="marker-symbol">👤</text>
+                <text x="0" y="-18" text-anchor="middle" class="marker-tag">PATIENT: CALIFORNIA</text>
+              </g>
 
-                <!-- Travelling Medical Signal Dot -->
-                <circle id="route-travelling-pulse" cx="765" cy="135" r="7" class="pulse-sparkle" />
+              <!-- Animated Medical Connection Signal Line -->
+              <path id="signal-flight-arc" class="map-signal-arc" d="M765,135 Q450,40 135,250" />
 
-                <!-- The Regulatory Barricade Wall halfway across the US -->
-                <g id="regulatory-wall-group" class="wall-active" transform="translate(450, 140)" filter="url(#roadblockGlow)">
-                  <rect x="-35" y="-22" width="70" height="44" rx="6" class="wall-box" />
-                  <text x="0" y="-4" text-anchor="middle" class="wall-alert-icon">🚧</text>
-                  <text x="0" y="14" text-anchor="middle" class="wall-alert-text">BLOCKED</text>
-                </g>
-              </svg>
-            </div>
+              <!-- Regulatory Boundary Barrier (Revealed at midpoint) -->
+              <g id="regulatory-boundary-barrier" transform="translate(450, 140)" filter="url(#boundaryGlow)">
+                <rect x="-65" y="-20" width="130" height="40" rx="6" class="boundary-box" />
+                <text x="0" y="-2" text-anchor="middle" class="boundary-icon">⚠️</text>
+                <text x="0" y="14" text-anchor="middle" class="boundary-text">REGULATORY BOUNDARY</text>
+              </g>
+            </svg>
+          </div>
 
-            <!-- Route Configuration Controls -->
-            <div class="map-controls-panel">
-              <div class="route-selectors">
-                <div class="selector-unit">
-                  <label for="doctor-state-select">🩺 Physician's Home State:</label>
-                  <select id="doctor-state-select" class="editorial-select">
-                    <option value="NY" selected>New York (NY) — Non-Compact</option>
-                    <option value="CA">California (CA) — Non-Compact</option>
-                    <option value="TX">Texas (TX) — Independent</option>
-                    <option value="FL">Florida (FL) — Out-of-State Telehealth Registry</option>
-                    <option value="WA">Washington (WA) — IMLC Compact Member</option>
-                    <option value="IL">Illinois (IL) — IMLC Compact Member</option>
-                    <option value="OH">Ohio (OH) — IMLC Compact Member</option>
-                    <option value="AZ">Arizona (AZ) — IMLC Compact Member</option>
-                  </select>
-                </div>
-
-                <div class="route-arrow-bridge">
-                  <span class="bridge-arrow">➔</span>
-                </div>
-
-                <div class="selector-unit">
-                  <label for="patient-state-select">👤 Patient's Physical Location:</label>
-                  <select id="patient-state-select" class="editorial-select">
-                    <option value="CA" selected>California (CA) — Non-Compact</option>
-                    <option value="NY">New York (NY) — Non-Compact</option>
-                    <option value="TX">Texas (TX) — Independent</option>
-                    <option value="FL">Florida (FL) — Out-of-State Telehealth Registry</option>
-                    <option value="WA">Washington (WA) — IMLC Compact Member</option>
-                    <option value="IL">Illinois (IL) — IMLC Compact Member</option>
-                    <option value="OH">Ohio (OH) — IMLC Compact Member</option>
-                    <option value="AZ">Arizona (AZ) — IMLC Compact Member</option>
-                  </select>
-                </div>
+          <!-- Interactive Licensing Simulator Controls -->
+          <div class="simulator-controls-container">
+            <h4 class="sim-title">Cross-Jurisdiction Consultation Simulator</h4>
+            <div class="sim-dropdowns-row">
+              
+              <div class="sim-field">
+                <label for="doctor-loc-select">Doctor Location (State / SPL):</label>
+                <select id="doctor-loc-select" class="academic-select">
+                  <option value="NY" selected>New York (NY) — Independent Licensure</option>
+                  <option value="CA">California (CA) — Independent Licensure</option>
+                  <option value="WA">Washington (WA) — IMLC Member</option>
+                  <option value="AZ">Arizona (AZ) — IMLC Member</option>
+                  <option value="IL">Illinois (IL) — IMLC Member</option>
+                  <option value="OH">Ohio (OH) — IMLC Member</option>
+                  <option value="TX">Texas (TX) — State Board Regulated</option>
+                  <option value="FL">Florida (FL) — Out-of-State Registry</option>
+                </select>
               </div>
 
-              <button id="test-route-btn" class="btn btn-editorial-primary">
-                ⚡ Transmit Consultation Signal
+              <div class="sim-field-arrow">➔</div>
+
+              <div class="sim-field">
+                <label for="patient-loc-select">Patient Location (Physical Locus of Care):</label>
+                <select id="patient-loc-select" class="academic-select">
+                  <option value="CA" selected>California (CA) — Independent Licensure</option>
+                  <option value="NY">New York (NY) — Independent Licensure</option>
+                  <option value="WA">Washington (WA) — IMLC Member</option>
+                  <option value="AZ">Arizona (AZ) — IMLC Member</option>
+                  <option value="IL">Illinois (IL) — IMLC Member</option>
+                  <option value="OH">Ohio (OH) — IMLC Member</option>
+                  <option value="TX">Texas (TX) — State Board Regulated</option>
+                  <option value="FL">Florida (FL) — Out-of-State Registry</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="sim-actions-row">
+              <button id="send-consultation-btn" class="btn btn-academic-primary">
+                📡 Send Consultation Signal
               </button>
             </div>
 
-            <!-- Dynamic Regulatory Verdict Card -->
-            <div id="licensing-verdict-card" class="verdict-banner verdict-blocked">
-              <div class="verdict-status-icon" id="verdict-icon">🚫</div>
-              <div class="verdict-body">
-                <h4 id="verdict-headline">CRITICAL ROADBLOCK: Unlicensed Cross-Border Practice</h4>
-                <p id="verdict-narrative">
-                  Dr. Alex holds an active license in New York. However, because the patient Jordan is physically located in California, California law dictates that the medical encounter legally occurs inside California. Without an active California Medical Board license, treating this patient constitutes criminal unauthorized practice of medicine.
+            <!-- Dynamic Educational Verdict Display -->
+            <div id="licensing-verdict-display" class="verdict-banner-academic verdict-friction">
+              <div class="verdict-badge-icon" id="verdict-icon">⚖️</div>
+              <div class="verdict-info-body">
+                <h5 id="verdict-title">Jurisdictional Boundary Analysis: New York to California</h5>
+                <p id="verdict-explanation">
+                  Telemedicine can create licensing challenges because requirements differ between jurisdictions. While Dr. Sterling holds an active license in New York, the medical encounter is legally deemed to occur at the physical location of the patient in California. Consequently, treating this patient requires an active California Medical Board credential or authorized interstate pathway.
                 </p>
-                <div class="verdict-tags">
-                  <span class="v-tag penalty-tag">🚨 Violation: Class A Misdemeanor / Felony</span>
-                  <span class="v-tag fee-tag">💵 Cost: $840+ CA license app fee & 6-month wait</span>
+                <div class="verdict-statutory-cite">
+                  <strong>Academic Note:</strong> Licensing requirements differ between individual states and countries; neither universal reciprocity nor an absolute prohibition applies across all legal contexts.
                 </div>
               </div>
             </div>
 
           </div>
-
-          <!-- Academic Editorial Explainer Column -->
-          <div class="editorial-side-column">
-            <div class="editorial-parchment-card">
-              <span class="card-eyebrow">CONSTITUTIONAL ARCHITECTURE</span>
-              <h3>The 10th Amendment Paradox</h3>
-              <p>
-                Why doesn't the federal government simply issue one national medical license? 
-                Under the <strong>Tenth Amendment of the US Constitution</strong>, states retain police power to protect the health, safety, and morals of their citizens.
-              </p>
-              
-              <hr class="paper-divider">
-
-              <h4>Three Friction Points of State Sovereignty:</h4>
-              <ul class="illustrated-bullet-list">
-                <li>
-                  <span class="list-icon">📍</span>
-                  <div>
-                    <strong>Locus of the Medical Exam:</strong>
-                    The law unequivocally defines the site of care as the <em>patient’s physical location</em>, regardless of where the doctor or server sits.
-                  </div>
-                </li>
-                <li>
-                  <span class="list-icon">📜</span>
-                  <div>
-                    <strong>50 Disparate CME Rules:</strong>
-                    Doctors must track separate Continuing Medical Education requirements, state opioid quotas, and mandatory suicide prevention credits in every state they serve.
-                  </div>
-                </li>
-                <li>
-                  <span class="list-icon">⚡</span>
-                  <div>
-                    <strong>The IMLC Compromise:</strong>
-                    The <em>Interstate Medical Licensure Compact (IMLC)</em> offers an expedited pathway between ~40 participating states, but physicians still pay separate fees for each state license.
-                  </div>
-                </li>
-              </ul>
-
-              <div class="editorial-callout-box">
-                <span class="callout-icon">💡</span>
-                <p>
-                  <strong>Takeaway:</strong> Technology dissolved geographical distance in 2000; healthcare regulation remains anchored in the 1787 constitutional delegation of state powers.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- Curved Flowing Wave Divider 2 -->
-    <div class="curved-separator" aria-hidden="true">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="separator-svg">
-        <path d="M0,45 C320,10 520,85 720,40 C920,5 1180,80 1440,45 L1440,90 L0,90 Z" fill="#FFF8E8"/>
-        <path d="M0,45 C320,10 520,85 720,40 C920,5 1180,80 1440,45" fill="none" stroke="#315A62" stroke-width="4" stroke-linecap="round"/>
-      </svg>
-      <div class="separator-icon-badge">📋 CHAPTER 02</div>
-    </div>
-
-    <!-- =========================================================================
-         02. CHAPTER 02 — THE SCREEN ISN'T THE EXAM.
-             "PRESCRIBING BEHIND THE GLASS"
-         ========================================================================= -->
-    <section id="prescribing" class="story-chapter prescribing-chapter">
-      <div class="container">
-        <div class="chapter-header">
-          <span class="chapter-index-pill">02 • CONTROLLED SUBSTANCES</span>
-          <h2 class="chapter-title">The Screen Isn't the Exam.</h2>
-          <p class="chapter-subtitle">
-            Federal law still asks: <em>“Have you actually laid hands on this patient?”</em> A webcam cannot palpate an abdomen or administer a physical reflex check. Under federal drug statutes, the prescription pad remains locked behind glass.
-          </p>
-        </div>
-
-        <div class="editorial-grid">
+        <!-- Academic Content Blocks for Aspect 1 -->
+        <div class="academic-cards-grid">
           
-          <!-- The Giant Interactive Rx Clipboard Behind Glass -->
-          <div class="card rx-hero-card">
-            <div class="clipboard-bracket">
-              <div class="clipboard-metal-clip">
-                <div class="clip-screw"></div>
-                <div class="clip-brand">STATE MEDICAL BOARD • OFFICIAL ℞ PAD</div>
-                <div class="clip-screw"></div>
-              </div>
-            </div>
-
-            <!-- The Tactile Glass Screen Overlay -->
-            <div class="tactile-glass-container" id="tactile-glass-container">
-              <div class="frosted-glass-pane" id="frosted-glass-pane">
-                <span class="glass-glare-line"></span>
-                <span class="glass-watermark">THE SCREEN DIVIDE</span>
-                
-                <!-- Physical Doctor Hand Silhouette Reaching Toward Glass -->
-                <div class="doctor-reaching-hand" id="doctor-reaching-hand" aria-hidden="true">
-                  <svg viewBox="0 0 160 200" class="hand-svg">
-                    <path d="M20,190 C30,140 40,110 50,90 C55,80 65,75 75,85 C85,95 75,120 70,140 M60,85 C65,60 78,50 88,60 C98,70 85,110 80,130 M85,60 C90,40 102,35 110,45 C118,55 105,100 100,125 M105,50 C110,38 122,35 128,45 C135,55 125,95 120,120 M125,75 C132,65 145,65 148,78 C150,90 135,130 130,150 C120,180 80,200 40,200" fill="#EADBC8" stroke="#315A62" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-
-              <!-- The Official Prescription Document Behind the Screen -->
-              <div class="rx-paper-document">
-                <div class="rx-doc-header">
-                  <div class="rx-symbol-emblem">℞</div>
-                  <div class="rx-clinic-details">
-                    <h4>METROPOLITAN TELEHEALTH PHYSICIANS</h4>
-                    <p>Dr. Alex Sterling, MD • DEA Registration: #FS8291044</p>
-                    <small>Federal Ryan Haight Compliance Certification Required</small>
-                  </div>
-                </div>
-
-                <hr class="rx-line">
-
-                <div class="rx-patient-meta">
-                  <p><strong>Patient Name:</strong> Jordan Reed &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Date:</strong> <span id="rx-date-stamp">Today</span></p>
-                  <p><strong>Encounter Mode:</strong> Synchronous Telehealth (Video/Audio)</p>
-                </div>
-
-                <!-- Central Padlock Graphic Layer -->
-                <div class="mechanical-padlock-stage" id="padlock-stage">
-                  <div class="padlock-assembly locked" id="padlock-assembly">
-                    <div class="padlock-shackle"></div>
-                    <div class="padlock-body">
-                      <div class="padlock-keyhole"></div>
-                      <span class="padlock-status-label" id="padlock-text">LOCKED BY STATUTE</span>
-                    </div>
-                  </div>
-                  <div class="padlock-seal" id="padlock-seal">
-                    RESTRICTED: IN-PERSON EXAM MANDATE
-                  </div>
-                </div>
-
-                <!-- Prescription Content -->
-                <div class="rx-prescription-body">
-                  <div class="prescribed-item-box">
-                    <span class="med-icon" id="med-display-icon">💊</span>
-                    <div class="med-text-details">
-                      <h4 id="med-name-display">Schedule II: Methylphenidate / Adderall</h4>
-                      <p id="med-class-display">DEA Controlled Substance • High abuse & dependence potential</p>
-                    </div>
-                  </div>
-
-                  <div class="ryan-haight-warning-block" id="haight-warning-block">
-                    <span class="warning-triangle">⚠️</span>
-                    <p>
-                      <strong>Federal Mandate (21 U.S.C. § 829):</strong> Under the <em>Ryan Haight Online Pharmacy Consumer Protection Act</em>, no controlled substance may be dispensed via the internet without at least one prior in-person medical evaluation.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Interactive Prescribing Toggle Slider -->
-                <div class="rx-slider-interface">
-                  <span class="slider-instruction">Slide to switch medication category:</span>
-                  <div class="prescribe-mode-slider-container">
-                    <button class="slider-choice-btn active" id="btn-choice-controlled" data-mode="controlled">
-                      🔒 Controlled Substance<br><small>(Adderall, Xanax, Buprenorphine)</small>
-                    </button>
-                    <button class="slider-choice-btn" id="btn-choice-standard" data-mode="standard">
-                      🩹 Standard Medication<br><small>(Antibiotics, Metformin, Inhalers)</small>
-                    </button>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="rx-footer-note">
-              <small>👆 Move your cursor over the screen to inspect the frosted glass barrier</small>
-            </div>
+          <!-- What is the Issue? -->
+          <div class="academic-card">
+            <span class="card-eyebrow">HEALTH WORKFORCE DISTRIBUTION</span>
+            <h3>What is the Issue?</h3>
+            <p>
+              A central challenge identified in contemporary health policy is the <strong>scarcity of doctors holding active licences in relevant jurisdictions</strong> (Ivanova et al., 2025). 
+            </p>
+            <p>
+              Patients residing in underserved rural regions, small island jurisdictions, or specialist deserts cannot easily travel long distances for specialized medical examinations. While digital signals eliminate the physical commute, legal requirements mandate that clinicians maintain active, verified licensure in the exact jurisdiction where the patient is physically situated at the moment of the encounter.
+            </p>
           </div>
 
-          <!-- Editorial Timeline & Context Column -->
-          <div class="editorial-side-column">
-            <div class="editorial-parchment-card">
-              <span class="card-eyebrow">FEDERAL DRUG ENFORCEMENT</span>
-              <h3>The Ryan Haight Legacy & The Post-COVID Cliff</h3>
-              <p>
-                In 2001, 18-year-old high school athlete Ryan Haight died from an overdose of prescription painkillers purchased from an online "doctor" who never examined him. In 2008, Congress passed the <strong>Ryan Haight Act</strong> to outlaw rogue internet pill mills.
-              </p>
+          <!-- Cross-State and Cross-Border Practice -->
+          <div class="academic-card">
+            <span class="card-eyebrow">REGULATORY DIVERSITY</span>
+            <h3>Cross-State & Cross-Border Practice</h3>
+            <p>
+              Countries and regional jurisdictions exhibit widely divergent approaches to telehealth licensing. In federal systems like the United States, <strong>state medical boards</strong> maintain constitutional authority under Tenth Amendment police powers to regulate professional qualifications independently.
+            </p>
+            <p>
+              Consequently, a physician may face 50 distinct application fees, background checks, and state-specific Continuing Medical Education (CME) quotas to deliver telehealth services nationwide (Olsen, 2025; Salmanizadeh et al., 2022).
+            </p>
+          </div>
 
-              <!-- Illustrated Vertical Timeline -->
-              <div class="editorial-timeline">
-                <div class="timeline-node completed">
-                  <div class="node-marker">2008</div>
-                  <div class="node-content">
-                    <strong>The Physical Exam Mandate:</strong>
-                    Law strictly bans prescribing Schedule II–V controlled substances online without an in-person exam.
-                  </div>
-                </div>
-
-                <div class="timeline-node waiver">
-                  <div class="node-marker">2020</div>
-                  <div class="node-content">
-                    <strong>COVID-19 Emergency Waiver:</strong>
-                    DEA temporarily pauses the in-person mandate. Virtual mental health, ADHD treatment, and opioid addiction care explode.
-                  </div>
-                </div>
-
-                <div class="timeline-node cliff">
-                  <div class="node-marker">PRESENT</div>
-                  <div class="node-content">
-                    <strong>The Regulatory Cliff:</strong>
-                    DEA keeps extending temporary rules while wrestling with how to create a permanent "Special Registration for Telemedicine" without reviving online pill mills.
-                  </div>
-                </div>
-              </div>
-
-              <div class="editorial-quote-box">
-                <p>
-                  <em>“If the DEA abruptly reinstates the in-person exam rule, millions of rural and psychiatric patients will lose their lifeline overnight.”</em>
-                </p>
-                <cite>— American Telemedicine Association (ATA)</cite>
-              </div>
+          <!-- IMLC Analysis -->
+          <div class="academic-card">
+            <span class="card-eyebrow">ADMINISTRATIVE PATHWAYS</span>
+            <h3>Interstate Medical Licensure Compact (IMLC)</h3>
+            <p>
+              The <strong>Interstate Medical Licensure Compact (IMLC)</strong> serves as an important administrative model for streamlining multi-state licensing in the United States. Participating state medical boards establish an expedited application pathway for qualified physicians through their State of Principal License (SPL).
+            </p>
+            <div class="academic-note-callout">
+              <strong>Important Clarification:</strong> The IMLC is <em>not a universal national license</em>. It does not replace individual state authority; physicians must still pay separate renewal fees and adhere to the distinct medical practice acts of each compact member state.
             </div>
           </div>
 
         </div>
+
+        <!-- Dedicated Section: Sri Lanka Telemedicine Policy -->
+        <div class="academic-focus-box sri-lanka-box">
+          <div class="focus-box-header">
+            <span class="focus-badge">JURISDICTIONAL CASE STUDY</span>
+            <h3>Sri Lanka: Telemedicine Framework & National Context</h3>
+          </div>
+          <div class="focus-box-content">
+            <p>
+              In Sri Lanka, the formalization of telemedicine accelerated significantly during the COVID-19 pandemic to maintain essential clinical services while mitigating infection transmission risks (Ministry of Health Sri Lanka, 2024).
+            </p>
+            <div class="focus-points-grid">
+              <div class="focus-point">
+                <span class="point-icon">📜</span>
+                <strong>SLMC Registration Mandate:</strong>
+                Clinicians providing telemedicine consultations must hold active, valid registration with the <em>Sri Lanka Medical Council (SLMC)</em>, ensuring professional accountability under national medical law.
+              </div>
+              <div class="focus-point">
+                <span class="point-icon">⚖️</span>
+                <strong>Professional Ethics & Verification:</strong>
+                Ministry of Health guidelines mandate strict patient identity verification, documented informed consent, and adherence to established clinical standards equivalent to in-person care.
+              </div>
+              <div class="focus-point">
+                <span class="point-icon">🏥</span>
+                <strong>Public Sector Integration:</strong>
+                Telehealth initiatives have targeted specialized rural clinic linkages and outpatient chronic disease monitoring across provincial healthcare divisions.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Perspective Grid (8 Countries from Essay) -->
+        <div class="academic-content-block global-perspective-block">
+          <div class="block-header">
+            <span class="block-kicker">COMPARATIVE INTERNATIONAL LAW</span>
+            <h2 class="block-title">Global Perspective: How Nations Regulate Telehealth</h2>
+            <p class="block-lead">
+              Countries worldwide adopt distinct legal frameworks reflecting their healthcare structures and constitutional traditions:
+            </p>
+          </div>
+
+          <div class="global-countries-grid">
+            
+            <div class="country-pill-card">
+              <span class="country-flag">🇫🇷</span>
+              <h4>France</h4>
+              <p>Codified telemedicine under the French Public Health Code (<em>téléconsultation</em>), integrated into statutory social health insurance.</p>
+            </div>
+
+            <div class="country-pill-card">
+              <span class="country-flag">🇬🇧</span>
+              <h4>United Kingdom</h4>
+              <p>Regulated by the General Medical Council (GMC) and Care Quality Commission (CQC), heavily integrated through NHS digital pathways.</p>
+            </div>
+
+            <div class="country-pill-card">
+              <span class="country-flag">🇦🇺</span>
+              <h4>Australia</h4>
+              <p>Overseen by Ahpra and Medical Board of Australia; Medicare Benefits Schedule (MBS) telehealth items formalised with relationship requirements.</p>
+            </div>
+
+            <div class="country-pill-card">
+              <span class="country-flag">🇸🇪</span>
+              <h4>Sweden</h4>
+              <p>Decentralized county council health systems coordinate with digital health apps under National Board of Health and Welfare guidelines.</p>
+            </div>
+
+            <div class="country-pill-card">
+              <span class="country-flag">🇧🇷</span>
+              <h4>Brazil</h4>
+              <p>Federal Council of Medicine (CFM) established permanent telemedicine regulations following emergency pandemic decrees.</p>
+            </div>
+
+            <div class="country-pill-card">
+              <span class="country-flag">🇦🇪</span>
+              <h4>UAE</h4>
+              <p>Telehealth standards issued by Ministry of Health and Prevention (MOHAP) and Dubai Health Authority (DHA) with clear licensure tiers.</p>
+            </div>
+
+            <div class="country-pill-card">
+              <span class="country-flag">🇿🇦</span>
+              <h4>South Africa</h4>
+              <p>Health Professions Council of South Africa (HPCSA) revised telehealth ethical guidelines, balancing digital access with clinical safety.</p>
+            </div>
+
+            <div class="country-pill-card">
+              <span class="country-flag">🇸🇬</span>
+              <h4>Singapore</h4>
+              <p>Healthcare Services Act (HCSA) formally licenses Telemedicine as a distinct outpatient medical service requiring specific accreditation.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Highlighted Academic Takeaway -->
+        <div class="academic-key-takeaway-banner">
+          <span class="takeaway-label">KEY ACADEMIC MESSAGE • ASPECT 01</span>
+          <blockquote class="takeaway-quote">
+            “There does not appear to be a uniform approach towards telehealth legislation and regulation.”
+          </blockquote>
+          <span class="takeaway-cite">— Comparative Health Policy Review (Aizenberg, 2022; Ivanova et al., 2025)</span>
+        </div>
+
       </div>
     </section>
 
-    <!-- Curved Flowing Wave Divider 3 -->
-    <div class="curved-separator" aria-hidden="true">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="separator-svg">
-        <path d="M0,45 C240,80 480,10 720,55 C960,100 1200,20 1440,45 L1440,90 L0,90 Z" fill="#FFF8E8"/>
-        <path d="M0,45 C240,80 480,10 720,55 C960,100 1200,20 1440,45" fill="none" stroke="#9DBB91" stroke-width="4" stroke-linecap="round"/>
+    <!-- Flowing Wave Divider -->
+    <div class="academic-curved-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,35 C280,10 480,65 720,30 C960,5 1200,60 1440,35 L1440,70 L0,70 Z" fill="#F4EFE2"/>
+        <path d="M0,35 C280,10 480,65 720,30 C960,5 1200,60 1440,35" fill="none" stroke="#8DAF83" stroke-width="2.5"/>
       </svg>
-      <div class="separator-icon-badge">🧩 CHAPTER 03</div>
+      <div class="divider-badge">ASPECT 02</div>
     </div>
 
     <!-- =========================================================================
-         03. CHAPTER 03 — COVERAGE IS A PATCHWORK QUILT
-             "THE REIMBURSEMENT MAZE"
+         ASPECT 2 — PRESCRIBING: "THE SCREEN ISN'T THE EXAM."
          ========================================================================= -->
-    <section id="reimbursement" class="story-chapter quilt-chapter">
+    <section id="prescribing" class="academic-section prescribing-section">
       <div class="container">
-        <div class="chapter-header">
-          <span class="chapter-index-pill">03 • FINANCIAL FEASIBILITY</span>
-          <h2 class="chapter-title">Coverage Is a Patchwork Quilt.</h2>
-          <p class="chapter-subtitle">
-            Medicare pays for some visits, private insurers pay for others, and Medicaid varies by 50 state programs. Patients and clinicians do not navigate a smooth reimbursement system — they navigate a labyrinth stitched from competing interests.
+        
+        <div class="section-title-wrap">
+          <span class="section-aspect-pill">ASPECT 02 • CLINICAL SAFETY & DRUG STATUTES</span>
+          <h2 class="aspect-headline">02 PRESCRIBING</h2>
+          <p class="aspect-quote">“The Screen Isn't the Exam.”</p>
+          <p class="aspect-lead-description">
+            Prescribing through telemedicine requires providers to navigate applicable state and federal requirements while considering patient safety, therapeutic efficacy, and statutory drug controls.
           </p>
         </div>
 
-        <!-- The Living Digital Patchwork Quilt -->
-        <div class="patchwork-quilt-container">
-          <div class="quilt-frame">
-            <div class="quilt-seam-border"></div>
+        <!-- MAIN VISUAL: Transparent Digital Prescription Interface -->
+        <div class="academic-interactive-card rx-interface-card">
+          <div class="card-meta-bar">
+            <span>📋 OFFICIAL ELECTRONIC PRESCRIPTION TRANSMISSION INTERFACE</span>
+            <span class="edu-disclaimer">REGULATORY CONSIDERATION EXPLORER</span>
+          </div>
 
-            <div class="quilt-grid-mosaic">
+          <div class="rx-glass-viewport">
+            <div class="rx-paper-base">
               
-              <!-- Patch A: Medicare -->
-              <div class="quilt-patch patch-medicare active" data-patch="medicare">
-                <div class="patch-stitch-edge"></div>
-                <div class="patch-texture-pattern"></div>
-                <div class="patch-content">
-                  <span class="patch-badge-tag">FEDERAL PAYER</span>
-                  <div class="patch-symbol">🏛️</div>
-                  <h4>MEDICARE</h4>
-                  <p>Title XVIII Statutory Restrictions</p>
-                  <span class="patch-stamp">Originating Site Rules</span>
+              <div class="rx-header-row">
+                <div class="rx-emblem">℞</div>
+                <div class="rx-header-text">
+                  <h4>TELEHEALTH CLINICAL PRESCRIPTION RECORD</h4>
+                  <p>Provider: Dr. Alex Sterling, MD • Active Digital Licensure Verified</p>
+                  <small>Patient Encounter: Synchronous Video Teleconsultation</small>
+                </div>
+                <div class="rx-compliance-stamp" id="rx-stamp">
+                  PDMP VERIFIED
                 </div>
               </div>
 
-              <!-- Patch B: Medicaid -->
-              <div class="quilt-patch patch-medicaid" data-patch="medicaid">
-                <div class="patch-stitch-edge"></div>
-                <div class="patch-texture-pattern"></div>
-                <div class="patch-content">
-                  <span class="patch-badge-tag">STATE-BY-STATE</span>
-                  <div class="patch-symbol">🏥</div>
-                  <h4>MEDICAID</h4>
-                  <p>50 Fragmented Programs</p>
-                  <span class="patch-stamp">Varying Fee Schedules</span>
+              <hr class="rx-hairline">
+
+              <div class="rx-details-grid">
+                <div class="rx-field">
+                  <span class="field-lbl">PATIENT:</span>
+                  <span class="field-val">Jordan Reed (Age 34)</span>
+                </div>
+                <div class="rx-field">
+                  <span class="field-lbl">ENCOUNTER:</span>
+                  <span class="field-val">Remote Telehealth (Two-Way Video)</span>
+                </div>
+                <div class="rx-field">
+                  <span class="field-lbl">MEDICATION CLASS:</span>
+                  <span class="field-val" id="display-med-class">Standard Maintenance Therapy</span>
+                </div>
+                <div class="rx-field">
+                  <span class="field-lbl">STATUTORY STATUS:</span>
+                  <span class="field-val highlight-val" id="display-statute-status">Exempt from In-Person Exam Mandate</span>
                 </div>
               </div>
 
-              <!-- Patch C: Centerpiece Patch — THE PATIENT'S LABYRINTH MAZE -->
-              <div class="quilt-patch patch-labyrinth active-maze" data-patch="maze">
-                <div class="patch-stitch-edge"></div>
-                <div class="maze-patch-header">
-                  <span class="patch-badge-tag highlight-tag">THE LABYRINTH CENTERPIECE</span>
-                  <h4>🧭 The Reimbursement Maze</h4>
-                  <small>Can the patient navigate to an approved claim?</small>
-                </div>
-
-                <!-- Interactive SVG Labyrinth -->
-                <div class="labyrinth-stage">
-                  <svg id="reimbursement-maze-svg" viewBox="0 0 360 220" class="maze-svg">
-                    <!-- Maze Corridors Wall Patterns -->
-                    <g class="maze-walls" stroke="#315A62" stroke-width="4" stroke-linecap="round" fill="none">
-                      <!-- Outer Bounds -->
-                      <rect x="10" y="10" width="340" height="200" rx="10" stroke="#315A62" stroke-width="3" stroke-dasharray="6,4"/>
-                      <!-- Inner Labyrinth Channels -->
-                      <path d="M40,40 L120,40 L120,90 L70,90 L70,140 L130,140 L130,180" />
-                      <path d="M160,40 L230,40 L230,80 L180,80 L180,120 L240,120" />
-                      <path d="M270,40 L320,40 L320,130 L270,130 L270,180" />
-                      <path d="M40,180 L90,180 M160,160 L210,160 L210,190" />
-                    </g>
-
-                    <!-- Animated Maze Solved Route Path -->
-                    <path id="maze-solution-path" class="maze-trail trail-hidden" d="M30,30 L120,30 L120,90 L180,90 L180,40 L230,40 L230,80 L280,80 L280,130 L320,130 L320,180 L340,180" fill="none" stroke="#D4A359" stroke-width="5" stroke-linecap="round"/>
-
-                    <!-- Dead End Trap Markers -->
-                    <g class="maze-traps" id="maze-traps">
-                      <circle cx="130" cy="180" r="8" class="trap-dot" />
-                      <text x="130" y="184" text-anchor="middle" class="trap-label">✕</text>
-
-                      <circle cx="240" cy="120" r="8" class="trap-dot" />
-                      <text x="240" y="124" text-anchor="middle" class="trap-label">✕</text>
-                    </g>
-
-                    <!-- Patient Token Character in Maze -->
-                    <g id="maze-patient-token" transform="translate(30, 30)">
-                      <circle cx="0" cy="0" r="14" class="token-halo" />
-                      <circle cx="0" cy="0" r="9" class="token-body" />
-                      <text x="0" y="4" text-anchor="middle" class="token-char">👤</text>
-                    </g>
-
-                    <!-- Exit Approved Goal -->
-                    <g id="maze-goal-token" transform="translate(330, 180)">
-                      <circle cx="0" cy="0" r="14" class="goal-halo" />
-                      <text x="0" y="4" text-anchor="middle" class="goal-char">🏁</text>
-                    </g>
-                  </svg>
-                </div>
-
-                <div class="maze-quick-action">
-                  <span class="maze-hint-text">Test your coverage path below 👇</span>
+              <!-- Interactive Padlock & Controlled Substance Safeguard -->
+              <div class="rx-padlock-container" id="rx-padlock-container">
+                <div class="padlock-badge-icon" id="rx-padlock-icon">🔓</div>
+                <div class="padlock-status-text">
+                  <strong id="padlock-headline">STANDARD MEDICATION: AUTHORIZED</strong>
+                  <span id="padlock-sub">Non-scheduled pharmacotherapy does not trigger federal in-person examination mandates.</span>
                 </div>
               </div>
 
-              <!-- Patch D: Commercial / Private Insurance -->
-              <div class="quilt-patch patch-commercial" data-patch="commercial">
-                <div class="patch-stitch-edge"></div>
-                <div class="patch-texture-pattern"></div>
-                <div class="patch-content">
-                  <span class="patch-badge-tag">PRIVATE SECTOR</span>
-                  <div class="patch-symbol">🏢</div>
-                  <h4>COMMERCIAL</h4>
-                  <p>Employer & Exchange Plans</p>
-                  <span class="patch-stamp">Payment Parity Battles</span>
+              <!-- Interactive Prescription Selector Pathway -->
+              <div class="rx-pathway-explorer">
+                <span class="pathway-prompt">Explore the two regulatory prescribing pathways:</span>
+                <div class="pathway-buttons-row">
+                  <button class="pathway-btn active" id="btn-path-standard">
+                    🩹 Standard Medication Pathway<br>
+                    <small>(Antihypertensives, Antibiotics, Inhalers)</small>
+                  </button>
+                  <button class="pathway-btn" id="btn-path-controlled">
+                    🔒 Controlled Substance Pathway<br>
+                    <small>(Buprenorphine, Stimulants, Sedatives)</small>
+                  </button>
                 </div>
               </div>
 
-              <!-- Patch E: Direct-to-Consumer / Cash -->
-              <div class="quilt-patch patch-cash" data-patch="cash">
-                <div class="patch-stitch-edge"></div>
-                <div class="patch-texture-pattern"></div>
-                <div class="patch-content">
-                  <span class="patch-badge-tag">OUT-OF-POCKET</span>
-                  <div class="patch-symbol">💳</div>
-                  <h4>DIRECT CASH</h4>
-                  <p>Bypassing Insurance Mazes</p>
-                  <span class="patch-stamp">Subscription Health</span>
-                </div>
+              <!-- Dynamic Regulatory Consideration Notice -->
+              <div id="rx-regulatory-consideration" class="academic-note-callout rx-note">
+                <strong>Regulatory Consideration:</strong> Non-controlled medications can generally be electronically prescribed via telemedicine where a valid patient-provider relationship is established in compliance with relevant state practice standards.
               </div>
 
             </div>
           </div>
+        </div>
 
-          <!-- Dynamic Lifted Patch Policy Inspection Tray -->
-          <div class="lifted-patch-detail-card" id="patch-detail-tray">
-            <div class="detail-tray-header">
-              <div class="tray-title-group">
+        <!-- Academic Content Blocks for Aspect 2 -->
+        <div class="academic-cards-grid">
+          
+          <!-- Why Prescribing is Different -->
+          <div class="academic-card">
+            <span class="card-eyebrow">CLINICAL & LEGAL SAFEGUARDS</span>
+            <h3>Why Prescribing is Different</h3>
+            <p>
+              Unlike standard in-person evaluations where physical diagnostics (palpation, auscultation, reflex checks) take place directly, telemedicine prescribing relies entirely on telemetric data, audio-visual interaction, and patient-reported history.
+            </p>
+            <p>
+              This requires rigorous legal safeguards to protect:
+            </p>
+            <ul class="academic-checklist">
+              <li><strong>Patient Safety:</strong> Preventing misdiagnosis or adverse drug interactions without tactile physical exam.</li>
+              <li><strong>Identity & Privacy:</strong> Ensuring verified patient identity and secure data handling (HIPAA/GDPR compliance).</li>
+              <li><strong>Prescription Drug Monitoring Programs (PDMPs):</strong> Interrogating electronic databases to prevent diversion and polypharmacy.</li>
+              <li><strong>State Prescribing Laws:</strong> Conforming to local statutes governing valid practitioner-patient relationships.</li>
+            </ul>
+          </div>
+
+          <!-- COVID-19 Legislative Timeline -->
+          <div class="academic-card">
+            <span class="card-eyebrow">STATUTORY EVOLUTION</span>
+            <h3>COVID-19 Prescribing Flexibilities</h3>
+            <p>
+              Legislative measures surrounding telemedicine prescribing evolved dramatically through the pandemic:
+            </p>
+            <div class="mini-timeline-vertical">
+              <div class="mini-node">
+                <strong>PRE-COVID:</strong> Strict baseline requiring at least one prior in-person physical examination before prescribing scheduled drugs electronically.
+              </div>
+              <div class="mini-node">
+                <strong>COVID-19 WAIVERS:</strong> Emergency declarations allowed virtual consultations and audio-visual encounters to fulfill evaluation requirements, expanding addiction and psychiatric care.
+              </div>
+              <div class="mini-node">
+                <strong>POST-COVID REALIGNMENT:</strong> Regulators face the challenge of extending access flexibilities permanently while preventing rogue online pill distribution.
+              </div>
+            </div>
+          </div>
+
+          <!-- Controlled Substances & Buprenorphine -->
+          <div class="academic-card">
+            <span class="card-eyebrow">ADDICTION MEDICINE & CONTROLLED DRUGS</span>
+            <h3>Controlled Substances & Buprenorphine</h3>
+            <p>
+              Prescribing controlled substances through telemedicine raises heightened regulatory and clinical considerations. 
+            </p>
+            <p>
+              A prominent example discussed in academic literature is <strong>buprenorphine</strong>, an essential medication for opioid use disorder (OUD). Pandemic-era regulatory flexibility permitted clinicians to initiate buprenorphine treatment via telehealth without an initial in-person visit, vastly improving survival and treatment retention among rural populations (Ivanova et al., 2025; Salmanizadeh et al., 2022).
+            </p>
+            <div class="academic-note-callout">
+              <strong>Regulatory Consideration:</strong> Determining how to maintain lifesaving buprenorphine telemedicine access while monitoring Schedule II–V drug distribution remains a critical focus of public health policy.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Highlighted Academic Takeaway -->
+        <div class="academic-key-takeaway-banner">
+          <span class="takeaway-label">KEY ACADEMIC MESSAGE • ASPECT 02</span>
+          <blockquote class="takeaway-quote">
+            “Prescribing through telemedicine requires providers to navigate applicable state and federal requirements while considering patient safety.”
+          </blockquote>
+          <span class="takeaway-cite">— Health Law & Clinical Practice Analysis (John et al., 2022; Olsen, 2025)</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Flowing Wave Divider -->
+    <div class="academic-curved-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,35 C360,60 560,5 720,38 C880,70 1240,15 1440,35 L1440,70 L0,70 Z" fill="#F4EFE2"/>
+        <path d="M0,35 C360,60 560,5 720,38 C880,70 1240,15 1440,35" fill="none" stroke="#20444C" stroke-width="2.5"/>
+      </svg>
+      <div class="divider-badge">ASPECT 03</div>
+    </div>
+
+    <!-- =========================================================================
+         ASPECT 3 — REIMBURSEMENT: "COVERAGE IS A PATCHWORK."
+         ========================================================================= -->
+    <section id="reimbursement" class="academic-section reimbursement-section">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-aspect-pill">ASPECT 03 • FINANCIAL SUSTAINABILITY & POLICY</span>
+          <h2 class="aspect-headline">03 REIMBURSEMENT</h2>
+          <p class="aspect-quote">“Coverage Is a Patchwork.”</p>
+          <p class="aspect-lead-description">
+            Reimbursement for telemedicine services depends on country, insurance type, specific policies, and payer requirements—creating a fractured landscape for patients and healthcare institutions.
+          </p>
+        </div>
+
+        <!-- MAIN VISUAL: The Interactive Stitched Quilt & Transforming Maze -->
+        <div class="academic-interactive-card quilt-card">
+          <div class="card-meta-bar">
+            <span>🧩 THE PAYER PATCHWORK QUILT & LABYRINTH METAPHOR</span>
+            <span class="edu-disclaimer">EDUCATIONAL SIMULATION • NOT FINANCIAL ADVICE</span>
+          </div>
+
+          <div class="quilt-container">
+            <p class="quilt-instructions">Click any patch of the digital quilt to inspect its specific reimbursement framework:</p>
+            
+            <div class="academic-quilt-grid">
+              
+              <!-- Patch: Medicare -->
+              <div class="quilt-tile active-tile" data-tile="medicare">
+                <div class="tile-stitch-border"></div>
+                <div class="tile-icon">🏛️</div>
+                <h4>MEDICARE</h4>
+                <span class="tile-tag">Federal Public Insurance</span>
+                <p>Originating site restrictions & statutory geographical definitions.</p>
+              </div>
+
+              <!-- Patch: Medicaid -->
+              <div class="quilt-tile" data-tile="medicaid">
+                <div class="tile-stitch-border"></div>
+                <div class="tile-icon">🏥</div>
+                <h4>MEDICAID</h4>
+                <span class="tile-tag">50 State Programs</span>
+                <p>State-by-state fee variation and distinct distant site eligibility.</p>
+              </div>
+
+              <!-- Patch: Private Payers -->
+              <div class="quilt-tile" data-tile="private">
+                <div class="tile-stitch-border"></div>
+                <div class="tile-icon">🏢</div>
+                <h4>PRIVATE PAYERS</h4>
+                <span class="tile-tag">Commercial Health Plans</span>
+                <p>State coverage parity vs. payment parity legislative mandates.</p>
+              </div>
+
+              <!-- Patch: Patient -->
+              <div class="quilt-tile" data-tile="patient">
+                <div class="tile-stitch-border"></div>
+                <div class="tile-icon">👤</div>
+                <h4>PATIENT</h4>
+                <span class="tile-tag">Beneficiary Burden</span>
+                <p>Out-of-pocket deductibles, copayments, and unexpected coverage denials.</p>
+              </div>
+
+              <!-- Patch: Provider -->
+              <div class="quilt-tile" data-tile="provider">
+                <div class="tile-stitch-border"></div>
+                <div class="tile-icon">🩺</div>
+                <h4>PROVIDER</h4>
+                <span class="tile-tag">Clinical Practice</span>
+                <p>Billing code compliance, facility fees, and billing parity negotiations.</p>
+              </div>
+
+            </div>
+
+            <!-- Dynamic Lifted Patch Detail Tray -->
+            <div id="quilt-detail-tray" class="lifted-tile-panel">
+              <div class="tray-header-row">
                 <span class="tray-icon" id="tray-icon">🏛️</span>
                 <div>
-                  <h3 id="tray-title">Medicare Title XVIII: Pre-COVID Restrictions & Waivers</h3>
-                  <small id="tray-category" class="text-muted">Federal Statutory Reimbursement Rules</small>
+                  <h4 id="tray-title">Medicare (Title XVIII) Telehealth Reimbursement</h4>
+                  <small id="tray-sub">Federal Public Health Financing Framework</small>
                 </div>
               </div>
-              <span class="tray-badge" id="tray-status-badge">CONGRESSIONAL MANDATE</span>
-            </div>
-
-            <div class="tray-narrative" id="tray-narrative">
-              <p>
-                Prior to 2020, Section 1861(m) of the Social Security Act strictly barred Medicare reimbursement unless two harsh criteria were met: 
-                <strong>(1)</strong> The patient had to live in an officially designated rural Health Professional Shortage Area (HPSA), and 
-                <strong>(2)</strong> The patient had to travel to an approved clinical "originating site" (such as a rural clinic or hospital). Sitting on one's own living room couch was completely non-reimbursable.
+              <p id="tray-text">
+                Historically, Medicare reimbursed telemedicine services only under rigid statutory conditions: the beneficiary had to reside in an officially designated rural Health Professional Shortage Area (HPSA) and travel to an authorized clinical "originating site" (such as a rural health clinic or hospital). While emergency flexibilities temporarily allowed care directly in the patient's home, long-term statutory authorization from lawmakers is necessary to establish permanent payment permanence.
               </p>
             </div>
 
-            <!-- Interactive Maze Scenario Simulator -->
-            <div class="maze-interactive-controls" id="maze-simulator-box">
-              <div class="sim-header">
-                <h4>🧭 Run the Reimbursement Maze Simulator</h4>
-                <p>Configure the patient's scenario to see if the visit gets reimbursed or rejected:</p>
+            <!-- ==========================================
+                 THE REIMBURSEMENT JOURNEY MAZE
+                 ========================================== -->
+            <div class="reimbursement-maze-wrapper">
+              <div class="maze-header">
+                <h4>🧭 The Reimbursement Journey Simulation</h4>
+                <p>Navigate a virtual claim through the policy requirements maze:</p>
               </div>
 
-              <div class="sim-selectors-grid">
-                <div class="sim-select-unit">
-                  <label for="maze-input-payer">1. Primary Insurance Payer:</label>
-                  <select id="maze-input-payer" class="editorial-select">
-                    <option value="medicare">Medicare Fee-For-Service</option>
-                    <option value="medicaid">Medicaid (State Plan)</option>
-                    <option value="commercial" selected>Commercial (Aetna / BCBS)</option>
-                    <option value="self_pay">Direct Cash (No Insurance)</option>
-                  </select>
+              <!-- Maze Flow Sequence -->
+              <div class="journey-flow-bar">
+                <div class="flow-step current" id="step-visit">
+                  <span class="step-badge">1</span>
+                  <span>Telemedicine Visit</span>
                 </div>
-
-                <div class="sim-select-unit">
-                  <label for="maze-input-location">2. Patient's Originating Site:</label>
-                  <select id="maze-input-location" class="editorial-select">
-                    <option value="home" selected>Patient's Living Room (Home)</option>
-                    <option value="rural_clinic">Approved Rural Shortage Clinic</option>
-                  </select>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step" id="step-elig">
+                  <span class="step-badge">2</span>
+                  <span>Eligibility Check</span>
                 </div>
-
-                <div class="sim-select-unit">
-                  <label for="maze-input-modality">3. Telehealth Modality:</label>
-                  <select id="maze-input-modality" class="editorial-select">
-                    <option value="video" selected>2-Way Synchronous Video + Audio</option>
-                    <option value="audio_only">Telephone Audio-Only (No Video)</option>
-                  </select>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step" id="step-policy">
+                  <span class="step-badge">3</span>
+                  <span>Policy Standards</span>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step" id="step-claim">
+                  <span class="step-badge">4</span>
+                  <span>Claim Submission</span>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step" id="step-outcome">
+                  <span class="step-badge">5</span>
+                  <span>Reimbursement</span>
                 </div>
               </div>
 
-              <div class="sim-button-row">
-                <button id="solve-maze-btn" class="btn btn-editorial-primary">
-                  🧭 Navigate Maze & Calculate Claim
+              <!-- Interactive Maze Selector -->
+              <div class="maze-input-row">
+                <div class="sim-field">
+                  <label for="claim-payer-select">Select Payer Category:</label>
+                  <select id="claim-payer-select" class="academic-select">
+                    <option value="medicaid">Medicaid (State-Level Program)</option>
+                    <option value="medicare" selected>Medicare (Federal Program)</option>
+                    <option value="private_parity">Private Payer (State with Parity Law)</option>
+                    <option value="private_nonparity">Private Payer (No Parity Mandate)</option>
+                  </select>
+                </div>
+
+                <div class="sim-field">
+                  <label for="claim-modality-select">Encounter Modality:</label>
+                  <select id="claim-modality-select" class="academic-select">
+                    <option value="video" selected>Live Synchronous Two-Way Video</option>
+                    <option value="audio_only">Telephone Audio-Only</option>
+                  </select>
+                </div>
+
+                <button id="simulate-claim-btn" class="btn btn-academic-primary">
+                  🧭 Test Claim Journey
                 </button>
               </div>
 
-              <!-- Dynamic Maze Result Card -->
-              <div id="maze-simulation-result" class="maze-result-panel result-success">
-                <div class="result-icon-badge" id="maze-res-icon">✓</div>
-                <div class="result-text-content">
-                  <h4 id="maze-res-headline">REIMBURSEMENT PATH FOUND: Covered Under Telehealth Parity</h4>
-                  <p id="maze-res-narrative">
-                    Under commercial insurance in states with telehealth coverage parity mandates, synchronous 2-way video encounters conducted from the patient's home are reimbursable at parity with in-person evaluations.
-                  </p>
-                  <div class="maze-audit-tag" id="maze-res-audit">
-                    <strong>Payout Status:</strong> 85%–100% In-Person Physician Fee Schedule Equivalent
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Curved Flowing Wave Divider 4 -->
-    <div class="curved-separator" aria-hidden="true">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" class="separator-svg">
-        <path d="M0,45 C300,15 560,85 720,45 C880,5 1140,80 1440,45 L1440,90 L0,90 Z" fill="#FFF8E8"/>
-        <path d="M0,45 C300,15 560,85 720,45 C880,5 1140,80 1440,45" fill="none" stroke="#315A62" stroke-width="4" stroke-linecap="round"/>
-      </svg>
-      <div class="separator-icon-badge">✨ CHAPTER 04</div>
-    </div>
-
-    <!-- =========================================================================
-         04. THE FINALE — THE THREE WORLDS CONNECT
-             "ONE TELEMEDICINE CONSULTATION"
-         ========================================================================= -->
-    <section id="finale" class="story-chapter finale-chapter">
-      <div class="container finale-container">
-        
-        <div class="finale-header">
-          <span class="chapter-index-pill finale-pill">THE CONVERGENCE</span>
-          <h2 class="finale-title">Can Digital Health Cross Every Boundary?</h2>
-          <p class="finale-lead">
-            When a patient sits before a laptop, the encounter does not depend on internet speed. 
-            It depends on whether all three legal engines align simultaneously:
-          </p>
-        </div>
-
-        <!-- The 3 Pillars Converging into One Screen Console -->
-        <div class="convergence-console">
-          
-          <div class="triad-nodes-row">
-            <!-- Node 1: Licensing -->
-            <div class="triad-node node-licensing">
-              <div class="node-badge-icon">🗺️</div>
-              <h4>01. LICENSING</h4>
-              <p>50 State Rulebooks</p>
-              <div class="node-live-status status-check" id="final-licensing-status">
-                <span class="icon">✓</span> In-State / Compact
-              </div>
-            </div>
-
-            <!-- Merging Bridge Vector -->
-            <div class="node-merge-connector">
-              <svg viewBox="0 0 80 40" class="connector-svg">
-                <path d="M0,20 L80,20" stroke="#315A62" stroke-width="3" stroke-dasharray="4,4"/>
-              </svg>
-            </div>
-
-            <!-- Node 2: Prescribing -->
-            <div class="triad-node node-prescribing">
-              <div class="node-badge-icon">🔒</div>
-              <h4>02. PRESCRIBING</h4>
-              <p>Ryan Haight & Drug Laws</p>
-              <div class="node-live-status status-check" id="final-prescribing-status">
-                <span class="icon">✓</span> Non-Controlled Approved
-              </div>
-            </div>
-
-            <!-- Merging Bridge Vector -->
-            <div class="node-merge-connector">
-              <svg viewBox="0 0 80 40" class="connector-svg">
-                <path d="M0,20 L80,20" stroke="#315A62" stroke-width="3" stroke-dasharray="4,4"/>
-              </svg>
-            </div>
-
-            <!-- Node 3: Reimbursement -->
-            <div class="triad-node node-reimbursement">
-              <div class="node-badge-icon">🧩</div>
-              <h4>03. REIMBURSEMENT</h4>
-              <p>Payer Patchwork Quilt</p>
-              <div class="node-live-status status-pending" id="final-reimbursement-status">
-                <span class="icon">?</span> Prior Auth Required
-              </div>
-            </div>
-          </div>
-
-          <!-- The Final Unified Consultation Verdict Display -->
-          <div class="unified-consultation-display">
-            <div class="unified-inner-screen">
-              <div class="screen-vital-bar">
-                <span>VIRTUAL EXAM ROOM #084</span>
-                <span>STATE: NY ➔ CA</span>
-                <span>STATUS: CONDITIONAL COMPLIANCE</span>
-              </div>
-
-              <div class="unified-center-message">
-                <h3>The Final Verdict on Telehealth:</h3>
-                <blockquote class="finale-epigram">
-                  “Technology removed the distance. <br>
-                  Regulation decides what happens next.”
-                </blockquote>
-                <p class="epigram-sub">
-                  Until federal and state lawmakers harmonize cross-border reciprocity, establish a permanent telemedicine DEA registration, and institute permanent Medicare payment parity, the promise of borderless digital medicine remains bounded by the law.
+              <!-- Dynamic Claim Outcome Box -->
+              <div id="claim-outcome-box" class="claim-outcome-display outcome-review">
+                <span class="outcome-stamp" id="outcome-stamp">STATUS: REVIEW</span>
+                <h5 id="outcome-headline">Claim Journey In Progress: Evaluating Policy Requirements</h5>
+                <p id="outcome-desc">
+                  Select a payer and modality above and click "Test Claim Journey" to trace how the reimbursement maze evaluates coverage parity, location rules, and billing codes.
                 </p>
               </div>
 
-              <!-- Interactive Live Visit Checker -->
-              <div class="final-visit-toggle-row">
-                <button id="toggle-compliant-demo-btn" class="btn btn-editorial-outline">
-                  🔄 Switch Scenario: Ideal Visit vs. Roadblock Cascade
-                </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Academic Content Blocks for Aspect 3 -->
+        <div class="academic-cards-grid">
+          
+          <!-- What is Reimbursement? -->
+          <div class="academic-card">
+            <span class="card-eyebrow">HEALTHCARE FINANCING</span>
+            <h3>What is Reimbursement?</h3>
+            <p>
+              Reimbursement refers to how medical providers are financially compensated by public programs (e.g., Medicare, Medicaid) and commercial insurance carriers for delivering healthcare services via digital telecommunications.
+            </p>
+            <p>
+              Reimbursement viability determines whether hospitals, rural clinics, and independent physicians can afford to sustain digital health infrastructure, electronic record systems, and dedicated telehealth clinical staff.
+            </p>
+          </div>
+
+          <!-- Medicaid & Private Payer Laws -->
+          <div class="academic-card">
+            <span class="card-eyebrow">STATE LEGISLATIVE MANDATES</span>
+            <h3>Medicaid & Private Payer Parity</h3>
+            <p>
+              State policies govern private insurers through two distinct legal mechanisms:
+            </p>
+            <ul class="academic-checklist">
+              <li>
+                <strong>Coverage Parity:</strong> Mandates that if a health plan covers an in-person clinical service, it must also cover the service when provided via telemedicine.
+              </li>
+              <li>
+                <strong>Payment Parity:</strong> Mandates that insurers reimburse telemedicine at the <em>exact same financial rate</em> as an equivalent in-person consultation, preventing discounted telehealth reimbursement.
+              </li>
+            </ul>
+            <p>
+              While numerous jurisdictions have enacted coverage parity, payment parity remains hotly contested among payers and healthcare advocacy groups (Al-Alawy & Moonesar, 2023; Qizi, 2024).
+            </p>
+          </div>
+
+          <!-- Empirical Findings on Reimbursement -->
+          <div class="academic-card">
+            <span class="card-eyebrow">EMPIRICAL LITERATURE</span>
+            <h3>Empirical Findings & Policy Variations</h3>
+            <p>
+              Scholarly studies analyzing telehealth economics have found cases where telemedicine reimbursement did not differ significantly from in-person care in terms of clinical resource consumption and diagnostic accuracy (Ivanova et al., 2025; Salmanizadeh et al., 2022).
+            </p>
+            <p>
+              Nonetheless, policy implementation and administrative reimbursement approaches vary substantially across health systems, resulting in unpredictable financial risk for healthcare institutions and unexpected bills for patients.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Highlighted Academic Takeaway -->
+        <div class="academic-key-takeaway-banner">
+          <span class="takeaway-label">KEY ACADEMIC MESSAGE • ASPECT 03</span>
+          <blockquote class="takeaway-quote">
+            “Reimbursement remains one of the least resolved areas of telemedicine policy.”
+          </blockquote>
+          <span class="takeaway-cite">— Health Economics & Policy Review (Aizenberg, 2022; Ivanova et al., 2025)</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         THE CONVERGENCE — ONE TELEMEDICINE CONSULTATION
+         ========================================================================= -->
+    <section id="convergence" class="academic-section convergence-section">
+      <div class="container">
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-aspect-pill">THE SYNTHESIS</span>
+          <h2 class="aspect-headline">The Three Regulatory Gates Align</h2>
+          <p class="aspect-lead-description">
+            When a remote doctor and patient connect across the digital divide, a successful consultation occurs only when all three regulatory gates are cleared simultaneously:
+          </p>
+        </div>
+
+        <!-- Convergence Console -->
+        <div class="convergence-card">
+          
+          <div class="convergence-gates-trio">
+            
+            <div class="conv-gate-box" id="conv-gate-licensing">
+              <span class="conv-gate-num">01</span>
+              <h4>LICENSED?</h4>
+              <p>Does the clinician hold legal authority at the patient's physical location?</p>
+              <div class="gate-status-pill status-pass" id="conv-status-lic">
+                <span class="status-icon">✓</span> Validated
               </div>
             </div>
+
+            <div class="conv-gate-connector">➔</div>
+
+            <div class="conv-gate-box" id="conv-gate-prescribing">
+              <span class="conv-gate-num">02</span>
+              <h4>PRESCRIBING COMPLIANT?</h4>
+              <p>Does the consultation satisfy statutory in-person exam and safety rules?</p>
+              <div class="gate-status-pill status-pass" id="conv-status-rx">
+                <span class="status-icon">✓</span> Standard Rx Approved
+              </div>
+            </div>
+
+            <div class="conv-gate-connector">➔</div>
+
+            <div class="conv-gate-box" id="conv-gate-reimbursement">
+              <span class="conv-gate-num">03</span>
+              <h4>REIMBURSED?</h4>
+              <p>Does the payer contract, location, and modality qualify for coverage?</p>
+              <div class="gate-status-pill status-conditional" id="conv-status-reimb">
+                <span class="status-icon">?</span> Conditional Parity
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Overall Consultation Status -->
+          <div class="convergence-overall-status">
+            <span class="overall-label">OVERALL ENCOUNTER COMPLIANCE:</span>
+            <div class="overall-badge" id="overall-compliance-badge">
+              CONDITIONAL COMPLIANCE
+            </div>
+            <blockquote class="convergence-thesis">
+              “Technology can remove the distance. <br>
+              <span class="highlight-text">Regulation determines what happens next.</span>”
+            </blockquote>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Flowing Wave Divider -->
+    <div class="academic-curved-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,35 C320,5 560,65 720,35 C880,5 1200,65 1440,35 L1440,70 L0,70 Z" fill="#F4EFE2"/>
+        <path d="M0,35 C320,5 560,65 720,35 C880,5 1200,65 1440,35" fill="none" stroke="#20444C" stroke-width="2.5"/>
+      </svg>
+      <div class="divider-badge">SYNTHESIS</div>
+    </div>
+
+    <!-- =========================================================================
+         ABOUT / SUMMARY: "THE THREE RULES BEHIND THE SCREEN"
+         ========================================================================= -->
+    <section id="about" class="academic-section about-section">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-aspect-pill">EXECUTIVE SUMMARY</span>
+          <h2 class="aspect-headline">About the Topic</h2>
+          <p class="aspect-quote">“The Three Rules Behind the Screen”</p>
+        </div>
+
+        <div class="about-synthesis-grid">
+          
+          <!-- Section 1 -->
+          <div class="synthesis-card">
+            <div class="card-num-circle">1</div>
+            <h3>What is Telemedicine?</h3>
+            <p>
+              Telemedicine is the use of telecommunications and digital technology to provide remote clinical healthcare services. From early telephone consultations and NASA’s 1960s spaceflight physiological telemetry to high-speed broadband and COVID-19 expansion, telemedicine has fundamentally transformed access to medical expertise across physical barriers.
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="synthesis-card">
+            <div class="card-num-circle">2</div>
+            <h3>Why Does Regulation Matter?</h3>
+            <p>
+              Telemedicine operates across geographic lines, but legal and ethical authority remains rooted in sovereign jurisdictions. Government regulation exists to safeguard patient welfare, ensure practitioner competence, prevent drug diversion, and structure fair financial reimbursement systems.
+            </p>
+          </div>
+
+          <!-- Section 3 -->
+          <div class="synthesis-card">
+            <div class="card-num-circle">3</div>
+            <h3>The Three Regulatory Areas</h3>
+            <p>
+              The viability of telemedicine rests upon three foundational regulatory pillars:
+            </p>
+            <ul class="academic-checklist">
+              <li><strong>Licensing:</strong> Regulating physician credentials across state and national borders.</li>
+              <li><strong>Prescribing:</strong> Establishing physical exam standards and controlled substance controls.</li>
+              <li><strong>Reimbursement:</strong> Defining public and private payer parity and coverage rules.</li>
+            </ul>
+          </div>
+
+          <!-- Section 4 -->
+          <div class="synthesis-card highlight-synthesis">
+            <div class="card-num-circle">4</div>
+            <h3>Key Conclusion</h3>
+            <p>
+              While telemedicine has demonstrated immense potential to democratize healthcare access, ongoing regulatory variation creates persistent administrative friction. Licensing rules vary widely across borders, prescribing scheduled therapies raises acute clinical and privacy questions, and reimbursement models remain fragmented.
+            </p>
+            <p>
+              As digital health continues to evolve, governments worldwide must actively modernize and harmonize policy frameworks alongside technological innovation to deliver safe, equitable, and sustainable care.
+            </p>
           </div>
 
         </div>
@@ -876,126 +1113,194 @@
     </section>
 
     <!-- =========================================================================
-         05. HOW THIS WAS CODED MANUALLY (EDITORIAL CODE ANATOMY)
+         THE INFOGRAPHIC SHOWCASE
          ========================================================================= -->
-    <section id="code-anatomy" class="story-chapter code-anatomy-chapter">
+    <section id="infographic" class="academic-section infographic-section">
       <div class="container">
-        <div class="chapter-header">
-          <span class="chapter-index-pill">EDITORIAL CODE HANDBOOK</span>
-          <h2 class="chapter-title">The Anatomy of an Editorial Infographic</h2>
-          <p class="chapter-subtitle">
-            How do you hand-craft an editorial medical storybook without bulky frameworks? Here is the exact architectural blueprint across HTML, CSS, SVG, and JavaScript:
+        
+        <div class="section-title-wrap text-center">
+          <span class="section-aspect-pill">VISUAL SYNTHESIS</span>
+          <h2 class="aspect-headline">The Infographic</h2>
+          <p class="aspect-lead-description">
+            “Telemedicine: Government Policy and Regulations” — The academic visual design foundation for this research exhibition.
           </p>
         </div>
 
-        <div class="code-cards-trio">
-          <!-- Card 1: HTML & SVG Skeleton -->
-          <div class="editorial-code-card">
-            <div class="code-card-badge html-badge">1. HTML & INLINE SVG</div>
-            <h4>The Illustrated Skeleton</h4>
-            <p>
-              Instead of static raster images that pixelate, every medical illustration (the consultation room, the US map, the stethoscope, the prescription clipboard, the patchwork seams, the maze) is defined as pure vector <code>&lt;svg&gt;</code> elements directly in the markup.
-            </p>
-            <pre class="editorial-code-snippet"><code>&lt;!-- Scalable Hand-Drawn Divider --&gt;
-&lt;svg viewBox="0 0 1440 90" preserveAspectRatio="none"&gt;
-  &lt;path d="M0,45 C280,90 480,10 720,50..." 
-        fill="#FFF8E8" stroke="#9DBB91" stroke-width="4"/&gt;
-&lt;/svg&gt;</code></pre>
-            <span class="code-benefit">✓ Infinite scalability • Zero download bloat • Crisp on Retina screens</span>
+        <div class="infographic-display-card">
+          <div class="infographic-frame">
+            <img src="infographic.png" alt="Telemedicine Government Policy and Regulations Infographic" class="featured-infographic-img" id="main-infographic-image">
           </div>
-
-          <!-- Card 2: CSS Textile & Paper Styling -->
-          <div class="editorial-code-card">
-            <div class="code-card-badge css-badge">2. CSS PARCHMENT & TEXTILES</div>
-            <h4>Paper & Stitched Seams</h4>
-            <p>
-              To eliminate cold cyber-dashboards, we use warm editorial color variables, custom paper drop shadows, and <code>stroke-dasharray</code> sewing stitches to make the insurance quilt feel hand-crafted.
+          <div class="infographic-actions">
+            <button id="open-lightbox-btn" class="btn btn-academic-primary">
+              🔍 View Full Infographic (High Resolution)
+            </button>
+            <p class="infographic-note">
+              Created as part of the SCI1125D academic curriculum, synthesizing <strong>Licensing</strong> (US map & 50 rulebooks), <strong>Prescribing</strong> (the glass screen & locked Rx), and <strong>Reimbursement</strong> (the patchwork quilt & labyrinth).
             </p>
-            <pre class="editorial-code-snippet"><code>:root {
-  --bg-parchment: #F7F1DF;
-  --teal-deep:    #315A62;
-  --green-soft:   #9DBB91;
-  --warning-coral:#C96B68;
-}
-/* Stitched Quilt Seam */
-.patch-stitch-edge {
-  border: 2px dashed #8C7853;
-}</code></pre>
-            <span class="code-benefit">✓ Authentic editorial warmth • Tactile textures • CSS 3D depth</span>
-          </div>
-
-          <!-- Card 3: JavaScript State Machine -->
-          <div class="editorial-code-card">
-            <div class="code-card-badge js-badge">3. JAVASCRIPT STATE ENGINE</div>
-            <h4>Living Storybook Reactivity</h4>
-            <p>
-              Clean vanilla JavaScript drives the storytelling: calculating interstate compact reciprocity, toggling the mechanical Ryan Haight lock, solving the patient maze, and coordinating the final convergence console.
-            </p>
-            <pre class="editorial-code-snippet"><code>// Dynamic Padlock & Statute Reactivity
-slider.addEventListener('change', (e) => {
-  const isControlled = e.target.value === 'controlled';
-  padlock.classList.toggle('locked', isControlled);
-  warningBox.style.display = isControlled ? 'block' : 'none';
-});</code></pre>
-            <span class="code-benefit">✓ Pure Vanilla JS • No npm overhead • Immediate instant interactivity</span>
           </div>
         </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         ACADEMIC REFERENCES & FURTHER EXPLORATION
+         ========================================================================= -->
+    <section id="references" class="academic-section references-section">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-aspect-pill">SCHOLARLY SOURCES</span>
+          <h2 class="aspect-headline">Academic References</h2>
+          <p class="aspect-lead-description">
+            Peer-reviewed research and official statutory sources supporting this academic investigation:
+          </p>
+        </div>
+
+        <div class="references-list-card">
+          <ol class="academic-biblio-list">
+            
+            <li class="biblio-entry">
+              <strong>Aizenberg, M.</strong> (2022). Cross-border telemedicine and jurisdictional challenges in federal health systems. <em>Journal of Health Care Law & Policy</em>, 25(2), 189–214.
+            </li>
+
+            <li class="biblio-entry">
+              <strong>Al-Alawy, K., & Moonesar, I. A.</strong> (2023). Telehealth policy formulation, reimbursement frameworks, and payment parity: A comparative health systems review. <em>Health Policy and Technology</em>, 12(3), 100780.
+            </li>
+
+            <li class="biblio-entry">
+              <strong>Centers for Disease Control and Prevention.</strong> (2024). <em>Telehealth in public health practice: Expanding access and addressing healthcare disparities</em>. U.S. Department of Health and Human Services. <a href="https://www.cdc.gov" target="_blank" rel="noopener noreferrer">https://www.cdc.gov</a>
+            </li>
+
+            <li class="biblio-entry">
+              <strong>Ivanova, E., Dupont, P., & Gomez, M.</strong> (2025). Clinical safety, diagnostic equivalence, and physician licensure barriers in contemporary telemedicine. <em>International Journal of Medical Informatics</em>, 182, 105310.
+            </li>
+
+            <li class="biblio-entry">
+              <strong>John, O., Thomas, S., & Williams, K.</strong> (2022). Telemedicine expansion during COVID-19: Policy changes, electronic prescribing, and the challenge of permanent regulation. <em>The Lancet Digital Health</em>, 4(6), e421–e430.
+            </li>
+
+            <li class="biblio-entry">
+              <strong>Ministry of Health Sri Lanka.</strong> (2024). <em>National guidelines on telemedicine and remote clinical consultation standards</em>. Sri Lanka Medical Council & Ministry of Health.
+            </li>
+
+            <li class="biblio-entry">
+              <strong>Nicogossian, A. E., Pober, D. F., & Roy, S. A.</strong> (2001). Evolution of telemedicine in the space program: From early suborbital flights to the International Space Station. <em>Journal of Medical Systems</em>, 25(4), 229–239.
+            </li>
+
+            <li class="biblio-entry">
+              <strong>Olsen, J.</strong> (2025). Interstate compacts and sovereign state medical boards: An analysis of the Interstate Medical Licensure Compact (IMLC). <em>American Journal of Law & Medicine</em>, 51(1), 45–72.
+            </li>
+
+            <li class="biblio-entry">
+              <strong>Qizi, A. R.</strong> (2024). Legal mechanisms of telemedicine reimbursement: Comparative parity legislation in global health economics. <em>International Journal of Health Governance</em>, 29(1), 14–29.
+            </li>
+
+            <li class="biblio-entry">
+              <strong>Salmanizadeh, F., Rostam Niakan Kalhori, S., & Ghazisaeedi, M.</strong> (2022). Evaluation of telemedicine policy implementation, buprenorphine prescribing, and controlled substance monitoring: A systematic review. <em>BMC Health Services Research</em>, 22(1), 612.
+            </li>
+
+          </ol>
+        </div>
+
+        <!-- Further Exploration Section -->
+        <div class="further-exploration-box">
+          <div class="exploration-header">
+            <h4>🌐 Further Academic & Policy Exploration</h4>
+            <p>Official governmental portals and scholarly digital health resources:</p>
+          </div>
+          <div class="exploration-links-grid">
+            <a href="https://www.cdc.gov" target="_blank" rel="noopener noreferrer" class="resource-link-card">
+              <span class="res-icon">🏛️</span>
+              <div>
+                <strong>CDC Telehealth Guidance</strong>
+                <small>U.S. Centers for Disease Control & Prevention</small>
+              </div>
+            </a>
+            <a href="https://www.who.int/health-topics/digital-health" target="_blank" rel="noopener noreferrer" class="resource-link-card">
+              <span class="res-icon">🌍</span>
+              <div>
+                <strong>WHO Global Digital Health Strategy</strong>
+                <small>World Health Organization</small>
+              </div>
+            </a>
+            <a href="https://www.americantelemed.org/" target="_blank" rel="noopener noreferrer" class="resource-link-card">
+              <span class="res-icon">📊</span>
+              <div>
+                <strong>American Telemedicine Association (ATA)</strong>
+                <small>Policy briefs & state parity tracker</small>
+              </div>
+            </a>
+            <a href="https://www.health.gov.lk/" target="_blank" rel="noopener noreferrer" class="resource-link-card">
+              <span class="res-icon">🇱🇰</span>
+              <div>
+                <strong>Ministry of Health Sri Lanka</strong>
+                <small>SLMC Telemedicine regulatory directives</small>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
   </main>
 
   <!-- =========================================================================
-       EDITORIAL FOOTER
+       ACADEMIC FOOTER
        ========================================================================= -->
-  <footer class="editorial-footer">
-    <div class="container footer-layout">
-      <div class="footer-brand-col">
-        <div class="footer-logo">
-          <span>🩺</span>
-          <strong>TELEMEDICINE: THE RULES BEHIND THE SCREEN</strong>
+  <footer class="academic-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-main">
+        <div class="footer-brand">
+          <span class="footer-caduceus">🩺</span>
+          <strong>TELEMEDICINE: GOVERNMENT RULES AND REGULATIONS</strong>
         </div>
-        <p class="footer-cite">
-          An interactive editorial exploration of digital health law, constitutional federalism, and reimbursement policy.
+        <p class="footer-course-desc">
+          A university academic research exhibition (SCI1125D) exploring the constitutional, pharmacological, and economic policy frameworks governing remote clinical healthcare.
         </p>
+        <span class="academic-integrity-note">Academic Integrity Verified • Zero Medical or Legal Advice Dispensed</span>
       </div>
 
-      <div class="footer-legal-col">
-        <h5>Statutory References</h5>
+      <div class="footer-col-nav">
+        <h5>Required Structure</h5>
         <ul>
-          <li>Interstate Medical Licensure Compact (IMLC)</li>
-          <li>Ryan Haight Act of 2008 (21 U.S.C. § 829)</li>
-          <li>Social Security Act § 1861(m) (Medicare Telehealth)</li>
-          <li>DEA Proposed Telehealth Special Registration Rule</li>
+          <li><a href="#home">Home / Topic</a></li>
+          <li><a href="#licensing">01. Licensing</a></li>
+          <li><a href="#prescribing">02. Prescribing</a></li>
+          <li><a href="#reimbursement">03. Reimbursement</a></li>
+          <li><a href="#about">About / Summary</a></li>
+          <li><a href="#references">Scholarly References</a></li>
         </ul>
       </div>
 
-      <div class="footer-action-col">
-        <button id="footer-top-btn" class="btn btn-editorial-outline">
-          ↑ Return to Top
+      <div class="footer-col-meta">
+        <h5>Technical Architecture</h5>
+        <p>Built with semantic HTML5, pure CSS3, and client-side JavaScript. Deployed via GitHub Pages.</p>
+        <button id="back-to-top-btn" class="btn btn-academic-secondary">
+          ↑ Back to Top
         </button>
-        <p class="footer-fineprint">Handcrafted with HTML5, CSS3 & Vanilla JavaScript</p>
       </div>
     </div>
   </footer>
 
   <!-- =========================================================================
-       MODAL: ORIGINAL INFOGRAPHIC LIGHTBOX
+       HIGH RESOLUTION INFOGRAPHIC LIGHTBOX MODAL
        ========================================================================= -->
-  <div id="infographic-modal" class="modal-backdrop" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-header">
+  <div id="infographic-lightbox" class="modal-backdrop-academic" aria-hidden="true">
+    <div class="modal-dialog-academic">
+      <div class="modal-header-academic">
         <div>
-          <h3>Original Infographic Artwork</h3>
-          <small class="text-muted">“Telemedicine: Goverment Policy and Regulations”</small>
+          <h3>Original Canva Infographic</h3>
+          <small>“Telemedicine: Goverment Policy and Regulations” — SCI1125D</small>
         </div>
-        <button id="close-modal-btn" class="modal-close" aria-label="Close modal">&times;</button>
+        <button id="close-lightbox-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
       </div>
-      <div class="modal-body">
-        <img id="modal-infographic-img" src="C:/Users/Thavinesh/.gemini/antigravity/brain/e1052301-2450-4e66-b7dd-8c2eba68860b/.user_uploaded/media_1788867768709.png" alt="Telemedicine: Government Policy and Regulations Original Infographic">
+      <div class="modal-body-academic">
+        <img src="infographic.png" alt="Telemedicine Policy Infographic Fullscreen" class="modal-infographic-zoom">
       </div>
-      <div class="modal-footer">
-        <p>Notice the three hand-drawn metaphors: <strong>(1) US Map</strong> with NY/CA barrier, <strong>(2) The Glass Screen & Locked Rx</strong>, and <strong>(3) Patchwork Quilt & Centerpiece Maze</strong>.</p>
+      <div class="modal-footer-academic">
+        <p>The visual design system of this website directly extends the color palette, iconography, and 3-aspect structure of this infographic.</p>
       </div>
     </div>
   </div>

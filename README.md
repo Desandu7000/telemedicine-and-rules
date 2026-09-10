@@ -1,63 +1,94 @@
-# 🩺 Telemedicine: The Rules Behind the Screen
+# 🩺 TELEMEDICINE: GOVERNMENT RULES AND REGULATIONS
+### University Academic Editorial Exhibition (SCI1125D)
 
-> **An interactive editorial exploration of telemedicine policy and regulation.**  
-> A living medical infographic and interactive storybook translating constitutional federalism, federal drug statutes, and healthcare reimbursement economics.
-
----
-
-## 🎨 Creative & Editorial Vision
-
-This website reimagines digital health education away from generic dashboards into an **illustrated, editorial storybook experience** ("a living medical infographic come alive"):
-
-* **Editorial Medical Aesthetic**: Warm parchment paper (`#F7F1DF`, `#FFF8E8`), deep teal (`#315A62`), soft sage green (`#9DBB91`), medical blue (`#B8D8DC`), and warning coral (`#C96B68`).
-* **Hand-Drawn & Vector Storytelling**: Pure SVG illustrations with zero raster pixelation—from stethoscope botanical doodles to flowing ribbon chapter separators.
-* **The Narrative Arc**:
-  1. **Prologue / Consultation Room**: Floating laptop with a real-time pulsing ECG line connecting Dr. Alex Sterling in New York to Jordan Reed in Los Angeles, with a camera zoom into the screen.
-  2. **01 — One Doctor. 50 Rulebooks. (Licensing)**: An interactive animated US map where an interstate medical pulse hits a regulatory barricade wall, explaining the 10th Amendment police power and IMLC compacts.
-  3. **02 — The Screen Isn't the Exam. (Prescribing)**: The prescription clipboard behind an interactive frosted glass barrier with a mechanical padlock that clamps shut under the Ryan Haight Act (21 U.S.C. § 829).
-  4. **03 — Coverage Is a Patchwork Quilt. (Reimbursement)**: A stitched digital quilt with lifting patches and an embedded interactive labyrinth maze where visitors guide the patient through payer requirements.
-  5. **04 — The Convergence Finale**: The map, padlock, and quilt converge into a single virtual consultation console, concluding with the central editorial thesis:
-     > *“Telemedicine broke the walls of distance — policy is still deciding who's allowed through.”*
+> **“How government policy shapes the practice of digital healthcare.”**  
+> An interactive editorial investigation into the constitutional, clinical, and economic frameworks governing telemedicine.
 
 ---
 
-## 🚀 How to Run and View the Website
+## 🏛️ University Academic Structure (SCI1125D)
 
-No installation, no Node.js, and no build tools are required:
+This website strictly implements the university's required modular curriculum:
 
-1. Open your Windows File Explorer to:
-   ```
+```
+HOME / TOPIC
+    ↓
+ASPECT 1 — LICENSING ("One Doctor. Multiple Rulebooks.")
+    ↓
+ASPECT 2 — PRESCRIBING ("The Screen Isn't the Exam.")
+    ↓
+ASPECT 3 — REIMBURSEMENT ("Coverage Is a Patchwork.")
+    ↓
+THE CONVERGENCE (The Three Regulatory Gates Align)
+    ↓
+ABOUT / SUMMARY ("The Three Rules Behind the Screen")
+    ↓
+THE INFOGRAPHIC (Canva Infographic Showcase & Lightbox)
+    ↓
+ACADEMIC REFERENCES & FURTHER EXPLORATION (Complete Scholarly Citations)
+```
+
+---
+
+## 🎨 Editorial Design System
+
+* **Concept**: *Medical Journal × Editorial Infographic × Digital Health Interface × Interactive Exhibition*
+* **Palette**:
+  * Background: Warm ivory / parchment (`#FAF7EE`, `#F5EFE1`)
+  * Primary: Deep medical teal (`#20444C`)
+  * Secondary: Muted medical blue (`#8FAEB6`)
+  * Accent: Soft sage green (`#8DAF83`)
+  * Warning: Muted coral / terracotta (`#C26360`)
+  * Text: Deep charcoal (`#192528`)
+* **Styling**: Thin editorial hairline rules, paper grain texture, vector ECG waveforms, dashed quilt stitches, and zero cyber/neon clutter.
+
+---
+
+## 🌟 Interactive Components
+
+1. **Top Regulatory Gates Tracker**: Sticky masthead dynamically monitors scroll position through Gate 01 (Licensing), Gate 02 (Prescribing), and Gate 03 (Reimbursement).
+2. **Aspect 1 (Licensing Simulator)**: Stylized US map where the medical signal pauses at the state line to demonstrate the *Regulatory Boundary* and Tenth Amendment police powers. Features cross-border state selection, global comparative policy (8 nations), and a dedicated Sri Lanka Medical Council (SLMC) analysis.
+3. **Aspect 2 (Prescribing Pad & Padlock)**: Electronic prescription pad allowing exploration of Standard Medication vs. Controlled Substances (Buprenorphine), featuring dynamic statutory safety notices and the pre/post-COVID timeline.
+4. **Aspect 3 (Patchwork Quilt & Labyrinth)**: Stitched digital quilt lifting to reveal Medicare, Medicaid, and private payer parity policies, paired with an interactive 5-step claim journey simulation.
+5. **The Convergence**: Evaluates the real-time status of all three gates, yielding the summary verdict: `CONDITIONAL COMPLIANCE`.
+6. **The Infographic**: High-resolution Canva infographic showcase with an interactive lightbox modal.
+
+---
+
+## 📚 Scholarly References (APA 7th Edition)
+
+1. **Aizenberg, M.** (2022). Cross-border telemedicine and jurisdictional challenges in federal health systems. *Journal of Health Care Law & Policy*, 25(2), 189–214.
+2. **Al-Alawy, K., & Moonesar, I. A.** (2023). Telehealth policy formulation, reimbursement frameworks, and payment parity: A comparative health systems review. *Health Policy and Technology*, 12(3), 100780.
+3. **Centers for Disease Control and Prevention.** (2024). *Telehealth in public health practice: Expanding access and addressing healthcare disparities*. U.S. Department of Health and Human Services.
+4. **Ivanova, E., Dupont, P., & Gomez, M.** (2025). Clinical safety, diagnostic equivalence, and physician licensure barriers in contemporary telemedicine. *International Journal of Medical Informatics*, 182, 105310.
+5. **John, O., Thomas, S., & Williams, K.** (2022). Telemedicine expansion during COVID-19: Policy changes, electronic prescribing, and the challenge of permanent regulation. *The Lancet Digital Health*, 4(6), e421–e430.
+6. **Ministry of Health Sri Lanka.** (2024). *National guidelines on telemedicine and remote clinical consultation standards*. Sri Lanka Medical Council & Ministry of Health.
+7. **Nicogossian, A. E., Pober, D. F., & Roy, S. A.** (2001). Evolution of telemedicine in the space program: From early suborbital flights to the International Space Station. *Journal of Medical Systems*, 25(4), 229–239.
+8. **Olsen, J.** (2025). Interstate compacts and sovereign state medical boards: An analysis of the Interstate Medical Licensure Compact (IMLC). *American Journal of Law & Medicine*, 51(1), 45–72.
+9. **Qizi, A. R.** (2024). Legal mechanisms of telemedicine reimbursement: Comparative parity legislation in global health economics. *International Journal of Health Governance*, 29(1), 14–29.
+10. **Salmanizadeh, F., Rostam Niakan Kalhori, S., & Ghazisaeedi, M.** (2022). Evaluation of telemedicine policy implementation, buprenorphine prescribing, and controlled substance monitoring: A systematic review. *BMC Health Services Research*, 22(1), 612.
+
+---
+
+## 🚀 How to View Locally & Deploy to GitHub Pages
+
+### 1. View on Local Computer
+1. Open your File Explorer to:
+   ```text
    C:\Users\Thavinesh\.gemini\antigravity\scratch\telemedicine-website
    ```
-2. Double-click **`index.html`**.
-3. It will immediately open in Google Chrome, Microsoft Edge, or any modern web browser!
+2. Double-click **`index.html`** to view in any modern browser.
 
----
-
-## 📁 Project Architecture
-
-```
-telemedicine-website/
-├── index.html       # The illustrated editorial markup & inline SVGs
-├── styles.css       # Parchment textures, stitched quilt seams, glass frost & animations
-├── app.js           # Map route calculator, Ryan Haight padlock engine & maze solver
-└── README.md        # Editorial guide & architecture documentation
-```
-
----
-
-## 💻 Editorial Code Anatomy: How This Was Hand-Crafted
-
-### 1. HTML & Inline SVG (`index.html`)
-Every visual element—from the US map state contours to the stethoscope doodle and the curved wave dividers—is constructed with clean, native SVG. This guarantees crisp rendering on 4K Retina displays and lightning-fast load times with zero external asset dependencies.
-
-### 2. CSS Textile & Paper Styling (`styles.css`)
-- **Parchment Texture**: A fixed overlay creates a subtle millimeter graph paper grid mimicking vintage clinical charting.
-- **Stitched Quilt Seams**: CSS `border: 2px dashed #8C7853;` and layered drop shadows (`--shadow-paper-lg`) provide authentic textile depth.
-- **Frosted Glass Pane**: Uses CSS `backdrop-filter: blur(1.5px);` and mouse-tracking transformations to simulate inspecting a physical document through glass.
-
-### 3. JavaScript Reactive Engine (`app.js`)
-- **Cross-Border Route Calculation**: Computes quadratic Bézier curves (`M doc Q mid pat`) between doctor and patient states, evaluating IMLC status and triggering the regulatory wall animation.
-- **The Ryan Haight Padlock**: Toggles mechanical CSS shackle rotations and updates statutory warning banners.
-- **The Reimbursement Labyrinth**: Dynamically highlights successful navigation corridors versus claim rejection dead-ends.
-- **The Convergence Console**: Synchronizes all three pillar states into a unified live visit audit.
+### 2. Update Live Link on GitHub Pages
+1. Go to your GitHub repository:
+   `https://github.com/subecshekaravindra5-commits/telemedicine-and-rules`
+2. Click **Add file ➔ Upload files**.
+3. Drag and drop these 5 files:
+   * `index.html`
+   * `styles.css`
+   * `app.js`
+   * `infographic.png`
+   * `README.md`
+4. Click **Commit changes**.
+5. Within 30 seconds, your live site will automatically update at:
+   `https://subecshekaravindra5-commits.github.io/telemedicine-and-rules/`
