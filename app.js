@@ -31,7 +31,6 @@ function initGateProgressTracker() {
     { id: 'reimbursement', gate: 3 },
     { id: 'convergence', gate: 3 },
     { id: 'about', gate: 3 },
-    { id: 'infographic', gate: 3 },
     { id: 'references', gate: 3 }
   ];
 
@@ -533,11 +532,11 @@ function initConvergenceAudit() {
    05. HIGH RESOLUTION INFOGRAPHIC LIGHTBOX MODAL
    ============================================================================== */
 function initInfographicLightbox() {
-  const openBtn = document.getElementById('open-lightbox-btn');
+  const openButtons = document.querySelectorAll('#open-lightbox-btn, .open-lightbox-btn');
   const modal = document.getElementById('infographic-lightbox');
   const closeBtn = document.getElementById('close-lightbox-btn');
 
-  if (!openBtn || !modal) return;
+  if (!modal || openButtons.length === 0) return;
 
   function showModal() {
     modal.classList.add('open');
@@ -551,7 +550,9 @@ function initInfographicLightbox() {
     document.body.style.overflow = '';
   }
 
-  openBtn.addEventListener('click', showModal);
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', showModal);
+  });
   if (closeBtn) closeBtn.addEventListener('click', hideModal);
 
   modal.addEventListener('click', (e) => {

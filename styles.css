@@ -398,6 +398,55 @@ a:hover {
 }
 
 /* ==============================================================================
+   FEATURED SECTION FIGURES & IMAGE CITATIONS (TASK 2 TEMPLATE)
+   ============================================================================== */
+.section-featured-figure {
+  margin: 2.25rem auto 3rem;
+  max-width: 880px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+.section-featured-figure:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.featured-aspect-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  background: #FAF7F0;
+}
+
+.figure-citation {
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  background: rgba(244, 239, 226, 0.6);
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.figure-citation .citation-icon {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.figure-citation strong {
+  color: var(--text-secondary);
+}
+
+/* ==============================================================================
    HOME / TOPIC SECTION & CONSULTATION HERO SCREEN
    ============================================================================== */
 .home-section {
