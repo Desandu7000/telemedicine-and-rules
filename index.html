@@ -13,6 +13,9 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -29,37 +32,23 @@
       <div class="academic-brand">
         <span class="academic-insignia">🩺</span>
         <div class="brand-text-block">
-          <span class="course-code-tag">SCI1125D • Professional Science Essentials</span>
-          <h1 class="brand-title">TELEMEDICINE: <span class="brand-sub">Government Rules & Regulations</span></h1>
+          <div class="brand-top-tag">
+            <span class="course-code-pill">SCI1125D</span>
+            <span class="course-tag-title">Professional Science Essentials</span>
+          </div>
+          <div class="brand-title">Telemedicine <span class="brand-divider">|</span> Government Rules &amp; Regulations</div>
         </div>
       </div>
 
       <!-- Main Navigation (Matches 5 Pages in Task 2 Template) -->
       <nav class="academic-nav" aria-label="Course Website Navigation">
         <a href="#home" class="nav-btn active">Home</a>
-        <a href="#licensing" class="nav-btn">01 Licensing</a>
-        <a href="#prescribing" class="nav-btn">02 Prescribing</a>
-        <a href="#reimbursement" class="nav-btn">03 Reimbursement</a>
+        <a href="#licensing" class="nav-btn"><span class="nav-num">01</span> Licensing</a>
+        <a href="#prescribing" class="nav-btn"><span class="nav-num">02</span> Prescribing</a>
+        <a href="#reimbursement" class="nav-btn"><span class="nav-num">03</span> Reimbursement</a>
         <a href="#about" class="nav-btn">About &amp; Summary</a>
         <a href="#references" class="nav-btn">References</a>
       </nav>
-
-      <!-- Three Regulatory Gates Tracker -->
-      <div class="gate-tracker" aria-label="Regulatory Gates Progress">
-        <span class="tracker-label">MAIN RULES:</span>
-        <div class="gate-indicator" id="gate-indicator-1" title="Gate 1: Licensing">
-          <span class="gate-dot"></span>
-          <span class="gate-name">01 LICENSING</span>
-        </div>
-        <div class="gate-indicator" id="gate-indicator-2" title="Gate 2: Prescribing">
-          <span class="gate-dot"></span>
-          <span class="gate-name">02 PRESCRIBING</span>
-        </div>
-        <div class="gate-indicator" id="gate-indicator-3" title="Gate 3: Reimbursement">
-          <span class="gate-dot"></span>
-          <span class="gate-name">03 REIMBURSEMENT</span>
-        </div>
-      </div>
     </div>
   </header>
 
@@ -70,17 +59,25 @@
     <section id="home" class="academic-section home-section">
       <div class="container">
 
-        <!-- Academic Heading Block -->
+        <!-- Academic Heading Block with clear Topic & Aspect Hierarchy -->
         <div class="hero-editorial-lead">
           <div class="academic-badge-pill">
             <span class="badge-dot"></span> SCI1125D RESEARCH REPORT
           </div>
+
+          <!-- Explicit Topic vs Aspect Hierarchy -->
+          <div class="hero-topic-kicker">
+            <span class="topic-tag-badge">TOPIC</span>
+            <span class="topic-title-text">TELEMEDICINE</span>
+          </div>
+
           <h1 class="hero-super-title">
-            TELEMEDICINE: <br>
-            <span class="highlight-text">GOVERNMENT RULES & REGULATIONS</span>
+            <span class="aspect-label-sub">SELECTED IT ASPECT:</span>
+            <span class="highlight-text">Government Rules &amp; Regulations</span>
           </h1>
+
           <p class="hero-subheading">
-            “How government policy shapes the practice of digital healthcare.”
+            “How government policy, state licensing, e-prescriptions, and reimbursement shape digital healthcare.”
           </p>
         </div>
 
@@ -143,7 +140,7 @@
                   </div>
                 </div>
 
-                <span class="connection-caption">Technology connects doctors and patients — but government rules decide
+                <span class="connection-caption">Technology connects doctors and patients, but government rules decide
                   how care is given</span>
               </div>
 
@@ -277,7 +274,7 @@
               <span class="gate-question">“What medicines can be prescribed safely online?”</span>
               <p>
                 Because doctors can't do a hands-on physical exam through a screen, laws set strict safety
-                checks—especially for controlled medicines that carry risks of misuse.
+                checks, especially for controlled medicines that carry risks of misuse.
               </p>
               <span class="card-cta-link">Learn About Prescribing ➔</span>
             </a>
@@ -305,7 +302,7 @@
             <span class="block-kicker">PROJECT POSTER • CANVA.COM</span>
             <h2 class="block-title">Project Infographic</h2>
             <p class="block-lead" style="margin: 0 auto; max-width: 760px;">
-              “Telemedicine: Government Policy and Regulations” — The visual research poster created for our SCI1125D diploma project.
+              “Telemedicine: Government Policy and Regulations” - The visual research poster created for our SCI1125D diploma project.
             </p>
           </div>
 
@@ -339,14 +336,14 @@
     </div>
 
     <!-- =========================================================================
-         ASPECT 1 — LICENSING: "ONE DOCTOR. MULTIPLE RULEBOOKS."
+         ASPECT 1: LICENSING: "ONE DOCTOR. MULTIPLE RULEBOOKS."
          ========================================================================= -->
     <section id="licensing" class="academic-section licensing-section">
       <div class="container">
 
         <div class="section-title-wrap">
           <span class="section-aspect-pill">RULE 01 • MEDICAL LICENSING</span>
-          <h2 class="aspect-headline">01 LICENSING</h2>
+          <h2 class="aspect-headline"><span class="headline-num">01</span> Licensing</h2>
           <p class="aspect-quote">“One Doctor. Multiple Rulebooks.”</p>
           <p class="aspect-lead-description">
             In traditional medicine, a doctor has a license to practice in their own state or country. But with
@@ -441,36 +438,51 @@
 
           <!-- Interactive Licensing Simulator Controls -->
           <div class="simulator-controls-container">
-            <h4 class="sim-title">Cross-State Consultation Test</h4>
+            <div class="sim-header-row">
+              <div class="sim-title-wrap">
+                <span class="sim-flag-badge-pill">
+                  <img src="images/flags/us.webp" alt="United States Flag" class="sim-flag-pill-img">
+                  <span class="sim-flag-pill-text">United States (State by State)</span>
+                </span>
+                <h4 class="sim-title">Cross-State Consultation Test</h4>
+              </div>
+              <span class="sim-rules-hint">Rules apply based on the patient's state</span>
+            </div>
             <div class="sim-dropdowns-row">
 
               <div class="sim-field">
-                <label for="doctor-loc-select">Doctor Location (State):</label>
+                <label for="doctor-loc-select">
+                  <span class="sim-label-flag-wrap"><img src="images/flags/us.webp" alt="US Flag" class="sim-flag-icon"></span>
+                  Doctor Location (US State):
+                </label>
                 <select id="doctor-loc-select" class="academic-select">
-                  <option value="NY" selected>New York (NY) — State License</option>
-                  <option value="CA">California (CA) — State License</option>
-                  <option value="WA">Washington (WA) — IMLC Member</option>
-                  <option value="AZ">Arizona (AZ) — IMLC Member</option>
-                  <option value="IL">Illinois (IL) — IMLC Member</option>
-                  <option value="OH">Ohio (OH) — IMLC Member</option>
-                  <option value="TX">Texas (TX) — Texas Board</option>
-                  <option value="FL">Florida (FL) — Telehealth Registry</option>
+                  <option value="NY" selected>New York (NY) - State License</option>
+                  <option value="CA">California (CA) - State License</option>
+                  <option value="WA">Washington (WA) - IMLC Member</option>
+                  <option value="AZ">Arizona (AZ) - IMLC Member</option>
+                  <option value="IL">Illinois (IL) - IMLC Member</option>
+                  <option value="OH">Ohio (OH) - IMLC Member</option>
+                  <option value="TX">Texas (TX) - Texas Board</option>
+                  <option value="FL">Florida (FL) - Telehealth Registry</option>
                 </select>
               </div>
 
               <div class="sim-field-arrow">➔</div>
 
               <div class="sim-field">
-                <label for="patient-loc-select">Patient Location (Where Care Happens):</label>
+                <label for="patient-loc-select">
+                  <span class="sim-label-flag-wrap"><img src="images/flags/us.webp" alt="US Flag" class="sim-flag-icon"></span>
+                  Patient Location (Where Care Happens):
+                </label>
                 <select id="patient-loc-select" class="academic-select">
-                  <option value="CA" selected>California (CA) — State License</option>
-                  <option value="NY">New York (NY) — State License</option>
-                  <option value="WA">Washington (WA) — IMLC Member</option>
-                  <option value="AZ">Arizona (AZ) — IMLC Member</option>
-                  <option value="IL">Illinois (IL) — IMLC Member</option>
-                  <option value="OH">Ohio (OH) — IMLC Member</option>
-                  <option value="TX">Texas (TX) — Texas Board</option>
-                  <option value="FL">Florida (FL) — Telehealth Registry</option>
+                  <option value="CA" selected>California (CA) - State License</option>
+                  <option value="NY">New York (NY) - State License</option>
+                  <option value="WA">Washington (WA) - IMLC Member</option>
+                  <option value="AZ">Arizona (AZ) - IMLC Member</option>
+                  <option value="IL">Illinois (IL) - IMLC Member</option>
+                  <option value="OH">Ohio (OH) - IMLC Member</option>
+                  <option value="TX">Texas (TX) - Texas Board</option>
+                  <option value="FL">Florida (FL) - Telehealth Registry</option>
                 </select>
               </div>
 
@@ -493,7 +505,7 @@
                   special interstate approval to treat this patient.
                 </p>
                 <div class="verdict-statutory-cite">
-                  <strong>Key Takeaway:</strong> Medical rules vary by state and country—there isn't one universal
+                  <strong>Key Takeaway:</strong> Medical rules vary by state and country, so there isn't one universal
                   license that works everywhere.
                 </div>
               </div>
@@ -555,7 +567,12 @@
         <!-- Dedicated Section: Sri Lanka Telemedicine Policy -->
         <div class="academic-focus-box sri-lanka-box">
           <div class="focus-box-header">
-            <span class="focus-badge">CASE STUDY</span>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <div class="country-flag-wrap lk-flag-wrap">
+                <img src="images/flags/lk.webp" alt="Sri Lanka Flag" class="country-flag-img" loading="lazy">
+              </div>
+              <span class="focus-badge">CASE STUDY • SRI LANKA</span>
+            </div>
             <h3>Sri Lanka: National Telemedicine Rules</h3>
           </div>
           <div class="focus-box-content">
@@ -599,56 +616,104 @@
           <div class="global-countries-grid">
 
             <div class="country-pill-card">
-              <span class="country-flag">🇫🇷</span>
+              <div class="country-card-top">
+                <div class="country-flag-wrap">
+                  <img src="images/flags/fr.webp" alt="France Flag" class="country-flag-img" loading="lazy">
+                </div>
+                <span class="country-iso-tag">FRA</span>
+              </div>
               <h4>France</h4>
+              <p class="country-agency-sub">French Public Health Code</p>
               <p>Telemedicine is written directly into the national health code and covered by the state health
                 insurance system.</p>
             </div>
 
             <div class="country-pill-card">
-              <span class="country-flag">🇬🇧</span>
+              <div class="country-card-top">
+                <div class="country-flag-wrap">
+                  <img src="images/flags/gb.webp" alt="United Kingdom Flag" class="country-flag-img" loading="lazy">
+                </div>
+                <span class="country-iso-tag">GBR</span>
+              </div>
               <h4>United Kingdom</h4>
+              <p class="country-agency-sub">GMC &amp; NHS England</p>
               <p>Regulated by the General Medical Council (GMC) and widely used across the National Health Service
                 (NHS).</p>
             </div>
 
             <div class="country-pill-card">
-              <span class="country-flag">🇦🇺</span>
+              <div class="country-card-top">
+                <div class="country-flag-wrap">
+                  <img src="images/flags/au.webp" alt="Australia Flag" class="country-flag-img" loading="lazy">
+                </div>
+                <span class="country-iso-tag">AUS</span>
+              </div>
               <h4>Australia</h4>
+              <p class="country-agency-sub">Ahpra &amp; MBS Telehealth</p>
               <p>Overseen by Ahpra, with funded video and phone visits through the Medicare Benefits Schedule (MBS).</p>
             </div>
 
             <div class="country-pill-card">
-              <span class="country-flag">🇸🇪</span>
+              <div class="country-card-top">
+                <div class="country-flag-wrap">
+                  <img src="images/flags/se.webp" alt="Sweden Flag" class="country-flag-img" loading="lazy">
+                </div>
+                <span class="country-iso-tag">SWE</span>
+              </div>
               <h4>Sweden</h4>
+              <p class="country-agency-sub">National Board of Health (Socialstyrelsen)</p>
               <p>Regional health councils work alongside popular digital health apps under national health guidelines.
               </p>
             </div>
 
             <div class="country-pill-card">
-              <span class="country-flag">🇧🇷</span>
+              <div class="country-card-top">
+                <div class="country-flag-wrap">
+                  <img src="images/flags/br.webp" alt="Brazil Flag" class="country-flag-img" loading="lazy">
+                </div>
+                <span class="country-iso-tag">BRA</span>
+              </div>
               <h4>Brazil</h4>
+              <p class="country-agency-sub">CFM (Conselho Federal de Medicina)</p>
               <p>The Federal Council of Medicine made telemedicine rules permanent after starting with temporary
                 pandemic orders.</p>
             </div>
 
             <div class="country-pill-card">
-              <span class="country-flag">🇦🇪</span>
+              <div class="country-card-top">
+                <div class="country-flag-wrap">
+                  <img src="images/flags/ae.webp" alt="UAE Flag" class="country-flag-img" loading="lazy">
+                </div>
+                <span class="country-iso-tag">ARE</span>
+              </div>
               <h4>UAE</h4>
+              <p class="country-agency-sub">MOHAP &amp; Dubai Health Authority</p>
               <p>The Ministry of Health and Dubai Health Authority created clear standards and specific licenses for
                 telehealth providers.</p>
             </div>
 
             <div class="country-pill-card">
-              <span class="country-flag">🇿🇦</span>
+              <div class="country-card-top">
+                <div class="country-flag-wrap">
+                  <img src="images/flags/za.webp" alt="South Africa Flag" class="country-flag-img" loading="lazy">
+                </div>
+                <span class="country-iso-tag">ZAF</span>
+              </div>
               <h4>South Africa</h4>
+              <p class="country-agency-sub">HPCSA Ethics Committee</p>
               <p>The Health Professions Council updated its ethical guidelines to allow video consults while protecting
                 patient safety.</p>
             </div>
 
             <div class="country-pill-card">
-              <span class="country-flag">🇸🇬</span>
+              <div class="country-card-top">
+                <div class="country-flag-wrap">
+                  <img src="images/flags/sg.webp" alt="Singapore Flag" class="country-flag-img" loading="lazy">
+                </div>
+                <span class="country-iso-tag">SGP</span>
+              </div>
               <h4>Singapore</h4>
+              <p class="country-agency-sub">Healthcare Services Act (HCSA)</p>
               <p>Under the Healthcare Services Act, telemedicine is licensed as its own official medical service
                 category.</p>
             </div>
@@ -662,7 +727,7 @@
           <blockquote class="takeaway-quote">
             “There does not appear to be a uniform approach towards telehealth legislation and regulation.”
           </blockquote>
-          <span class="takeaway-cite">— Health Policy Review (Aizenberg, 2022; Ivanova et al., 2025)</span>
+          <span class="takeaway-cite">Source: Health Policy Review (Aizenberg, 2022; Ivanova et al., 2025)</span>
         </div>
 
       </div>
@@ -678,14 +743,14 @@
     </div>
 
     <!-- =========================================================================
-         ASPECT 2 — PRESCRIBING: "THE SCREEN ISN'T THE EXAM."
+         ASPECT 2: PRESCRIBING: "THE SCREEN ISN'T THE EXAM."
          ========================================================================= -->
     <section id="prescribing" class="academic-section prescribing-section">
       <div class="container">
 
         <div class="section-title-wrap">
           <span class="section-aspect-pill">RULE 02 • PRESCRIBING RULES</span>
-          <h2 class="aspect-headline">02 PRESCRIBING</h2>
+          <h2 class="aspect-headline"><span class="headline-num">02</span> Prescribing</h2>
           <p class="aspect-quote">“The Screen Isn't the Exam.”</p>
           <p class="aspect-lead-description">
             Prescribing medicine over a screen is different from doing an in-person exam. Doctors must follow federal
@@ -860,7 +925,7 @@
             “Prescribing through telemedicine requires providers to navigate applicable state and federal requirements
             while considering patient safety.”
           </blockquote>
-          <span class="takeaway-cite">— Health Law & Practice Review (John et al., 2022; Olsen, 2025)</span>
+          <span class="takeaway-cite">Source: Health Law & Practice Review (John et al., 2022; Olsen, 2025)</span>
         </div>
 
       </div>
@@ -876,14 +941,14 @@
     </div>
 
     <!-- =========================================================================
-         ASPECT 3 — REIMBURSEMENT: "COVERAGE IS A PATCHWORK."
+         ASPECT 3: REIMBURSEMENT: "COVERAGE IS A PATCHWORK."
          ========================================================================= -->
     <section id="reimbursement" class="academic-section reimbursement-section">
       <div class="container">
 
         <div class="section-title-wrap">
           <span class="section-aspect-pill">RULE 03 • PAYING FOR CARE</span>
-          <h2 class="aspect-headline">03 REIMBURSEMENT</h2>
+          <h2 class="aspect-headline"><span class="headline-num">03</span> Reimbursement</h2>
           <p class="aspect-quote">“Coverage Is a Patchwork.”</p>
           <p class="aspect-lead-description">
             Whether a telemedicine visit is covered by insurance depends on the patient's insurance plan, government
@@ -1116,14 +1181,14 @@
           <blockquote class="takeaway-quote">
             “Reimbursement remains one of the least resolved areas of telemedicine policy.”
           </blockquote>
-          <span class="takeaway-cite">— Health Economics Review (Aizenberg, 2022; Ivanova et al., 2025)</span>
+          <span class="takeaway-cite">Source: Health Economics Review (Aizenberg, 2022; Ivanova et al., 2025)</span>
         </div>
 
       </div>
     </section>
 
     <!-- =========================================================================
-         THE CONVERGENCE — ONE TELEMEDICINE CONSULTATION
+         THE CONVERGENCE: ONE TELEMEDICINE CONSULTATION
          ========================================================================= -->
     <section id="convergence" class="academic-section convergence-section">
       <div class="container">
@@ -1230,7 +1295,7 @@
             <p>
               Telemedicine is using phones, tablets, and computers to provide medical care from a distance. It began
               with simple radio calls and NASA tracking astronauts' health in the 1960s, and grew into everyday video
-              doctor appointments today—especially after COVID-19 made remote care essential.
+              doctor appointments today, especially after COVID-19 made remote care essential.
             </p>
           </div>
 
@@ -1267,7 +1332,7 @@
             <div class="card-num-circle">4</div>
             <h3>Our Conclusion</h3>
             <p>
-              Telemedicine makes it much easier for people—especially those living in rural areas—to see a doctor
+              Telemedicine makes it much easier for people (especially those living in rural areas) to see a doctor
               without having to travel. However, because different states and countries have different laws, it can be
               confusing for both patients and healthcare providers.
             </p>
@@ -1310,7 +1375,7 @@
 
             <li class="biblio-entry">
               <strong>Aizenberg, M.</strong> (2022). Cross-border telemedicine and jurisdictional challenges in federal
-              health systems. <em>Journal of Health Care Law & Policy</em>, 25(2), 189–214.
+              health systems. <em>Journal of Health Care Law & Policy</em>, 25(2), 189-214.
             </li>
 
             <li class="biblio-entry">
@@ -1335,7 +1400,7 @@
             <li class="biblio-entry">
               <strong>John, O., Thomas, S., & Williams, K.</strong> (2022). Telemedicine expansion during COVID-19:
               Policy changes, electronic prescribing, and the challenge of permanent regulation. <em>The Lancet Digital
-                Health</em>, 4(6), e421–e430.
+                Health</em>, 4(6), e421-e430.
             </li>
 
             <li class="biblio-entry">
@@ -1346,18 +1411,18 @@
             <li class="biblio-entry">
               <strong>Nicogossian, A. E., Pober, D. F., & Roy, S. A.</strong> (2001). Evolution of telemedicine in the
               space program: From early suborbital flights to the International Space Station. <em>Journal of Medical
-                Systems</em>, 25(4), 229–239.
+                Systems</em>, 25(4), 229-239.
             </li>
 
             <li class="biblio-entry">
               <strong>Olsen, J.</strong> (2025). Interstate compacts and sovereign state medical boards: An analysis of
               the Interstate Medical Licensure Compact (IMLC). <em>American Journal of Law & Medicine</em>, 51(1),
-              45–72.
+              45-72.
             </li>
 
             <li class="biblio-entry">
               <strong>Qizi, A. R.</strong> (2024). Legal mechanisms of telemedicine reimbursement: Comparative parity
-              legislation in global health economics. <em>International Journal of Health Governance</em>, 29(1), 14–29.
+              legislation in global health economics. <em>International Journal of Health Governance</em>, 29(1), 14-29.
             </li>
 
             <li class="biblio-entry">
