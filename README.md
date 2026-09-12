@@ -9,7 +9,7 @@
 
 ## 🏛️ Project & Course Structure
 
-This website project is organized strictly according to the **SCI1125D Task 2** rubric and template:
+This website project is organized strictly according to the **SCI1125D** rubric and template:
 
 ```
 HOME / TOPIC (Telemedicine & Digital Consultation Stage + Infographic Poster)
