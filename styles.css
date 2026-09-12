@@ -65,6 +65,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   font-size: 16px;
 }
 
@@ -1762,6 +1763,11 @@ a:hover {
   color: var(--gold-deep);
 }
 
+.status-denied {
+  background: var(--coral-tint);
+  color: var(--coral-warning);
+}
+
 .conv-gate-connector {
   font-size: 1.5rem;
   color: var(--teal-primary);
@@ -2157,4 +2163,12 @@ a:hover {
   .exploration-links-grid { grid-template-columns: 1fr; }
   .hero-super-title { font-size: 2.1rem; }
   .aspect-headline { font-size: 2.1rem; }
+}
+
+@media (max-width: 600px) {
+  .rx-details-grid { grid-template-columns: 1fr; }
+  .rx-header-row { flex-direction: column; text-align: center; }
+  .flow-arrow { display: none; }
+  .academic-brand { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .frame-bottom-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
 }

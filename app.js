@@ -498,17 +498,17 @@ function renderConvergenceUI() {
   const overallBadge = document.getElementById('overall-compliance-badge');
 
   if (licEl) {
-    licEl.className = `gate-status-pill ${convergenceState.licensing ? 'status-pass' : 'status-conditional'}`;
+    licEl.className = `gate-status-pill ${convergenceState.licensing ? 'status-pass' : 'status-denied'}`;
     licEl.innerHTML = `<span class="status-icon">${convergenceState.licensing ? '✓' : '⚠️'}</span> ${convergenceState.licensingText}`;
   }
 
   if (rxEl) {
-    rxEl.className = `gate-status-pill ${convergenceState.prescribing ? 'status-pass' : 'status-conditional'}`;
+    licEl && (rxEl.className = `gate-status-pill ${convergenceState.prescribing ? 'status-pass' : 'status-conditional'}`);
     rxEl.innerHTML = `<span class="status-icon">${convergenceState.prescribing ? '✓' : '🔒'}</span> ${convergenceState.prescribingText}`;
   }
 
   if (reimbEl) {
-    reimbEl.className = `gate-status-pill ${convergenceState.reimbursement ? 'status-pass' : 'status-conditional'}`;
+    reimbEl.className = `gate-status-pill ${convergenceState.reimbursement ? 'status-pass' : 'status-denied'}`;
     reimbEl.innerHTML = `<span class="status-icon">${convergenceState.reimbursement ? '✓' : '✕'}</span> ${convergenceState.reimbursementText}`;
   }
 
@@ -542,11 +542,13 @@ function initInfographicLightbox() {
   function showModal() {
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
   }
 
   function hideModal() {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
   openBtn.addEventListener('click', showModal);
