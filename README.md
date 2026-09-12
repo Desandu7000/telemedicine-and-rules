@@ -1,56 +1,57 @@
-# 🩺 TELEMEDICINE: GOVERNMENT RULES AND REGULATIONS
-### Diploma Student Project (SCI1125D)
+# 🩺 Telemedicine | Government Rules & Regulations
+### SCI1125D Professional Science Essentials • Website Project
 
-> **“How government policy shapes the practice of digital healthcare.”**  
-> An interactive website exploring how doctor licensing, prescription rules, and health insurance work in telemedicine.
+> **Overarching Topic:** Telemedicine  
+> **Selected IT Aspect:** Government Rules and Regulations  
+> **Core Focus:** How state licensing, electronic prescribing, and insurance reimbursement shape digital healthcare delivery.
 
 ---
 
-## 🏛️ Project Structure (SCI1125D)
+## 🏛️ Project & Course Structure
 
-This project follows our course structure:
+This website project is organized strictly according to the **SCI1125D Task 2** rubric and template:
 
 ```
-HOME / TOPIC
+HOME / TOPIC (Telemedicine & Digital Consultation Stage + Infographic Poster)
     ↓
-RULE 1 — LICENSING ("One Doctor. Multiple Rulebooks.")
+01 LICENSING ("One Doctor. Multiple Rulebooks.")
     ↓
-RULE 2 — PRESCRIBING ("The Screen Isn't the Exam.")
+02 PRESCRIBING ("The Screen Isn't the Exam.")
     ↓
-RULE 3 — REIMBURSEMENT ("Coverage Is a Patchwork.")
+03 REIMBURSEMENT ("Coverage Is a Patchwork.")
     ↓
-PUTTING IT TOGETHER (How the Three Rules Work Together)
+ABOUT & SUMMARY ("The Three Rules Behind the Screen" + Convergence Status)
     ↓
-ABOUT / SUMMARY ("The Three Rules Behind the Screen")
-    ↓
-THE INFOGRAPHIC (Canva Poster Showcase & Lightbox)
-    ↓
-ACADEMIC REFERENCES (Sources & Bibliography)
+REFERENCES (Academic Bibliography & Source Attributions)
 ```
 
 ---
 
-## 🎨 Design Theme
+## 🎨 Design Theme & Aesthetics
 
-* **Concept**: *Clean Medical Theme × Educational Poster × Interactive Learning*
-* **Colors**:
+* **Concept**: *Clean Medical Journal × University Academic Editorial × Interactive Health Interface*
+* **Typography**:
+  * Headings: `Plus Jakarta Sans`
+  * Quotes & Editorial Text: `Fraunces` (Serif)
+  * Code & Regulatory Pills: `JetBrains Mono`
+* **Color Palette**:
   * Background: Soft parchment (`#FAF7EE`, `#F4EFE2`)
-  * Primary: Medical teal (`#20444C`)
-  * Secondary: Soft blue (`#8FAEB6`)
-  * Accent: Sage green (`#8DAF83`)
-  * Warning: Coral / red (`#C26360`)
-  * Text: Dark slate (`#192528`)
+  * Primary Brand: Deep medical teal (`#20444C`, `#163238`)
+  * Secondary Accents: Soft slate blue (`#8FAEB6`, `#D6E6E9`)
+  * Compliance Sage: Sage green (`#8DAF83`, `#EFF6EE`)
+  * Regulatory Notice: Coral red (`#C26360`, `#FBEFEF`)
+  * Text: Academic slate (`#192528`, `#485A5E`)
 
 ---
 
-## 🌟 Interactive Features
+## 🌟 Interactive Learning Features
 
-1. **Top Rule Tracker**: Highlights which of the three rules you are viewing as you scroll down the page.
-2. **State Licensing Simulator**: Test what happens when a doctor in one state attempts to treat a patient in another state.
-3. **Online Prescription Pad**: Compare standard daily medicine rules against strict safety rules for controlled substances.
-4. **Insurance Payment Quilt & Claim Test**: Click through different insurance groups (Medicare, Medicaid, Private) and test whether an online visit claim gets approved or denied.
-5. **Combined Visit Status**: Shows whether all three rules are satisfied for an appointment.
-6. **Poster Lightbox**: Click to zoom in on the high-resolution project poster.
+1. **Digital Consultation Stage**: An animated medical connection interface demonstrating the statutory checks that take place during a virtual visit.
+2. **State Licensing Simulator**: Test cross-state consultations between different US jurisdictions (e.g., New York, California, Texas, and IMLC states) with live SVG route arcs, boundary alerts, and legal outcome verdicts.
+3. **Interactive Prescription Pad**: Compare standard daily medication rules against strict Drug Enforcement Administration (DEA) and PDMP regulations for controlled substances.
+4. **Insurance Payment Quilt & Claim Evaluator**: Explore how Medicare, Medicaid, and commercial private insurers handle telemedicine parity and evaluate claims live.
+5. **Three Regulatory Gates Convergence Model**: Demonstrates how all three gates (Licensing, Prescribing, Reimbursement) must align for a compliant patient visit.
+6. **Canva Infographic Poster & Lightbox**: High-resolution academic poster showcase integrated directly into the Home page with modal zoom support.
 
 ---
 
@@ -69,25 +70,11 @@ ACADEMIC REFERENCES (Sources & Bibliography)
 
 ---
 
-## 🚀 How to View Locally & Deploy to GitHub Pages
+## 🔗 Project Links & Viewing Guide
 
-### 1. View on Local Computer
-1. Open your File Explorer to:
-   ```text
-   C:\Users\Thavinesh\.gemini\antigravity\scratch\telemedicine-website
-   ```
-2. Double-click **`index.html`** to view in any modern browser.
+* **Live Website**: [https://rsubecsheka.github.io/telemedicine-and-rules/](https://rsubecsheka.github.io/telemedicine-and-rules/)
+* **GitHub Repository**: [https://github.com/rsubecsheka/telemedicine-and-rules](https://github.com/rsubecsheka/telemedicine-and-rules)
 
-### 2. Update Live Link on GitHub Pages
-1. Go to your GitHub repository:
-   `https://github.com/subecshekaravindra5-commits/telemedicine-and-rules`
-2. Click **Add file ➔ Upload files**.
-3. Drag and drop these 5 files:
-   * `index.html`
-   * `styles.css`
-   * `app.js`
-   * `infographic.png`
-   * `README.md`
-4. Click **Commit changes**.
-5. Within 30 seconds, your live site will automatically update at:
-   `https://subecshekaravindra5-commits.github.io/telemedicine-and-rules/`
+### 💻 Viewing Locally
+Simply double-click `index.html` to open and view the website in any modern web browser. All styles, fonts, scripts, and image assets load directly without requiring any local server or extra software.
+
