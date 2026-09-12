@@ -1,57 +1,56 @@
 # 🩺 TELEMEDICINE: GOVERNMENT RULES AND REGULATIONS
-### University Academic Editorial Exhibition (SCI1125D)
+### Diploma Student Project (SCI1125D)
 
 > **“How government policy shapes the practice of digital healthcare.”**  
-> An interactive editorial investigation into the constitutional, clinical, and economic frameworks governing telemedicine.
+> An interactive website exploring how doctor licensing, prescription rules, and health insurance work in telemedicine.
 
 ---
 
-## 🏛️ University Academic Structure (SCI1125D)
+## 🏛️ Project Structure (SCI1125D)
 
-This website strictly implements the university's required modular curriculum:
+This project follows our course structure:
 
 ```
 HOME / TOPIC
     ↓
-ASPECT 1 — LICENSING ("One Doctor. Multiple Rulebooks.")
+RULE 1 — LICENSING ("One Doctor. Multiple Rulebooks.")
     ↓
-ASPECT 2 — PRESCRIBING ("The Screen Isn't the Exam.")
+RULE 2 — PRESCRIBING ("The Screen Isn't the Exam.")
     ↓
-ASPECT 3 — REIMBURSEMENT ("Coverage Is a Patchwork.")
+RULE 3 — REIMBURSEMENT ("Coverage Is a Patchwork.")
     ↓
-THE CONVERGENCE (The Three Regulatory Gates Align)
+PUTTING IT TOGETHER (How the Three Rules Work Together)
     ↓
 ABOUT / SUMMARY ("The Three Rules Behind the Screen")
     ↓
-THE INFOGRAPHIC (Canva Infographic Showcase & Lightbox)
+THE INFOGRAPHIC (Canva Poster Showcase & Lightbox)
     ↓
-ACADEMIC REFERENCES & FURTHER EXPLORATION (Complete Scholarly Citations)
+ACADEMIC REFERENCES (Sources & Bibliography)
 ```
 
 ---
 
-## 🎨 Editorial Design System
+## 🎨 Design Theme
 
-* **Concept**: *Medical Journal × Editorial Infographic × Digital Health Interface × Interactive Exhibition*
-* **Palette**:
-  * Background: Warm ivory / parchment (`#FAF7EE`, `#F5EFE1`)
-  * Primary: Deep medical teal (`#20444C`)
-  * Secondary: Muted medical blue (`#8FAEB6`)
-  * Accent: Soft sage green (`#8DAF83`)
-  * Warning: Muted coral / terracotta (`#C26360`)
-  * Text: Deep charcoal (`#192528`)
-* **Styling**: Thin editorial hairline rules, paper grain texture, vector ECG waveforms, dashed quilt stitches, and zero cyber/neon clutter.
+* **Concept**: *Clean Medical Theme × Educational Poster × Interactive Learning*
+* **Colors**:
+  * Background: Soft parchment (`#FAF7EE`, `#F4EFE2`)
+  * Primary: Medical teal (`#20444C`)
+  * Secondary: Soft blue (`#8FAEB6`)
+  * Accent: Sage green (`#8DAF83`)
+  * Warning: Coral / red (`#C26360`)
+  * Text: Dark slate (`#192528`)
 
 ---
 
-## 🌟 Interactive Components
+## 🌟 Interactive Features
 
-1. **Top Regulatory Gates Tracker**: Sticky masthead dynamically monitors scroll position through Gate 01 (Licensing), Gate 02 (Prescribing), and Gate 03 (Reimbursement).
-2. **Aspect 1 (Licensing Simulator)**: Stylized US map where the medical signal pauses at the state line to demonstrate the *Regulatory Boundary* and Tenth Amendment police powers. Features cross-border state selection, global comparative policy (8 nations), and a dedicated Sri Lanka Medical Council (SLMC) analysis.
-3. **Aspect 2 (Prescribing Pad & Padlock)**: Electronic prescription pad allowing exploration of Standard Medication vs. Controlled Substances (Buprenorphine), featuring dynamic statutory safety notices and the pre/post-COVID timeline.
-4. **Aspect 3 (Patchwork Quilt & Labyrinth)**: Stitched digital quilt lifting to reveal Medicare, Medicaid, and private payer parity policies, paired with an interactive 5-step claim journey simulation.
-5. **The Convergence**: Evaluates the real-time status of all three gates, yielding the summary verdict: `CONDITIONAL COMPLIANCE`.
-6. **The Infographic**: High-resolution Canva infographic showcase with an interactive lightbox modal.
+1. **Top Rule Tracker**: Highlights which of the three rules you are viewing as you scroll down the page.
+2. **State Licensing Simulator**: Test what happens when a doctor in one state attempts to treat a patient in another state.
+3. **Online Prescription Pad**: Compare standard daily medicine rules against strict safety rules for controlled substances.
+4. **Insurance Payment Quilt & Claim Test**: Click through different insurance groups (Medicare, Medicaid, Private) and test whether an online visit claim gets approved or denied.
+5. **Combined Visit Status**: Shows whether all three rules are satisfied for an appointment.
+6. **Poster Lightbox**: Click to zoom in on the high-resolution project poster.
 
 ---
 
