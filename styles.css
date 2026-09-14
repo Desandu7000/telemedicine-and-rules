@@ -2344,7 +2344,7 @@ a:hover {
 }
 
 .footer-student-details strong {
-  color: var(--blue-muted);
+  color: #FFF; 
   font-weight: 700;
 }
 
