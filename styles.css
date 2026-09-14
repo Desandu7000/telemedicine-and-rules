@@ -2339,26 +2339,6 @@ a:hover {
   border-top: 1px solid rgba(32, 68, 76, 0.2);
   background: #F4EFE2;
 }
-
-.footer-student-details {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-}
-
-.footer-student-details strong {
-  font-family: "Fraunces", serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.footer-student-details span {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-}
-
 /* ==============================================================================
    HIGH RESOLUTION LIGHTBOX MODAL
    ============================================================================== */
