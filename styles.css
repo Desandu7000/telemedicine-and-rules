@@ -2339,6 +2339,26 @@ a:hover {
   border-top: 1px solid rgba(32, 68, 76, 0.2);
   background: #F4EFE2;
 }
+
+.footer-student-details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.footer-student-details strong {
+  color: #FFF;
+  font-weight: 700;
+}
+
+.footer-student-details span {
+  color: #9FB2B6;
+}
 /* ==============================================================================
    HIGH RESOLUTION LIGHTBOX MODAL
    ============================================================================== */
